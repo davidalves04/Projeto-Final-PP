@@ -16,7 +16,7 @@ import enums.Velocidade;
 * Número: 8240266   
 * Turma: LSIRC T2
 */
-public class Player {
+public class Player{
     private String nome;
     private int posicao;
     private Remate remate;
