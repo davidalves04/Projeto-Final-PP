@@ -8,6 +8,6 @@ package enums;
  *
  * @author david
  */
-public enum Passe {
-    CURTO, MEDIO, LONGO
+public enum PlayerPosition {
+    GK, DEF, MID, FWD
 }
