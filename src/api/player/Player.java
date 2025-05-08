@@ -10,13 +10,34 @@ import enums.PreferredFoot;
  *
  * @author david
  */
-public class Player {
+public class Player  {
+
+    
     private int id;
     private String name;
-    private PlayerPosition Position;
+    
     private PreferredFoot preferredFoot;
-    private int shooting;
-    private int passing;
-    private int speed;
-    private int stamina;
+    
+    public Player(int id, String name, PreferredFoot preferredFoot){
+              
+    this.id = id;
+    this.name = name;
+    
+    this.preferredFoot = preferredFoot;
+}
+    
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public PreferredFoot getPreferredFoot() {
+        return preferredFoot;
+    }
+    
+    
+    
 }

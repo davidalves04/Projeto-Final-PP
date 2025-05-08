@@ -9,5 +9,21 @@ package enums;
  * @author david
  */
 public enum PlayerPosition {
-    GK, DEF, MID, FWD
+    GK, DEF, MID, FWD;
+    
+      public static String positionToString(PlayerPosition pos) {
+        switch (pos) {
+            case GK:
+                return "Guarda-Redes";
+            case DEF:
+                return "Defesa";
+            case MID:
+                return "Médio";
+            case FWD:
+                return "Avançado";
+            default:
+                return "Desconhecida";
+        }
+    }
+      
 }

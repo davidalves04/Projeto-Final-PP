@@ -9,5 +9,5 @@ package api.team;
  * @author david
  */
 public class Formation {
-    
+    private Formation formation;
 }

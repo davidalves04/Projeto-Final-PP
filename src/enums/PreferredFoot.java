@@ -9,5 +9,17 @@ package enums;
  * @author david
  */
 public enum PreferredFoot {
-    LEFT, RIGHT
+    LEFT, RIGHT;
+    
+        public static String footToString(PreferredFoot foot) {
+        switch (foot) {
+            case LEFT:
+                return "Esquerdo";
+            case RIGHT:
+                return "Direito";
+            default:
+                return "Desconhecido";
+        }
+    }
+    
 }
