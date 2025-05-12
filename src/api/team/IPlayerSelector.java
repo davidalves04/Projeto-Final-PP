@@ -4,10 +4,14 @@
  */
 package api.team;
 
+import api.player.IPlayer;
+import api.player.IPlayerPosition;
+
 /**
  *
- * @author david
+ * @author Utilizador
  */
-public class Formation {
-    private Formation formation;
+public interface IPlayerSelector {
+        IPlayer selectPlayer(IClub club, IPlayerPosition position);
+
 }

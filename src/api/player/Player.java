@@ -17,11 +17,13 @@ public class Player  {
     private String name;
     
     private PreferredFoot preferredFoot;
+    private PlayerPosition position;
     
-    public Player(int id, String name, PreferredFoot preferredFoot){
+    public Player(int id, String name, PreferredFoot preferredFoot,PlayerPosition position){
               
     this.id = id;
     this.name = name;
+    this.position = position;
     
     this.preferredFoot = preferredFoot;
 }
@@ -39,5 +41,12 @@ public class Player  {
     }
     
     
+     public PlayerPosition getPosition() {
+        return this.position;
+    }
+    
+      public void setPosition(PlayerPosition position) {
+        this.position = position;
+    }
     
 }

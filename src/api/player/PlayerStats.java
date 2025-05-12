@@ -11,7 +11,7 @@ import enums.PreferredFoot;
  *
  * @author david
  */
-public abstract class PlayerStats extends Player implements IPlayer{
+public class PlayerStats extends Player{
     private int shooting;
     private int passing;
     private int speed;
@@ -19,10 +19,10 @@ public abstract class PlayerStats extends Player implements IPlayer{
     private int defense;
     private int defenseGk;
     
-    public PlayerStats(int id, String name, PreferredFoot preferredFoot,
+    public PlayerStats(int id, String name, PreferredFoot preferredFoot,PlayerPosition position,
                       int shooting, int passing, int speed, int stamina,int defense,int defenseGk) {
        
-        super(id,name,preferredFoot);
+        super(id,name,preferredFoot,position);
         this.shooting = shooting;
         this.passing = passing;
         this.speed = speed;
@@ -32,64 +32,51 @@ public abstract class PlayerStats extends Player implements IPlayer{
         
     }
     
-     public abstract PlayerPosition getPosition();                 
                       
-     @Override
     public int getShooting() {
         return shooting;
     }
 
-    @Override
     public void setShooting(int shooting) {
         this.shooting = shooting;
     }
 
-    @Override
     public int getPassing() {
         return passing;
     }
 
-    @Override
     public void setPassing(int passing) {
         this.passing = passing;
     }
 
-    @Override
     public int getSpeed() {
         return speed;
     }
 
-    @Override
     public void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    @Override
     public int getStamina() {
         return stamina;
     }
 
-    @Override
     public void setStamina(int stamina) {
         this.stamina = stamina;
     }
 
-    @Override
     public int getDefense() {
         return defense;
     }
 
-    @Override
     public void setDefense(int defense) {
         this.defense = defense;
     }
 
-    @Override
     public int getDefenseGk() {
         return defenseGk;
     }
 
-    @Override
     public void setDefenseGk(int defenseGk) {
         this.defenseGk = defenseGk;
     

@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package api.player;
+package api.team;
 
 /**
  *
  * @author Utilizador
  */
-public interface IPlayer {
-    
+public interface IFormation {
+      String getDisplayName();
+
+    int getTacticalAdvantage(IFormation formation);
 }

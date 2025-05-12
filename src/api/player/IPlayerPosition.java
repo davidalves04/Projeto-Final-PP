@@ -8,6 +8,6 @@ package api.player;
  *
  * @author Utilizador
  */
-public interface IPlayer {
+public class IPlayerPosition {
     
 }
