@@ -2,98 +2,123 @@ package api.player;
 
 import enums.PlayerPosition;
 import enums.PreferredFoot;
+import java.time.LocalDate;
 
 /**
  *
  * @author david
  */
 public class Player implements IPlayer {
-    private int id;
+   
+    
     private String name;
+    private LocalDate birth;
+    private int age;
+    private String nationality;
+    private String photo;
+    private int number;
+    private int passing;
+    private int speed;
+    private int shooting;
+    private int stamina;
+    private IPlayerPosition position;
     private PreferredFoot preferredFoot;
-    private PlayerPosition position;
-    private PlayerStats stats;
+    private int height;
+    private int weight;
 
-    // Construtor
-    public Player(int id, String name, PlayerPosition position, PreferredFoot preferredFoot, PlayerStats stats) {
-        this.id = id;
+    public Player(String name, LocalDate birth, int age, String nationality, int number, int passing, int speed, int shooting, int stamina, IPlayerPosition position, PreferredFoot preferredFoot, int height, int weight) {
         this.name = name;
+        this.birth = birth;
+        this.age = age;
+        this.nationality = nationality;
+        this.number = number;
+        this.passing = passing;
+        this.speed = speed;
+        this.shooting = shooting;
+        this.stamina = stamina;
         this.position = position;
         this.preferredFoot = preferredFoot;
-        this.stats = stats;
+        this.height = height;
+        this.weight = weight;
     }
 
-    // Getters
-    public int getId() {
-        return id;
-    }
-
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public PreferredFoot getPreferredFoot() {
-        return preferredFoot;
+    @Override
+    public LocalDate getBirthDate() {
+        return this.birth;
     }
 
-    public PlayerPosition getPosition() {
-        return position;
+    @Override
+    public int getAge() {
+        return this.age;
     }
 
-    public void setPosition(PlayerPosition position) {
+    @Override
+    public String getNationality() {
+        return this.nationality;
+    }
+
+    @Override
+    public void setPosition(IPlayerPosition position) {
+         if (position == null) {
+        throw new IllegalArgumentException("Formation cannot be null");
+    }
         this.position = position;
     }
 
-    public PlayerStats getStats() {
-        return stats;
+    @Override
+    public String getPhoto() {
+        return this.photo;
     }
 
-    // Delegações para IPlayer (se a interface exigir)
+    @Override
+    public int getNumber() {
+        return this.number;
+    }
+
+    @Override
     public int getShooting() {
-        return stats.getShooting();
+        return this.shooting;
     }
 
-    public void setShooting(int s) {
-        stats.setShooting(s);
-    }
-
+    @Override
     public int getPassing() {
-        return stats.getPassing();
+       return this.passing;
     }
 
-    public void setPassing(int p) {
-        stats.setPassing(p);
-    }
-
-    public int getSpeed() {
-        return stats.getSpeed();
-    }
-
-    public void setSpeed(int sp) {
-        stats.setSpeed(sp);
-    }
-
+    @Override
     public int getStamina() {
-        return stats.getStamina();
+      return this.stamina;
     }
 
-    public void setStamina(int st) {
-        stats.setStamina(st);
+    @Override
+    public int getSpeed() {
+      return this.speed;
     }
 
-    public int getDefense() {
-        return stats.getDefense();
+    @Override
+    public IPlayerPosition getPosition() {
+      return this.position;
     }
 
-    public void setDefense(int d) {
-        stats.setDefense(d);
+    @Override
+    public float getHeight() {
+        return this.height;
     }
 
-    public int getDefenseGk() {
-        return stats.getDefenseGk();
+    @Override
+    public float getWeight() {
+        return this.weight;
     }
 
-    public void setDefenseGk(int gk) {
-        stats.setDefenseGk(gk);
+    @Override
+    public PreferredFoot getPreferredFoot() {
+        return this.preferredFoot;
     }
+    
+      
 }

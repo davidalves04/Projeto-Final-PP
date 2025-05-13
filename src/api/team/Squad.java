@@ -14,7 +14,7 @@ import api.player.IPlayerPosition;
 public class Squad extends Team implements ITeam{
     private IClub club;
     private IFormation formation;
-    private IPlayer []players = getPlayers();
+    private IPlayer []players;
     private int positionCount;
     private int teamStrengh;
 
@@ -22,6 +22,7 @@ public class Squad extends Team implements ITeam{
         super(code, country, logo, foundedYear, name, playerCount, stadiumName);
         this.club = club;
         this.formation = formation;
+        this.players = super.getPlayers(); 
         this.positionCount = positionCount;
         this.teamStrengh = teamStrengh;
     }
@@ -29,8 +30,7 @@ public class Squad extends Team implements ITeam{
     
         @Override
     public IClub getClub() {
-          //Falta implementar o adicionar jogador
-        
+      
           return this.club;
     }
 
@@ -96,14 +96,39 @@ public class Squad extends Team implements ITeam{
     
     @Override
     public int getPositionCount(IPlayerPosition position) {
-        //Ainda por implementar
-        return 0;
+        
+        int count = getPlayerCount();
+        int total = 0;
+        
+        
+        for(int i = 0; i < count;i++){
+            if (players[i].getPosition().equals(position)) { 
+            total++;
+        }
+        }
+        
+        
+        return total;
     }
 
     @Override
     public int getTeamStrength() {
-       //Ainda por implementar
-       return 0;
+       int count = getPlayerCount();
+       int totalStrength = 0;
+       for(int i = 0;i < count;i++){
+                IPlayer player = players[i];
+        
+        // Soma os atributos do jogador
+        int totalAtributes = player.getShooting() + player.getStamina() + player.getSpeed() + player.getPassing();
+        
+        int playerStrength = totalAtributes / 4;
+        
+        totalStrength += playerStrength; // adiciona à força total da equipa
+        
+       }
+        
+        
+       return totalStrength / count; //Media de todos os atributos dos jogadores
 
     }
 

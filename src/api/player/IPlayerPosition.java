@@ -8,6 +8,8 @@ package api.player;
  *
  * @author Utilizador
  */
-public class IPlayerPosition {
+public interface IPlayerPosition {
+    
+    String getDescrition();
     
 }

@@ -9,6 +9,7 @@ package api.team;
  * @author Utilizador
  */
 public interface IFormation {
+    
       String getDisplayName();
 
     int getTacticalAdvantage(IFormation formation);
