@@ -1,38 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.player;
-
-import enums.PlayerPosition;
-import enums.PreferredFoot;
 
 /**
  *
  * @author david
  */
-public class PlayerStats extends Player{
+public class PlayerStats {
     private int shooting;
     private int passing;
     private int speed;
     private int stamina;
     private int defense;
     private int defenseGk;
-    
-    public PlayerStats(int id, String name, PreferredFoot preferredFoot,PlayerPosition position,
-                      int shooting, int passing, int speed, int stamina,int defense,int defenseGk) {
-       
-        super(id,name,preferredFoot,position);
+
+    public PlayerStats(int shooting, int passing, int speed, int stamina, int defense, int defenseGk) {
         this.shooting = shooting;
         this.passing = passing;
         this.speed = speed;
         this.stamina = stamina;
         this.defense = defense;
         this.defenseGk = defenseGk;
-        
     }
-    
-                      
+
     public int getShooting() {
         return shooting;
     }
@@ -79,7 +67,5 @@ public class PlayerStats extends Player{
 
     public void setDefenseGk(int defenseGk) {
         this.defenseGk = defenseGk;
-    
-}
-    
+    }
 }
