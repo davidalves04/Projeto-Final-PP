@@ -1,6 +1,5 @@
 package api.player;
 
-import enums.PlayerPosition;
 import enums.PreferredFoot;
 import java.time.LocalDate;
 
@@ -9,33 +8,29 @@ import java.time.LocalDate;
  * @author david
  */
 public class Player implements IPlayer {
-   
-    
+
     private String name;
     private LocalDate birth;
     private int age;
     private String nationality;
     private String photo;
     private int number;
-    private int passing;
-    private int speed;
-    private int shooting;
-    private int stamina;
     private IPlayerPosition position;
     private PreferredFoot preferredFoot;
     private int height;
     private int weight;
 
-    public Player(String name, LocalDate birth, int age, String nationality, int number, int passing, int speed, int shooting, int stamina, IPlayerPosition position, PreferredFoot preferredFoot, int height, int weight) {
+    private PlayerStats stats;
+
+    public Player(String name, LocalDate birth, int age, String nationality, int number, 
+                  PlayerStats stats, IPlayerPosition position, PreferredFoot preferredFoot, 
+                  int height, int weight) {
         this.name = name;
         this.birth = birth;
         this.age = age;
         this.nationality = nationality;
         this.number = number;
-        this.passing = passing;
-        this.speed = speed;
-        this.shooting = shooting;
-        this.stamina = stamina;
+        this.stats = stats;
         this.position = position;
         this.preferredFoot = preferredFoot;
         this.height = height;
@@ -64,9 +59,9 @@ public class Player implements IPlayer {
 
     @Override
     public void setPosition(IPlayerPosition position) {
-         if (position == null) {
-        throw new IllegalArgumentException("Formation cannot be null");
-    }
+        if (position == null) {
+            throw new IllegalArgumentException("Position cannot be null");
+        }
         this.position = position;
     }
 
@@ -82,27 +77,27 @@ public class Player implements IPlayer {
 
     @Override
     public int getShooting() {
-        return this.shooting;
+        return stats.getShooting();
     }
 
     @Override
     public int getPassing() {
-       return this.passing;
+        return stats.getPassing();
     }
 
     @Override
     public int getStamina() {
-      return this.stamina;
+        return stats.getStamina();
     }
 
     @Override
     public int getSpeed() {
-      return this.speed;
+        return stats.getSpeed();
     }
 
     @Override
     public IPlayerPosition getPosition() {
-      return this.position;
+        return this.position;
     }
 
     @Override
@@ -119,6 +114,4 @@ public class Player implements IPlayer {
     public PreferredFoot getPreferredFoot() {
         return this.preferredFoot;
     }
-    
-      
 }
