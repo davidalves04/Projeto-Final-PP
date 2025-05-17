@@ -4,27 +4,19 @@
  */
 package api.player;
 
-import enums.PlayerPosition;
 
 /**
  *
  * @author Utilizador
  */
 public class Position implements IPlayerPosition {
-      private String descrition;
+      private String description;
 
-    public Position(String descrition) {
-        this.descrition = descrition;
+    public Position(String description) {
+        this.description = description;
     }
-
- 
 
     @Override
     public String getDescrition() {
-        return this.descrition;
-    }
-    
-    
-    
-    
+        return this.description;}
 }
