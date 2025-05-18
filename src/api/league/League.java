@@ -1,21 +1,20 @@
 package api.league;
 
-import api.team.ITeam;
-import com.ppstudios.footballmanager.api.contracts.league
-import contracts.ISchedule;
+import com.ppstudios.footballmanager.api.contracts.league.ILeague;
+import com.ppstudios.footballmanager.api.contracts.league.ISeason;
+import java.io.IOException;
 
 public class League implements ILeague {
     private String name;
-    private ITeam[] teams;
-    private ISchedule schedule;
+    private ISeason[] seasons;
+    private int seasonCount;
 
-    public League(String name, ITeam[] teams, ISchedule schedule) {
-        if (name == null || teams == null || schedule == null)
-            throw new IllegalArgumentException("Nome, equipas e calendário não podem ser nulos");
+    private static final int MAX_SEASONS = 10; // Podes ajustar conforme necessário
 
+    public League(String name) {
         this.name = name;
-        this.teams = teams;
-        this.schedule = schedule;
+        this.seasons = new ISeason[MAX_SEASONS];
+        this.seasonCount = 0;
     }
 
     @Override
@@ -24,22 +23,62 @@ public class League implements ILeague {
     }
 
     @Override
-    public ITeam[] getTeams() {
-        return this.teams;
-    }
-
-    @Override
-    public ISchedule getSchedule() {
-        return this.schedule;
-    }
-
-    @Override
-    public ITeam getTeamByName(String name) {
-        for (ITeam team : teams) {
-            if (team != null && team.getName().equals(name)) {
-                return team;
-            }
+    public ISeason[] getSeasons() {
+        ISeason[] result = new ISeason[seasonCount];
+        for (int i = 0; i < seasonCount; i++) {
+            result[i] = seasons[i];
         }
-        return null;
+        return result;
+    }
+
+    @Override
+    public boolean createSeason(ISeason season) {
+        if (seasonCount >= MAX_SEASONS || season == null) {
+            return false;
+        }
+        seasons[seasonCount++] = season;
+        return true;
+    }
+
+    @Override
+    public ISeason removeSeason(int index) {
+        if (index < 0 || index >= seasonCount) {
+            return null;
+        }
+        ISeason removed = seasons[index];
+        for (int i = index; i < seasonCount - 1; i++) {
+            seasons[i] = seasons[i + 1];
+        }
+        seasons[--seasonCount] = null;
+        return removed;
+    }
+
+    @Override
+    public ISeason getSeason(int index) {
+        if (index < 0 || index >= seasonCount) {
+            return null;
+        }
+        return seasons[index];
+    }
+
+    @Override
+    public void exportToJson() {
+        try {
+            System.out.print("{");
+            System.out.print("\"name\": \"" + name + "\", ");
+            System.out.print("\"seasons\": [");
+
+            for (int i = 0; i < seasonCount; i++) {
+                seasons[i].exportToJson();
+                if (i < seasonCount - 1) {
+                    System.out.print(", ");
+                }
+            }
+
+            System.out.print("]");
+            System.out.print("}");
+        } catch (IOException e) {
+            e.printStackTrace(); // ou logar de outra forma
+        }
     }
 }

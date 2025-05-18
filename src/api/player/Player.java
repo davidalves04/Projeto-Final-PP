@@ -17,8 +17,8 @@ public class Player implements IPlayer {
     private int number;
     private IPlayerPosition position;
     private PreferredFoot preferredFoot;
-    private int height;
-    private int weight;
+    private float height;
+    private float weight;
 
     private PlayerStats stats;
 

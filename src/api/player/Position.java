@@ -10,13 +10,14 @@ package api.player;
  * @author Utilizador
  */
 public class Position implements IPlayerPosition {
-      private String description;
+    private String description;
 
     public Position(String description) {
         this.description = description;
     }
 
     @Override
-    public String getDescrition() {
-        return this.description;}
+    public String getDescription() {
+        return this.description;
+    }
 }

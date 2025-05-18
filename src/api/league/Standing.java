@@ -2,14 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package api.player;
+package api.league;
 
 /**
  *
- * @author Utilizador
+ * @author david
  */
-public interface IPlayerPosition {
-    
-    String getDescription();
+public class Standing {
     
 }
