@@ -1,11 +1,13 @@
 package api.player;
 
+
 import java.time.LocalDate;
 
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -25,12 +27,15 @@ public class Player implements IPlayer {
     private PreferredFoot preferredFoot;
     private float height;
     private float weight;
+    
+    private String file;
+    private static int playerCount;
 
     private PlayerStats stats;
 
     public Player(String name, LocalDate birth, int age, String nationality, int number, 
                   PlayerStats stats, IPlayerPosition position, PreferredFoot preferredFoot, 
-                  int height, int weight) {
+                  float height, float weight,String file) {
         this.name = name;
         this.birth = birth;
         this.age = age;
@@ -41,6 +46,8 @@ public class Player implements IPlayer {
         this.preferredFoot = preferredFoot;
         this.height = height;
         this.weight = weight;
+        this.file = file;
+        playerCount++;
     }
 
     @Override
@@ -120,12 +127,38 @@ public class Player implements IPlayer {
     public PreferredFoot getPreferredFoot() {
         return this.preferredFoot;
     }
+    
+     public static int getPlayerCount() {
+        return playerCount;
+    }
+    
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
 
     
 
     @Override
     public void exportToJson() throws IOException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+               try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
+                  
+           writer.write("{\n");
+        writer.write("  \"name\": \"" + this.name + "\",\n");
+        writer.write("  \"birthDate\": \"" + this.birth + "\",\n");
+        writer.write("  \"nationality\": \"" + this.nationality + "\",\n");
+        writer.write("  \"basePosition\": \"" + this.position + "\",\n");
+        writer.write("  \"photo\": \"" + this.photo + "\",\n");
+        writer.write("  \"number\": " + this.number + "\n");
+                   
+        writer.write("}\n");
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar para JSON: " + e.getMessage());
+    }
     }
 
    

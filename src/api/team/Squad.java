@@ -10,6 +10,8 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -22,6 +24,9 @@ public class Squad extends Team implements ITeam{
     private IPlayer []players;
     private int positionCount;
     private int teamStrengh;
+    
+    private String fileClub;
+    private String filePlayers;
 
     public Squad(IClub club, IFormation formation, IPlayer[] players, int positionCount, int teamStrengh, String code, String country, String logo, int foundedYear, String name, int playerCount, String stadiumName) {
         super(code, country, logo, foundedYear, name, playerCount, stadiumName);
@@ -146,8 +151,40 @@ public class Squad extends Team implements ITeam{
    
      @Override
     public void exportToJson() throws IOException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileClub, true))) {
+        writer.write("{\n");
+        writer.write("  \"code\": \"" + getCode() + "\",\n");
+        writer.write("  \"country\": \"" + getCountry() + "\",\n");
+        writer.write("  \"logo\": \"" + getLogo() + "\",\n");
+        writer.write("  \"foundedYear\": " + getFoundedYear() + ",\n");
+        writer.write("  \"name\": \"" + getName() + "\",\n");
+        writer.write("  \"stadium\": \"" + getStadiumName() + "\"\n");
+        writer.write("  \"formation\": \"" + this.formation + "\",\n");
+        writer.write("  \"teamStrength\": " + this.teamStrengh + ",\n");
+        
+        writer.write("}\n");
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar equipa: " + e.getMessage());
     }
+
+    // Exporta os jogadores para "players.json"
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePlayers, true))) {
+        for (int i = 0; i < getPlayerCount(); i++) {
+            IPlayer player = getPlayers()[i];
+            writer.write("{\n");
+            writer.write("  \"name\": \"" + player.getName() + "\",\n");
+            writer.write("  \"birthDate\": \"" + player.getBirthDate() + "\",\n");
+            writer.write("  \"nationality\": \"" + player.getNationality() + "\",\n");
+            writer.write("  \"basePosition\": \"" + player.getPosition() + "\",\n");
+            writer.write("  \"photo\": \"" + player.getPhoto() + "\",\n");
+            writer.write("  \"number\": " + player.getNumber() + "\n");
+            writer.write("}\n");
+        }
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar jogadores: " + e.getMessage());
+    }
+}
+    
     
     
     

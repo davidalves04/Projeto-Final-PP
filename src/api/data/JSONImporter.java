@@ -4,8 +4,10 @@
  */
 package api.data;
 
-import com.fasterxml.jackson.databind.ObjectMapper; //Biblioteca para dar import ou export de JSON
+import api.player.Player;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 
 
@@ -15,19 +17,24 @@ import java.io.IOException;
  */
 public class JSONImporter {
 
-    private ObjectMapper mapper;
+   
+  
+    private StringBuilder json = new StringBuilder();
 
-    public JSONImporter() {
-        this.mapper = new ObjectMapper();
-    }
+    // Lê o ficheiro JSON todo para a StringBuilder
+    public void readFile(String filename) throws IOException {
+        json.setLength(0);  // limpa conteúdo anterior
 
-        public void ImportJSON(String caminho, Class classe) {
-        try {
-            Object obj = mapper.readValue(new File(caminho), classe);
-            System.out.println("Objeto importado: " + obj);
-        } catch (IOException e) {
-            e.printStackTrace(); // ou logar de outra forma
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                json.append(line.trim());
+            }
         }
     }
 
+    //Ira returna a String 
+    public String getJson() {
+        return json.toString();
+    }
 }

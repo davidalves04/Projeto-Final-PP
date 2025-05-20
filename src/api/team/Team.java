@@ -10,6 +10,8 @@ import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
 
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -172,10 +174,21 @@ public class Team implements IClub {
         //Ainda por implementar
     }
 
-    @Override
-    public void exportToJson() throws IOException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ @Override
+  public void exportToJson() throws IOException {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter("teams.json", true))) {
+      writer.write("{\n");
+      writer.write("  \"code\": \"" + this.code + "\",\n");
+      writer.write("  \"country\": \"" + this.country + "\",\n");
+      writer.write("  \"logo\": \"" + this.logo + "\",\n");
+      writer.write("  \"foundedYear\": " + this.foundedYear + ",\n");
+      writer.write("  \"name\": \"" + this.name + "\",\n");
+      writer.write("  \"stadiumName\": \"" + this.stadiumName + "\",\n");
+      writer.write("}\n");
+    } catch (IOException e) {
+      System.out.println("Erro ao exportar equipa para JSON: " + e.getMessage());
     }
+  }
       
     
     
