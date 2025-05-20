@@ -1,7 +1,13 @@
 package api.player;
 
-import enums.PreferredFoot;
 import java.time.LocalDate;
+
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
+import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
+
+import java.io.IOException;
+
 
 /**
  *
@@ -114,4 +120,13 @@ public class Player implements IPlayer {
     public PreferredFoot getPreferredFoot() {
         return this.preferredFoot;
     }
+
+    
+
+    @Override
+    public void exportToJson() throws IOException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
 }

@@ -4,9 +4,14 @@
  */
 package api.team;
 
-import api.player.IPlayer;
-import api.player.IPlayerPosition;
-import api.player.Player;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
+import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
+
+
+import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import java.io.IOException;
+
 
 /**
  *
@@ -166,12 +171,12 @@ public class Team implements IClub {
       return null;
         //Ainda por implementar
     }
-   
-   
 
+    @Override
+    public void exportToJson() throws IOException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
       
-
-         
-         
-        
+    
+    
 }

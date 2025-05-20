@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package api.player;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 
 
 /**
@@ -16,6 +17,8 @@ public class Position implements IPlayerPosition {
         this.description = description;
     }
 
+    
+    
     @Override
     public String getDescription() {
         return this.description;

@@ -4,6 +4,9 @@
  */
 package api.team;
 
+
+import com.ppstudios.footballmanager.api.contracts.team.IFormation;
+
 /**
  *
  * @author Utilizador
