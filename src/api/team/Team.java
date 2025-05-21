@@ -176,7 +176,7 @@ public class Team implements IClub {
 
  @Override
   public void exportToJson() throws IOException {
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter("teams.json", true))) {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter("clubs.json", true))) {
       writer.write("{\n");
       writer.write("  \"code\": \"" + this.code + "\",\n");
       writer.write("  \"country\": \"" + this.country + "\",\n");

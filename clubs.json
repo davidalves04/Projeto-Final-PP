@@ -18,3 +18,23 @@
   "formation": "4.4.2",
   "teamStrength": 83,
 }
+{
+  "code": "FCP",
+  "country": "Portugal",
+  "logo": "fcp.com",
+  "foundedYear": 1893,
+  "name": "FC Porto",
+  "stadium": "Estadio do Dragao"
+  "formation": "5.2.3",
+  "teamStrength": 86,
+}
+{
+  "code": "SLB",
+  "country": "Portugal",
+  "logo": "slb.com",
+  "foundedYear": 1904,
+  "name": "Benfica",
+  "stadium": "Salao de Festas"
+  "formation": "4.4.2",
+  "teamStrength": 83,
+}
