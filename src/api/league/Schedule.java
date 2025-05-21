@@ -3,173 +3,138 @@ package api.league;
 import com.ppstudios.footballmanager.api.contracts.league.ISchedule;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
-import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
+import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
+import java.io.IOException;
 
 public class Schedule implements ISchedule {
 
-    private IMatch[][] rounds;
-    private int totalRounds;
-    private int teams;
-    private IStanding[] standings;
+    private final IMatch[][] rounds;
+    private final IStanding[] standings;
 
-    public Schedule(IClub[] clubs, int numberOfTeams, int maxRounds) {
-        this.teams = numberOfTeams;
-        this.totalRounds = maxRounds;
-        this.rounds = new IMatch[totalRounds][numberOfTeams / 2];
-        this.standings = new Standing[numberOfTeams];
+    public Schedule(IMatch[][] rounds, ITeam[] teams) {
+        this.rounds = rounds;
+        this.standings = new IStanding[teams.length];
 
-        for (int i = 0; i < numberOfTeams; i++) {
-            standings[i] = new Standing(clubs[i]);
+        for (int i = 0; i < teams.length; i++) {
+            standings[i] = new Standing(teams[i]);
         }
-
-        generateRoundRobin(clubs);
     }
 
-    private void generateRoundRobin(IClub[] clubs) {
-        int n = teams;
-        IClub[] temp = new IClub[n];
-        for (int i = 0; i < n; i++) {
-            temp[i] = clubs[i];
-        }
+    @Override
+    public IMatch[] getMatchesForRound(int i) {
+        if (i < 0 || i >= rounds.length) return new IMatch[0];
+        return rounds[i];
+    }
 
-        for (int round = 0; round < n - 1; round++) {
-            for (int i = 0; i < n / 2; i++) {
-                IClub home = temp[i];
-                IClub away = temp[n - 1 - i];
-                rounds[round][i] = new Match(home, away); // ida
-                rounds[round + (n - 1)][i] = new Match(away, home); // volta
+    @Override
+    public IMatch[] getMatchesForTeam(ITeam team) {
+        java.util.List<IMatch> matches = new java.util.ArrayList<>();
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                if (match.getHomeTeam() == team || match.getAwayTeam() == team) {
+                    matches.add(match);
+                }
             }
-
-            // Rotação dos clubes (fixando o primeiro)
-            IClub last = temp[n - 1];
-            for (int i = n - 1; i > 1; i--) {
-                temp[i] = temp[i - 1];
-            }
-            temp[1] = last;
         }
+        return matches.toArray(new IMatch[0]);
+    }
+
+    @Override
+    public int getNumberOfRounds() {
+        return rounds.length;
     }
 
     @Override
     public IMatch[] getAllMatches() {
-        int totalMatches = totalRounds * (teams / 2);
-        IMatch[] all = new IMatch[totalMatches];
-        int index = 0;
-        for (int i = 0; i < totalRounds; i++) {
-            for (int j = 0; j < rounds[i].length; j++) {
-                all[index++] = rounds[i][j];
+        java.util.List<IMatch> allMatches = new java.util.ArrayList<>();
+        for (IMatch[] round : rounds) {
+            java.util.Collections.addAll(allMatches, round);
+        }
+        return allMatches.toArray(new IMatch[0]);
+    }
+
+    @Override
+    public void setTeam(ITeam team, int index) {
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                match.setTeam(team);
             }
         }
-        return all;
+
+        standings[index] = new Standing(team);
     }
 
-    @Override
-    public IMatch[] getMatchesForRound(int round) {
-        if (round >= 0 && round < totalRounds) {
-            return rounds[round];
+    public IStanding[] getStandings() {
+        return standings;
+    }
+
+    public void simulate() {
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                if (!match.isPlayed()) {
+                    match.setPlayed();
+
+                    IClub home = match.getHomeClub();
+                    IClub away = match.getAwayClub();
+
+                    int homeGoals = match.getTotalByEvent(IGoalEvent.class, home);
+                    int awayGoals = match.getTotalByEvent(IGoalEvent.class, away);
+
+                    IStanding homeStanding = getStandingByClub(home);
+                    IStanding awayStanding = getStandingByClub(away);
+
+                    if (homeStanding instanceof Standing h && awayStanding instanceof Standing a) {
+                        h.updateStats(homeGoals, awayGoals);
+                        a.updateStats(awayGoals, homeGoals);
+                    }
+                }
+            }
         }
-        return new IMatch[0];
     }
 
-    @Override
-    public void simulateRound(int round, MatchSimulatorStrategy strategy) {
-        if (round < 0 || round >= totalRounds) return;
-
-        for (int i = 0; i < rounds[round].length; i++) {
-            IMatch match = rounds[round][i];
-            strategy.simulate(match);
-            updateStandings(match);
-        }
-    }
-
-    private void updateStandings(IMatch match) {
-        IClub home = match.getHomeTeam();
-        IClub away = match.getAwayTeam();
-        int homeGoals = match.getHomeGoals();
-        int awayGoals = match.getAwayGoals();
-
-        Standing sh = findStanding(home);
-        Standing sa = findStanding(away);
-
-        sh.updateStats(homeGoals, awayGoals);
-        sa.updateStats(awayGoals, homeGoals);
-    }
-
-    private Standing findStanding(IClub club) {
-        for (int i = 0; i < standings.length; i++) {
-            if (standings[i].getClub().equals(club)) {
-                return (Standing) standings[i]; // ⬅️ Downcast explicado abaixo
+    private IStanding getStandingByClub(IClub club) {
+        for (IStanding standing : standings) {
+            if (standing.getTeam().getClub().equals(club)) {
+                return standing;
             }
         }
         return null;
     }
 
-    @Override
-    public int getTotalMatchesPlayed() {
-        int count = 0;
-        for (int i = 0; i < totalRounds; i++) {
-            for (int j = 0; j < rounds[i].length; j++) {
-                if (rounds[i][j].wasPlayed()) count++;
-            }
-        }
-        return count;
-    }
-
-    @Override
     public void reset() {
-        for (int i = 0; i < totalRounds; i++) {
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                if (match instanceof Match m) {
+                    m.reset();
+                }
+            }
+        }
+
+        for (IStanding standing : standings) {
+            if (standing instanceof Standing s) {
+                s.reset();
+            }
+        }
+    }
+
+    @Override
+    public void exportToJson() {
+        System.out.println("{");
+        for (int i = 0; i < rounds.length; i++) {
+            System.out.println("  \"round_" + (i + 1) + "\": [");
             for (int j = 0; j < rounds[i].length; j++) {
-                rounds[i][j].reset();
-            }
-        }
-        for (int i = 0; i < standings.length; i++) {
-            ((Standing) standings[i]).reset(); // ⬅️ Downcast: temos IStanding, mas o método reset() só existe em Standing
-        }
-    }
-
-    @Override
-    public IStanding[] getStandings() {
-        return standings;
-    }
-
-    // 🔹 Método adicional exigido pelo contrato ISchedule
-    @Override
-    public IMatch[] getMatchesForTeam(ITeam iteam) {
-        IClub club = (IClub) iteam; // ⬅️ Downcast: estamos a assumir que iteam é um IClub, pois o Schedule só trabalha com IClub
-        int count = 0;
-
-        // 1. Contar o número de jogos para alocar array
-        for (int i = 0; i < totalRounds; i++) {
-            for (IMatch match : rounds[i]) {
-                if (match.getHomeTeam().equals(club) || match.getAwayTeam().equals(club)) {
-                    count++;
+                try {
+                    rounds[i][j].exportToJson();
+                } catch (IOException e) {
+                    System.err.println("Erro ao exportar jogo da jornada " + (i + 1) + ", posição " + (j + 1));
+                    e.printStackTrace();
                 }
+                if (j < rounds[i].length - 1) System.out.println(",");
             }
+            System.out.println("  ]" + (i < rounds.length - 1 ? "," : ""));
         }
-
-        // 2. Preencher o array com os jogos
-        IMatch[] result = new IMatch[count];
-        int index = 0;
-        for (int i = 0; i < totalRounds; i++) {
-            for (IMatch match : rounds[i]) {
-                if (match.getHomeTeam().equals(club) || match.getAwayTeam().equals(club)) {
-                    result[index++] = match;
-                }
-            }
-        }
-
-        return result;
-    }
-
-    // 🔹 Método adicional exigido pelo contrato ISchedule
-    @Override
-    public void setTeam(ITeam iteam, int i) {
-        // Este método não tem uso real aqui, pois os clubes já são definidos no construtor
-        // Mas vamos implementá-lo de forma segura:
-        if (i >= 0 && i < standings.length) {
-            IClub club = (IClub) iteam; // ⬅️ Downcast: garantimos que iteam é do tipo IClub
-            standings[i] = new Standing(club);
-        }
+        System.out.println("}");
     }
 }

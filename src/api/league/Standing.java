@@ -1,53 +1,56 @@
 package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 public class Standing implements IStanding {
 
-    private IClub club;
+    private final ITeam team;
+    private int points;
     private int wins;
     private int draws;
     private int losses;
     private int goalsScored;
     private int goalsConceded;
 
-    public Standing(IClub club) {
-        this.club = club;
+    public Standing(ITeam team) {
+        this.team = team;
+        this.points = 0;
+        this.wins = 0;
+        this.draws = 0;
+        this.losses = 0;
+        this.goalsScored = 0;
+        this.goalsConceded = 0;
     }
 
     @Override
     public ITeam getTeam() {
-        return club;
+        return team;
     }
 
     @Override
     public int getPoints() {
-        return (wins * 3) + draws;
+        return points;
     }
 
     @Override
-    public void addPoints(int points) {
-        // Não usado, pois pontos são derivados de vitórias/empates.
+    public void addPoints(int p) {
+        points += p;
     }
 
     @Override
-    public void addWin(int goalsScored) {
-        this.wins++;
-        this.goalsScored += goalsScored;
+    public void addWin(int i) {
+        wins += i;
     }
 
     @Override
-    public void addDraw(int goalsScored) {
-        this.draws++;
-        this.goalsScored += goalsScored;
+    public void addDraw(int i) {
+        draws += i;
     }
 
     @Override
-    public void addLoss(int goalsScored) {
-        this.losses++;
-        this.goalsScored += goalsScored;
+    public void addLoss(int i) {
+        losses += i;
     }
 
     @Override
@@ -85,29 +88,36 @@ public class Standing implements IStanding {
         return goalsScored - goalsConceded;
     }
 
-    public IClub getClub() {
-        return club;
+    // Métodos auxiliares para atualizar os golos (opcional)
+    public void addGoalsScored(int goals) {
+        goalsScored += goals;
     }
 
-    // Método usado por Schedule para atualizar as estatísticas
-    public void updateStats(int scored, int conceded) {
-        this.goalsScored += scored;
-        this.goalsConceded += conceded;
-
-        if (scored > conceded) {
-            addWin(scored);
-        } else if (scored == conceded) {
-            addDraw(scored);
-        } else {
-            addLoss(scored);
-        }
+    public void addGoalsConceded(int goals) {
+        goalsConceded += goals;
     }
+    
+    public void updateStats(int goalsScored, int goalsConceded) {
+    this.goalsScored += goalsScored;
+    this.goalsConceded += goalsConceded;
+
+    if (goalsScored > goalsConceded) {
+        addPoints(3);
+        addWin(1);
+    } else if (goalsScored == goalsConceded) {
+        addPoints(1);
+        addDraw(1);
+    } else {
+        addLoss(1);
+    }
+}
 
     public void reset() {
-        wins = 0;
-        draws = 0;
-        losses = 0;
-        goalsScored = 0;
-        goalsConceded = 0;
+        this.points = 0;
+        this.wins = 0;
+        this.draws = 0;
+        this.losses = 0;
+        this.goalsScored = 0;
+        this.goalsConceded = 0;
     }
 }
