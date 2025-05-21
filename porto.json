@@ -1,0 +1,24 @@
+{
+  "name": "Pepê",
+  "birthDate": "1997-06-15",
+  "nationality": "Brasil",
+  "basePosition": "Right Wing",
+  "photo": "Pepê.com",
+  "number": 11
+  "shooting stats": 70,
+  "stamina stats": 95,
+  "speed stats": 95,
+  "passing stats": 80,
+}
+{
+  "name": "Rodrigo mora",
+  "birthDate": "1997-06-15",
+  "nationality": "Portufal",
+  "basePosition": "Left Wing",
+  "photo": "Rodrigo_Mora.com",
+  "number": 87
+  "shooting stats": 90,
+  "stamina stats": 90,
+  "speed stats": 85,
+  "passing stats": 85,
+}

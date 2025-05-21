@@ -28,6 +28,11 @@ public class Formation implements IFormation{
         //Ainda por implementar
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return this.displayName;
+    }
      
      
     

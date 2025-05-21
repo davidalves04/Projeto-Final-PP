@@ -19,42 +19,32 @@ import java.io.IOException;
  * @author david
  */
 public class Squad extends Team implements ITeam{
-    private IClub club;
     private IFormation formation;
-    private IPlayer []players;
     private int positionCount;
     private int teamStrengh;
     
     private String fileClub;
     private String filePlayers;
 
-    public Squad(IClub club, IFormation formation, IPlayer[] players, int positionCount, int teamStrengh, String code, String country, String logo, int foundedYear, String name, int playerCount, String stadiumName) {
-        super(code, country, logo, foundedYear, name, playerCount, stadiumName);
-        this.club = club;
+    public Squad( IFormation formation, String code, String country, String logo, int foundedYear, String name, int playerCount, String stadiumName) {
+        super(code, country, logo, foundedYear, name, stadiumName);
         this.formation = formation;
-        this.players = super.getPlayers(); 
-        this.positionCount = positionCount;
-        this.teamStrengh = teamStrengh;
+       
     }
 
     
         @Override
     public IClub getClub() {
       
-          return this.club;
+         
+          return this;
     }
 
     
-       @Override
+      @Override
     public IPlayer[] getPlayers() {
-        int count = getPlayerCount();
         
-         IPlayer[] copy = new IPlayer[count];
-    for (int i = 0; i < count; i++) {
-        copy[i] = players[i];
-    }
-    return copy; //Ira dar return de uma copia dos jogadores criados
-    
+          return super.getPlayers(); 
     }
     
     
@@ -107,9 +97,9 @@ public class Squad extends Team implements ITeam{
     @Override
     public int getPositionCount(IPlayerPosition position) {
         
-        int count = getPlayerCount();
+        int count = super.getPlayerCount();
         int total = 0;
-        
+        IPlayer[] players = super.getPlayers(); 
         
         for(int i = 0; i < count;i++){
             if (players[i].getPosition().equals(position)) { 
@@ -125,19 +115,26 @@ public class Squad extends Team implements ITeam{
     public int getTeamStrength() {
        int count = getPlayerCount();
        int totalStrength = 0;
+       IPlayer[] players = super.getPlayers(); 
+       
        for(int i = 0;i < count;i++){
                 IPlayer player = players[i];
+                if (player == null) continue; // ignora se for null (por segurança)
         
         // Soma os atributos do jogador
         int totalAtributes = player.getShooting() + player.getStamina() + player.getSpeed() + player.getPassing();
         
+        
         int playerStrength = totalAtributes / 4;
+        
+       
+        
         
         totalStrength += playerStrength; // adiciona à força total da equipa
         
        }
-        
-        
+       
+       
        return totalStrength / count; //Media de todos os atributos dos jogadores
 
     }
@@ -148,7 +145,28 @@ public class Squad extends Team implements ITeam{
        return false;
     }
 
-   
+    
+    
+    
+    public String getFileClub() {
+        return fileClub;
+    }
+
+    public void setFileClub(String fileClub) {
+        this.fileClub = fileClub;
+    }
+
+    public String getFilePlayers() {
+        return filePlayers;
+    }
+
+    public void setFilePlayers(String filePlayers) {
+        this.filePlayers = filePlayers;
+    }
+
+    
+    
+    
      @Override
     public void exportToJson() throws IOException {
          try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileClub, true))) {
@@ -160,17 +178,21 @@ public class Squad extends Team implements ITeam{
         writer.write("  \"name\": \"" + getName() + "\",\n");
         writer.write("  \"stadium\": \"" + getStadiumName() + "\"\n");
         writer.write("  \"formation\": \"" + this.formation + "\",\n");
-        writer.write("  \"teamStrength\": " + this.teamStrengh + ",\n");
+        writer.write("  \"teamStrength\": " + getTeamStrength() + ",\n");
         
         writer.write("}\n");
     } catch (IOException e) {
         System.out.println("Erro ao exportar equipa: " + e.getMessage());
     }
 
-    // Exporta os jogadores para "players.json"
+    int count = getPlayerCount();
+    IPlayer[] players = getPlayers();
+
     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePlayers, true))) {
-        for (int i = 0; i < getPlayerCount(); i++) {
-            IPlayer player = getPlayers()[i];
+        for (int i = 0; i < count; i++) {
+            
+            IPlayer player = players[i];
+            if (player == null) continue; // ignora se for null (por segurança)
             writer.write("{\n");
             writer.write("  \"name\": \"" + player.getName() + "\",\n");
             writer.write("  \"birthDate\": \"" + player.getBirthDate() + "\",\n");
@@ -178,6 +200,12 @@ public class Squad extends Team implements ITeam{
             writer.write("  \"basePosition\": \"" + player.getPosition() + "\",\n");
             writer.write("  \"photo\": \"" + player.getPhoto() + "\",\n");
             writer.write("  \"number\": " + player.getNumber() + "\n");
+            
+            writer.write("  \"shooting stats\": " + player.getShooting() + ",\n");
+            writer.write("  \"stamina stats\": " + player.getStamina() + ",\n");
+            writer.write("  \"speed stats\": " + player.getSpeed() + ",\n");
+            writer.write("  \"passing stats\": " + player.getPassing() + ",\n");
+            
             writer.write("}\n");
         }
     } catch (IOException e) {
@@ -190,3 +218,4 @@ public class Squad extends Team implements ITeam{
     
     
 }
+

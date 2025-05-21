@@ -29,17 +29,17 @@ public class Player implements IPlayer {
     private float weight;
     
     private String file;
-    private static int playerCount;
 
     private PlayerStats stats;
 
-    public Player(String name, LocalDate birth, int age, String nationality, int number, 
+    public Player(String name, LocalDate birth, int age, String nationality, int number,String photo, 
                   PlayerStats stats, IPlayerPosition position, PreferredFoot preferredFoot, 
                   float height, float weight,String file) {
         this.name = name;
         this.birth = birth;
         this.age = age;
         this.nationality = nationality;
+        this.photo = photo;
         this.number = number;
         this.stats = stats;
         this.position = position;
@@ -47,9 +47,14 @@ public class Player implements IPlayer {
         this.height = height;
         this.weight = weight;
         this.file = file;
-        playerCount++;
     }
 
+
+    
+    
+    
+    
+    
     @Override
     public String getName() {
         return this.name;
@@ -76,6 +81,7 @@ public class Player implements IPlayer {
             throw new IllegalArgumentException("Position cannot be null");
         }
         this.position = position;
+        
     }
 
     @Override
@@ -111,6 +117,7 @@ public class Player implements IPlayer {
     @Override
     public IPlayerPosition getPosition() {
         return this.position;
+        
     }
 
     @Override
@@ -128,9 +135,6 @@ public class Player implements IPlayer {
         return this.preferredFoot;
     }
     
-     public static int getPlayerCount() {
-        return playerCount;
-    }
     
 
     public String getFile() {
@@ -147,13 +151,17 @@ public class Player implements IPlayer {
     public void exportToJson() throws IOException {
                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
                   
-           writer.write("{\n");
+        writer.write("{\n");
         writer.write("  \"name\": \"" + this.name + "\",\n");
         writer.write("  \"birthDate\": \"" + this.birth + "\",\n");
         writer.write("  \"nationality\": \"" + this.nationality + "\",\n");
-        writer.write("  \"basePosition\": \"" + this.position + "\",\n");
+        writer.write("  \"basePosition\": \"" + this.position.getDescription() + "\",\n");
         writer.write("  \"photo\": \"" + this.photo + "\",\n");
         writer.write("  \"number\": " + this.number + "\n");
+        writer.write("  \"shooting stats\": " + getShooting() + ",\n");
+        writer.write("  \"stamina stats\": " + getStamina() + ",\n");
+        writer.write("  \"speed stats\": " + getSpeed() + ",\n");
+        writer.write("  \"passing stats\": " + getPassing() + ",\n");
                    
         writer.write("}\n");
     } catch (IOException e) {
@@ -163,3 +171,4 @@ public class Player implements IPlayer {
 
    
 }
+

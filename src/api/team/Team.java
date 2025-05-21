@@ -34,13 +34,13 @@ public class Team implements IClub {
    
    private IPlayer[] players;
 
-    public Team(String code, String country, String logo, int foundedYear, String name, int playerCount, String stadiumName) {
+    public Team(String code, String country, String logo, int foundedYear, String name,String stadiumName) {
         this.code = code;
         this.country = country;
         this.logo = logo;
         this.foundedYear = foundedYear;
         this.name = name;
-        this.playerCount = playerCount;
+        
         this.stadiumName = stadiumName;
         this.players = new IPlayer[MAX_PLAYERS]; // ← inicializar o array
 
