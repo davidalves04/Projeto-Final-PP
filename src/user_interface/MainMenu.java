@@ -4,7 +4,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMenu {
-
+    public static void main(String[] args) {
+        MainMenu menu = new MainMenu();
+        menu.mostrarMenu();
+    }
     public void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
         int opcao;
