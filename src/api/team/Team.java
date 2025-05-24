@@ -11,6 +11,7 @@ import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -31,6 +32,7 @@ public class Team implements IClub {
    private String name;
    private int playerCount;
    private String stadiumName;
+   private String file;
    
    private IPlayer[] players;
 
@@ -43,15 +45,27 @@ public class Team implements IClub {
         
         this.stadiumName = stadiumName;
         this.players = new IPlayer[MAX_PLAYERS]; // ← inicializar o array
-
+       
         
     }
 
     @Override
     public void addPlayer(IPlayer player) {
          if (playerCount == players.length) {
-        return; // Equipa cheia
+          throw new IllegalArgumentException("Jogador é null");
     }
+         
+      for (int i = 0; i < playerCount; i++) {
+        if (players[i].equals(player)) {
+            throw new IllegalArgumentException("Jogador já está no clube");
+        }
+    }
+
+    if (playerCount == players.length) {
+        throw new IllegalStateException("Clube cheio");
+    }
+   
+         
     players[playerCount++] = player;
     
     
@@ -88,9 +102,14 @@ public class Team implements IClub {
         return this.playerCount;
     }
 
+    
     @Override
     public IPlayer[] getPlayers() {
-        return this.players;
+      IPlayer[] copy = new IPlayer[playerCount];
+    for (int i = 0; i < playerCount; i++) {
+        copy[i] = this.players[i];
+    }
+    return copy; //Ira returna uma copia dos jogadores que estao na equipa
     }
 
     @Override
@@ -169,11 +188,35 @@ public class Team implements IClub {
     
     @Override
     public IPlayer selectPlayer(IPlayerSelector selector, IPlayerPosition position) {
-        //Ainda por implementar
-      return null;
-        //Ainda por implementar
+      
+    if (position == null) {
+        throw new IllegalArgumentException("Posição não pode ser nula");
+    }
+    if (this.getPlayerCount() == 0) {
+        throw new IllegalStateException("Clube vazio"); 
+    }
+    IPlayer player = selector.selectPlayer(this, position); //this refere-se exatamente ao objeto Team 
+    
+    if (player == null) {
+        throw new IllegalStateException("Nenhum jogador encontrado");
+    }
+    
+    return player; //ira devolver o player com base na posição (caso seja encontrado)
+
     }
 
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    
+    
+    
+    
  @Override
   public void exportToJson() throws IOException {
     try (BufferedWriter writer = new BufferedWriter(new FileWriter("clubs.json", true))) {
@@ -190,6 +233,32 @@ public class Team implements IClub {
     }
   }
       
-    
+    public void exportTeamsArrayToJson(Team[] teams, File file) {
+    try {
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+            writer.write("[\n"); //Escreve o [ inicial
+        }
+
+        
+        for (int i = 0; i < teams.length; i++) {
+            teams[i].exportToJson();  
+
+            
+            if (i < teams.length - 1) { //Assim o ultimo nao tem virgula
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+                    writer.write(",\n");
+                }
+            }
+        }
+
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.write("\n]"); //Escreve o ] final
+        }
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar lista para JSON: " + e.getMessage());
+    }
+}
     
 }

@@ -19,18 +19,24 @@ import java.io.IOException;
  * @author david
  */
 public class Squad  implements ITeam{
+    private static final int MAX_TEAM = 18; //11 inicial e 7 no banco
+    
     private IClub club;
     private IFormation formation;
     private int positionCount;
     private int teamStrengh;
     
+    private IPlayer []players;
+    private int playerCount;
     
     private String fileClub;
     private String filePlayers;
 
-    public Squad( IClub club,IFormation formation, String code, String country, String logo, int foundedYear, String name, int playerCount, String stadiumName) {
+    public Squad( IClub club,IFormation formation) {
        
+        this.club = club;
         this.formation = formation;
+        IPlayer []players = new IPlayer[MAX_TEAM];
        
     }
 
@@ -38,34 +44,45 @@ public class Squad  implements ITeam{
         @Override
     public IClub getClub() {
       
-          return this.club; //Ira retornar apenas as informaçoes que estao na classe Team (como nome,estadio,etc)
+          return this.club; 
     }
 
     
       @Override
     public IPlayer[] getPlayers() {
         
-          return this.club.getPlayers(); //Ira retornar os players do array da classe Team
+         IPlayer[] copy = new IPlayer[playerCount];
+    for (int i = 0; i < playerCount; i++) {
+        copy[i] = this.players[i];
+    }
+    return copy; //Ira returna uma copia dos jogadores que estao na equipa
+        
+   
     }
     
     
 
     @Override
     public void addPlayer(IPlayer player) {
-         if (player == null){
-             throw new IllegalArgumentException("Jogador null");
-         }
-        if (this.club.isPlayer(player)){
-            throw new IllegalStateException("Já está na equipa");
+             if (player == null) {
+         throw new IllegalArgumentException("Jogador null");
+       }
+             if (!club.isPlayer(player)) {
+        throw new IllegalStateException("Jogador não pertence ao clube");
+       }
+             if (playerCount >= players.length) {
+        throw new IllegalStateException("A equipa está cheia");
+       }
+            for (int i = 0; i < playerCount; i++) {
+           if (players[i].equals(player)) {
+            throw new IllegalStateException("Jogador já está na equipa");
+          }
         }
-        
-        //Falta implementar caso o jogador teja noutra equipa
-        
-        if (formation == null){
-            throw new IllegalStateException("Formação não definida");
+            if (formation == null) {
+        throw new IllegalStateException("Formação não definida");
         }
-        
-        this.club.addPlayer(player); // usa método original da Team
+
+    players[playerCount++] = player; // adiciona à equipa
     }
 
 
@@ -112,6 +129,25 @@ public class Squad  implements ITeam{
         return total;
     }
 
+    public IPlayer[] getPositionPlayersList(IPlayerPosition position){
+        
+    
+    
+    IPlayer[] totalPlayersPos = new IPlayer[MAX_TEAM]; // array para armazenar os jogadores encontrados
+    int count = 0; // contador de quantos jogadores foram adicionados
+
+    for (int i = 0; i < playerCount; i++) {
+        if (players[i].getPosition().equals(position)) { // compara a posição corretamente
+            totalPlayersPos[count++] = players[i]; // adiciona jogador ao array e incrementa o contador
+        }
+    }
+
+    // Opcional: podes retornar só o array completo, ou um array com o tamanho exato
+    // Aqui retorno o array completo (com possíveis posições null no fim)
+    return totalPlayersPos;
+     
+    }
+    
     @Override
     public int getTeamStrength() {
        int count = this.club.getPlayerCount();
@@ -142,8 +178,14 @@ public class Squad  implements ITeam{
 
     @Override
     public boolean isValidPositionForFormation(IPlayerPosition position) {
-       //Ainda por implementar
-       return false;
+     String pos = position.getDescription();
+
+    if (pos.equals("GK") || pos.equals("DEF") || pos.equals("MID") || pos.equals("FWD")) {
+        return true;
+    }
+
+    return false;
+       
     }
 
     

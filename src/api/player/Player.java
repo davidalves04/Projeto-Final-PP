@@ -7,6 +7,7 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -34,7 +35,7 @@ public class Player implements IPlayer {
 
     public Player(String name, LocalDate birth, int age, String nationality, int number,String photo, 
                   PlayerStats stats, IPlayerPosition position, PreferredFoot preferredFoot, 
-                  float height, float weight,String file) {
+                  float height, float weight) {
         this.name = name;
         this.birth = birth;
         this.age = age;
@@ -46,7 +47,6 @@ public class Player implements IPlayer {
         this.preferredFoot = preferredFoot;
         this.height = height;
         this.weight = weight;
-        this.file = file;
     }
 
 
@@ -157,11 +157,12 @@ public class Player implements IPlayer {
         writer.write("  \"nationality\": \"" + this.nationality + "\",\n");
         writer.write("  \"basePosition\": \"" + this.position.getDescription() + "\",\n");
         writer.write("  \"photo\": \"" + this.photo + "\",\n");
-        writer.write("  \"number\": " + this.number + "\n");
-        writer.write("  \"shooting stats\": " + getShooting() + ",\n");
-        writer.write("  \"stamina stats\": " + getStamina() + ",\n");
-        writer.write("  \"speed stats\": " + getSpeed() + ",\n");
-        writer.write("  \"passing stats\": " + getPassing() + ",\n");
+        writer.write("  \"number\": " + this.number + ",\n");
+        writer.write("  \"age\": " + this.age + ",\n");
+        writer.write("  \"shootingstats\": " + getShooting() + ",\n");
+        writer.write("  \"staminastats\": " + getStamina() + ",\n");
+        writer.write("  \"speedstats\": " + getSpeed() + ",\n");
+        writer.write("  \"passingstats\": " + getPassing() + "\n");
                    
         writer.write("}\n");
     } catch (IOException e) {
@@ -169,6 +170,33 @@ public class Player implements IPlayer {
     }
     }
 
+   public void exportPlayersArrayToJson(Player[] players, File file) {
+    try {
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+            writer.write("[\n"); //Escreve o [ inicial
+        }
+
+        
+        for (int i = 0; i < players.length; i++) {
+            players[i].exportToJson();  
+
+            
+            if (i < players.length - 1) { //Assim o ultimo nao tem virgula
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+                    writer.write(",\n");
+                }
+            }
+        }
+
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            writer.write("\n]"); //Escreve o ] final
+        }
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar lista para JSON: " + e.getMessage());
+    }
+}
    
 }
 
