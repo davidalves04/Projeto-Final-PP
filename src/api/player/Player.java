@@ -149,7 +149,9 @@ public class Player implements IPlayer {
 
     @Override
     public void exportToJson() throws IOException {
-               try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
+        File playerFile = new File(file);
+        
+               try (BufferedWriter writer = new BufferedWriter(new FileWriter(playerFile,true))) {
                   
         writer.write("{\n");
         writer.write("  \"name\": \"" + this.name + "\",\n");
@@ -170,33 +172,6 @@ public class Player implements IPlayer {
     }
     }
 
-   public void exportPlayersArrayToJson(Player[] players, File file) {
-    try {
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
-            writer.write("[\n"); //Escreve o [ inicial
-        }
-
-        
-        for (int i = 0; i < players.length; i++) {
-            players[i].exportToJson();  
-
-            
-            if (i < players.length - 1) { //Assim o ultimo nao tem virgula
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-                    writer.write(",\n");
-                }
-            }
-        }
-
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            writer.write("\n]"); //Escreve o ] final
-        }
-    } catch (IOException e) {
-        System.out.println("Erro ao exportar lista para JSON: " + e.getMessage());
-    }
-}
    
 }
 

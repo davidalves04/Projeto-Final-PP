@@ -4,6 +4,7 @@
  */
 package api.team;
 
+import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
 
@@ -97,6 +98,13 @@ public class Team implements IClub {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    
+    
+    
     @Override
     public int getPlayerCount() {
         return this.playerCount;
@@ -219,7 +227,8 @@ public class Team implements IClub {
     
  @Override
   public void exportToJson() throws IOException {
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter("clubs.json", true))) {
+     File teamFile = new File(file); 
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(teamFile, true))) {
       writer.write("{\n");
       writer.write("  \"code\": \"" + this.code + "\",\n");
       writer.write("  \"country\": \"" + this.country + "\",\n");
@@ -233,32 +242,6 @@ public class Team implements IClub {
     }
   }
       
-    public void exportTeamsArrayToJson(Team[] teams, File file) {
-    try {
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
-            writer.write("[\n"); //Escreve o [ inicial
-        }
-
-        
-        for (int i = 0; i < teams.length; i++) {
-            teams[i].exportToJson();  
-
-            
-            if (i < teams.length - 1) { //Assim o ultimo nao tem virgula
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-                    writer.write(",\n");
-                }
-            }
-        }
-
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            writer.write("\n]"); //Escreve o ] final
-        }
-    } catch (IOException e) {
-        System.out.println("Erro ao exportar lista para JSON: " + e.getMessage());
-    }
-}
+     
     
 }

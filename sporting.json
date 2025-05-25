@@ -1,0 +1,46 @@
+[
+{
+  "name": "Gyokeres",
+  "birthDate": "2000-03-15",
+  "nationality": "Suecia",
+  "basePosition": "Foward",
+  "photo": "gyokeres.png",
+  "number": 9,
+  "age": 25,
+  "shootingstats": 90,
+  "staminastats": 95,
+  "speedstats": 80,
+  "passingstats": 95
+}
+
+,
+{
+  "name": "Gyokeres",
+  "birthDate": "2000-03-15",
+  "nationality": "Suecia",
+  "basePosition": "Foward",
+  "photo": "gyokeres.png",
+  "number": 9,
+  "age": 25,
+  "shootingstats": 90,
+  "staminastats": 95,
+  "speedstats": 80,
+  "passingstats": 95
+}
+
+,
+{
+  "name": "Gyokeres",
+  "birthDate": "2000-03-15",
+  "nationality": "Suecia",
+  "basePosition": "Foward",
+  "photo": "gyokeres.png",
+  "number": 9,
+  "age": 25,
+  "shootingstats": 90,
+  "staminastats": 95,
+  "speedstats": 80,
+  "passingstats": 95
+}
+
+]
