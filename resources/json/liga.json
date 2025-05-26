@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Liga Portugal",
+    "seasons": [
+      {
+        "year": 2024,
+        "teams": [
+          {
+            "name": "FC Porto",
+            "club": {
+              "name": "Futebol Clube do Porto"
+            }
+          },
+          {
+            "name": "SL Benfica",
+            "club": {
+              "name": "Sport Lisboa e Benfica"
+            }
+          }
+        ],
+        "matches": []
+      }
+    ]
+  }
+]

@@ -5,9 +5,7 @@ import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 
 public class Match implements IMatch {
 
@@ -17,13 +15,15 @@ public class Match implements IMatch {
     private ITeam homeTeam;
     private ITeam awayTeam;
     private int round;
-    private final List<IEvent> events;
+    private IEvent[] events;
+    private int eventCount;
 
     public Match(IClub home, IClub away) {
         this.home = home;
         this.away = away;
         this.played = false;
-        this.events = new ArrayList<>();
+        this.events = new IEvent[100]; // tamanho máximo arbitrário
+        this.eventCount = 0;
     }
 
     @Override
@@ -59,23 +59,23 @@ public class Match implements IMatch {
     @Override
     public int getTotalByEvent(Class type, IClub club) {
         int count = 0;
-        for (IEvent e : events) {
-            if (type.isInstance(e)) {
-                if (e instanceof IGoalEvent) {
-                    IGoalEvent ge = (IGoalEvent) e;
-                    if (club.getPlayers() != null) {
-                        for (var p : club.getPlayers()) {
-                            if (p.equals(ge.getPlayer())) {
-                                count++;
-                                break;
-                            }
+        for (int i = 0; i < eventCount; i++) {
+            IEvent e = events[i];
+            if (type.isInstance(e) && e instanceof IGoalEvent) {
+                IGoalEvent ge = (IGoalEvent) e;
+                IPlayer[] jogadores = club.getPlayers();
+                if (jogadores != null) {
+                    for (IPlayer p : jogadores) {
+                        if (p.equals(ge.getPlayer())) {
+                            count++;
+                            break;
                         }
                     }
                 }
             }
         }
         return count;
-}
+    }
 
     @Override
     public boolean isValid() {
@@ -84,14 +84,12 @@ public class Match implements IMatch {
 
     @Override
     public ITeam getWinner() {
-        // Simplificado: número de eventos de tipo "golo"
         int homeGoals = getTotalByEvent(IGoalEvent.class, home);
         int awayGoals = getTotalByEvent(IGoalEvent.class, away);
 
-
         if (homeGoals > awayGoals) return homeTeam;
         if (awayGoals > homeGoals) return awayTeam;
-        return null; // empate
+        return null;
     }
 
     @Override
@@ -119,21 +117,27 @@ public class Match implements IMatch {
 
     @Override
     public void addEvent(IEvent event) {
-        events.add(event);
+        if (eventCount < events.length) {
+            events[eventCount++] = event;
+        }
     }
 
     @Override
     public IEvent[] getEvents() {
-        return events.toArray(new IEvent[0]);
+        IEvent[] result = new IEvent[eventCount];
+        for (int i = 0; i < eventCount; i++) {
+            result[i] = events[i];
+        }
+        return result;
     }
 
     @Override
     public int getEventCount() {
-        return events.size();
+        return eventCount;
     }
 
     public void reset() {
         played = false;
-        events.clear();
+        eventCount = 0;
     }
-}
+} 
