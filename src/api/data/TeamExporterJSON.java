@@ -1,61 +1,84 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.data;
 
+import api.team.Squad;
 import api.team.Team;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
-/**
- *
- * @author Utilizador
- */
 public class TeamExporterJSON {
-    public void exportTeamsArrayToJson(Team[] teams, String teamFile) {
-         File file = new File(teamFile);
-         
-         
-    try {
-        
-         if (file.exists() && file.length() > 0) {
-            String conteudo = new String(Files.readAllBytes(Paths.get(teamFile)));
-            if (conteudo.trim().endsWith("]")) {
-                conteudo = conteudo.trim();
-                conteudo = conteudo.substring(0, conteudo.length() - 1) + ",\n";
-                Files.write(Paths.get(teamFile), conteudo.getBytes());
-            }
-        }
-        
-       if (!file.exists()|| file.length() == 0) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(teamFile,true))) {
-            writer.write("[\n"); //Escreve o [ inicial
-        }
-            }
 
-        
-        for (int i = 0; i < teams.length; i++) {
-            teams[i].exportToJson();  
+    public void exportTeamsArrayToJson(Team[] teams, String teamFile) throws IOException {
+        File file = new File(teamFile);
+boolean existeConteudo = false;
 
-            
-            if (i < teams.length - 1) { //Assim o ultimo nao tem virgula
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-                    writer.write(",\n");
-                }
-            }
-        }
 
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            writer.write("\n]"); //Escreve o ] final
+if (file.exists() && file.length() > 0) {
+    
+    StringBuilder conteudo = new StringBuilder();
+    try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            conteudo.append(line).append("\n");
         }
-    } catch (IOException e) {
-        System.out.println("Erro ao exportar lista para JSON: " + e.getMessage());
+    }
+    String sConteudo = conteudo.toString().trim();
+    if (sConteudo.endsWith("]")) {
+        existeConteudo = true;
+       
+        sConteudo = sConteudo.substring(0, sConteudo.length() - 1);
+        
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+            writer.write(sConteudo);
+            writer.write(",\n"); 
+        }
     }
 }
+
+
+if (!existeConteudo) {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+        writer.write("[\n");
+    }
+}
+
+try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+    for (int i = 0; i < teams.length; i++) {
+        teams[i].exportToJson(); 
+
+        if (i < teams.length - 1) {
+            writer.write(",\n");
+        }
+    }
+
+   
+    writer.write("\n]");
+}
+    }
+
+    
+    
+  //Export da Squad  
+    public void exportSquadToJson(Squad squad, String squadFile) throws IOException {
+   File file = new File(squadFile);
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+        writer.write("[\n");          
+    }
+
+    
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+        squad.exportToJson();
+    }
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+        writer.write("\n]");         
+    }
+    
+    }
+    
 }

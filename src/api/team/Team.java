@@ -35,6 +35,8 @@ public class Team implements IClub {
    private String stadiumName;
    private String file;
    
+   private static int teamCount;
+   
    private IPlayer[] players;
 
     public Team(String code, String country, String logo, int foundedYear, String name,String stadiumName) {
@@ -46,7 +48,7 @@ public class Team implements IClub {
         
         this.stadiumName = stadiumName;
         this.players = new IPlayer[MAX_PLAYERS]; // ← inicializar o array
-       
+        teamCount++; // incrementa sempre que uma equipa é criada
         
     }
 
@@ -128,7 +130,7 @@ public class Team implements IClub {
     @Override
     public boolean isPlayer(IPlayer player) {
         for (int i = 0; i < playerCount; i++) { //Ira percorrer ate encontrar player e devolve true se encontrar
-        if (players[i].equals(player)) {  
+        if (players[i].getNumber() == player.getNumber()) {  
             return true;
         }
     }
@@ -169,11 +171,13 @@ public class Team implements IClub {
     private int findPlayer(IPlayer player) {
     int i = 0, pos = -1;
     while (i < playerCount && pos == -1) {
-        if (players[i].equals(player)) {  //Ira procurar o player no array
+        if (players[i].getNumber() == player.getNumber()) {  //Ira procurar o player no array
             pos = i;
         }
         i++;
     }
+    
+    
     return pos; //Devolve a posição caso seja encontrado senão ira retornar -1
 }
     
@@ -222,6 +226,16 @@ public class Team implements IClub {
     }
 
     
+    public String squadJsonFile(){
+        
+        return getCode() + ".json"; //Devolve o ficheiro onde esta a squad
+    }
+    
+    
+     public static int getTeamCount() {
+        return teamCount;
+    }
+
     
     
     
@@ -235,7 +249,7 @@ public class Team implements IClub {
       writer.write("  \"logo\": \"" + this.logo + "\",\n");
       writer.write("  \"foundedYear\": " + this.foundedYear + ",\n");
       writer.write("  \"name\": \"" + this.name + "\",\n");
-      writer.write("  \"stadiumName\": \"" + this.stadiumName + "\",\n");
+      writer.write("  \"stadiumName\": \"" + this.stadiumName + "\"\n");
       writer.write("}\n");
     } catch (IOException e) {
       System.out.println("Erro ao exportar equipa para JSON: " + e.getMessage());

@@ -2,12 +2,17 @@ package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class League implements ILeague {
     private String name;
     private ISeason[] seasons;
     private int seasonCount;
+    
+    private String file;
 
     private static final int MAX_SEASONS = 10; // Podes ajustar conforme necessário
 
@@ -61,24 +66,37 @@ public class League implements ILeague {
         return seasons[index];
     }
 
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    
+    
+    
     @Override
     public void exportToJson() {
-        try {
-            System.out.print("{");
-            System.out.print("\"name\": \"" + name + "\", ");
-            System.out.print("\"seasons\": [");
+        File fileLeague = new File(file); // ou o nome que quiser
 
-            for (int i = 0; i < seasonCount; i++) {
-                seasons[i].exportToJson();
-                if (i < seasonCount - 1) {
-                    System.out.print(", ");
-                }
-            }
-
-            System.out.print("]");
-            System.out.print("}");
-        } catch (IOException e) {
-            e.printStackTrace(); // ou logar de outra forma
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileLeague,true))) {
+        
+        writer.write("{\n");
+        writer.write("  \"name\": \"" + name + "\",\n");
+        writer.write("  \"seasons\": ");
+        for(int i = 0;i < seasons.length;i++){
+            seasons[i].exportToJson();
+            
         }
+        writer.write("}\n");
+        
+    } catch (IOException e) {
+        e.printStackTrace(); // ou logging apropriado
     }
+    
+    }
+    
 }
+    

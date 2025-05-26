@@ -4,6 +4,7 @@
  */
 package api.team;
 
+import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.IFormation;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
@@ -36,7 +37,7 @@ public class Squad  implements ITeam{
        
         this.club = club;
         this.formation = formation;
-        IPlayer []players = new IPlayer[MAX_TEAM];
+        this.players = new IPlayer[MAX_TEAM];
        
     }
 
@@ -129,6 +130,7 @@ public class Squad  implements ITeam{
         return total;
     }
 
+    
     public IPlayer[] getPositionPlayersList(IPlayerPosition position){
         
     
@@ -142,8 +144,8 @@ public class Squad  implements ITeam{
         }
     }
 
-    // Opcional: podes retornar só o array completo, ou um array com o tamanho exato
-    // Aqui retorno o array completo (com possíveis posições null no fim)
+    
+    
     return totalPlayersPos;
      
     }
@@ -199,38 +201,49 @@ public class Squad  implements ITeam{
         this.fileClub = fileClub;
     }
 
-    public String getFilePlayers() {
-        return filePlayers;
-    }
 
-    public void setFilePlayers(String filePlayers) {
-        this.filePlayers = filePlayers;
-    }
-
-    
     
     
      @Override
     public void exportToJson() throws IOException {
         
-    int count = this.club.getPlayerCount();
-    IPlayer[] players = getPlayers();
+    
+    
 
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePlayers, true))) {
-        for (int i = 0; i < count; i++) {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileClub))) {
+        
             
-            IPlayer player = players[i];
-            if (player == null) continue; // ignora se for null (por segurança)
+            
+            
              // Formação
-        writer.write("  \"formation\": {\n");
-        writer.write("    \"description\": \"" + formation.getDisplayName() + "\"\n");
-        writer.write("    \"tatical advantage\": \"" + formation.getTacticalAdvantage(formation)+ "\"\n");
-        writer.write("  },\n");
+        writer.write("{\n");
+        writer.write("    \"formation\": \"" + formation.getDisplayName() + "\",\n");
+       
+        for(int i = 0;i < this.playerCount;i++){
+            writer.write("{\n");
+        writer.write("  \"name\": \"" + players[i].getName() + "\",\n");
+        writer.write("  \"birthDate\": \"" + players[i].getBirthDate() + "\",\n");
+        writer.write("  \"nationality\": \"" + players[i].getNationality() + "\",\n");
+        writer.write("  \"basePosition\": \"" + players[i].getPosition() + "\",\n");
+        writer.write("  \"photo\": \"" + players[i].getPhoto() + "\",\n");
+        writer.write("  \"number\": " + players[i].getNumber() + ",\n");
+        writer.write("  \"age\": " + players[i].getAge() + ",\n");
+        writer.write("  \"height\": " + players[i].getHeight()  + ",\n");
+        writer.write("  \"weight\": " + players[i].getWeight() + ",\n");
+      
+        writer.write("  \"shootingstats\": " + players[i].getShooting() + ",\n");
+        writer.write("  \"staminastats\": " + players[i].getStamina() + ",\n");
+        writer.write("  \"speedstats\": " + players[i].getSpeed() + ",\n");
+        writer.write("  \"passingstats\": " + players[i].getPassing() + "\n");
+                   
+        writer.write("}\n");
+        }
+        
 
         // Força da equipa
-        writer.write("  \"teamStrength\": " + getTeamStrength() + ",\n");
+        writer.write("  \"teamStrength\": " + getTeamStrength() + "\n");
             writer.write("}\n");
-        }
+        
     } catch (IOException e) {
         System.out.println("Erro ao exportar jogadores: " + e.getMessage());
     }

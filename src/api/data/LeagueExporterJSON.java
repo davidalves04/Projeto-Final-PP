@@ -4,8 +4,11 @@
  */
 package api.data;
 
-import api.player.Player;
+
+import api.league.League;
+
 import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
@@ -17,13 +20,9 @@ import java.io.IOException;
  *
  * @author Utilizador
  */
-public class PlayerExporterJSON {
-    
-    
-    
-    
-    public void exportPlayersArrayToJson(Player[] players, String playerFile) throws IOException {
- File file = new File(playerFile);
+public class LeagueExporterJSON {
+   public void exportLeaguesArrayToJson(League[] leagues, String leagueFile) throws IOException {
+ File file = new File(leagueFile);
 boolean existeConteudo = false;
 
 // 1) Le o conteúdo para verificar se já tem conteúdo JSON
@@ -59,10 +58,10 @@ if (!existeConteudo) {
 
 // 3) Agora abre o arquivo para append, e para cada equipa chama exportToJson()
 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-    for (int i = 0; i < players.length; i++) {
-        players[i].exportToJson(); // supondo que exportToJson agora recebe BufferedWriter
+    for (int i = 0; i < leagues.length; i++) {
+        leagues[i].exportToJson(); // supondo que exportToJson agora recebe BufferedWriter
 
-        if (i < players.length - 1) {
+        if (i < leagues.length - 1) {
             writer.write(",\n");
         }
     }
@@ -71,5 +70,4 @@ try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
     writer.write("\n]");
 }
 }
-    
 }

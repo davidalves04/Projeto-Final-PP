@@ -161,6 +161,8 @@ public class Player implements IPlayer {
         writer.write("  \"photo\": \"" + this.photo + "\",\n");
         writer.write("  \"number\": " + this.number + ",\n");
         writer.write("  \"age\": " + this.age + ",\n");
+        writer.write("  \"height\": " + this.height + ",\n");
+        writer.write("  \"weight\": " + this.weight + ",\n");
         writer.write("  \"shootingstats\": " + getShooting() + ",\n");
         writer.write("  \"staminastats\": " + getStamina() + ",\n");
         writer.write("  \"speedstats\": " + getSpeed() + ",\n");
