@@ -39,6 +39,7 @@ public class Season implements ISeason {
         IMatch[][] generatedRounds = MatchGenerator.generateRoundRobinMatches(clubs, maxRounds); // Deves implementar isto ou adaptar
         ITeam[] teams = java.util.Arrays.copyOf(clubs, clubs.length, ITeam[].class);
         this.schedule = new Schedule(generatedRounds, teams);
+        
     }
 
     @Override
@@ -186,8 +187,16 @@ public class Season implements ISeason {
         return clubs;
     }
 
+    
+    public void setExportFile(String file) {
+    if (schedule instanceof Schedule s) {
+        s.setFile(file);
+    }
+}
+    
     @Override
     public void exportToJson() throws IOException {
+        
         schedule.exportToJson();
     }
 }

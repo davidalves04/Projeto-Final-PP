@@ -6,6 +6,9 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Match implements IMatch {
 
@@ -18,6 +21,8 @@ public class Match implements IMatch {
     private IEvent[] events;
     private int eventCount;
 
+    private String file;
+    
     public Match(IClub home, IClub away) {
         this.home = home;
         this.away = away;
@@ -110,10 +115,61 @@ public class Match implements IMatch {
         }
     }
 
-    @Override
-    public void exportToJson() {
-        System.out.println("{ \"home\": \"" + home.getName() + "\", \"away\": \"" + away.getName() + "\", \"played\": " + played + " }");
+    public String getFile() {
+        return file;
     }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    
+    
+   @Override
+    public void exportToJson() {
+         
+        
+               try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
+                  
+       writer.write("{\n");
+      
+       
+        writer.write(" \"home\": \n");
+        
+        writer.write("{\n");
+      writer.write("  \"code\": \"" + home.getCode() + "\",\n");
+      writer.write("  \"country\": \"" + home.getCountry() + "\",\n");
+      writer.write("  \"logo\": \"" + home.getLogo() + "\",\n");
+      writer.write("  \"foundedYear\": " + home.getFoundedYear() + ",\n");
+      writer.write("  \"name\": \"" + home.getName() + "\",\n");
+      writer.write("  \"stadiumName\": \"" + home.getStadiumName() + "\"\n");
+      writer.write("},\n");
+
+      writer.write(" \"away\": \n");
+      writer.write("{\n");
+      writer.write("  \"code\": \"" + away.getCode() + "\",\n");
+      writer.write("  \"country\": \"" + away.getCountry() + "\",\n");
+      writer.write("  \"logo\": \"" + away.getLogo() + "\",\n");
+      writer.write("  \"foundedYear\": " + away.getFoundedYear() + ",\n");
+      writer.write("  \"name\": \"" + away.getName() + "\",\n");
+      writer.write("  \"stadiumName\": \"" + away.getStadiumName() + "\"\n");
+      writer.write("},\n");
+    
+        
+    
+    writer.write(" \"played\": " + played + ",\n");
+    writer.write(" \"round\": " + round + ",\n");
+
+
+                   
+        writer.write("}\n");
+        
+        
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar para JSON: " + e.getMessage());
+    }
+    }
+
 
     @Override
     public void addEvent(IEvent event) {

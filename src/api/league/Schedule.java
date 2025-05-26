@@ -6,6 +6,8 @@ import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Schedule implements ISchedule {
@@ -13,6 +15,9 @@ public class Schedule implements ISchedule {
     private final IMatch[][] rounds;
     private final IStanding[] standings;
 
+    private int matchCount;
+    private String file;
+    
     public Schedule(IMatch[][] rounds, ITeam[] teams) {
         this.rounds = rounds;
         this.standings = new IStanding[teams.length];
@@ -119,22 +124,41 @@ public class Schedule implements ISchedule {
         }
     }
 
-    @Override
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    
+    
+    
+ @Override
     public void exportToJson() {
-        System.out.println("{");
-        for (int i = 0; i < rounds.length; i++) {
-            System.out.println("  \"round_" + (i + 1) + "\": [");
-            for (int j = 0; j < rounds[i].length; j++) {
-                try {
-                    rounds[i][j].exportToJson();
-                } catch (IOException e) {
-                    System.err.println("Erro ao exportar jogo da jornada " + (i + 1) + ", posição " + (j + 1));
-                    e.printStackTrace();
-                }
-                if (j < rounds[i].length - 1) System.out.println(",");
-            }
-            System.out.println("  ]" + (i < rounds.length - 1 ? "," : ""));
+       
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
+
+        
+        writer.write("{\n");
+        writer.write("\n  \"round_" + (matchCount + 1) + "\": \n");
+        
+        for(int i= 0; i < rounds.length;i++){
+            
+        for(int j = 0;j < rounds[i].length;j++){
+            rounds[i][j].exportToJson();
         }
-        System.out.println("}");
+        }
+        writer.write("}\n");
+        
+        
+        
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar para JSON: " + e.getMessage());
+    }
+    
+     this.matchCount++;
+     
     }
 }

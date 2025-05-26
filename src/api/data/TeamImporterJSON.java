@@ -29,7 +29,7 @@ import java.time.LocalDate;
 public class TeamImporterJSON {
     private final static int MAX_TEAM = 18;
     // Importa um objeto Team a partir de um JSON
-    private static Team readTeamFromParser(JsonParser parser) throws IOException {
+    public static Team readTeamFromParser(JsonParser parser) throws IOException {
         String code = null;
         String country = null;
         String logo = null;
@@ -85,6 +85,7 @@ public class TeamImporterJSON {
 
         parser.close();
         return teams;
+        
     }
     
     
