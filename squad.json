@@ -1,0 +1,24 @@
+[
+  {
+    "clubName": "Futebol Clube do Porto",
+    "formation": "4-3-3",
+    "players": [
+      {
+        "name": "Thomas Peres",
+  "birthDate": "2005-05-15",
+  "nationality": "Argentina",
+  "basePosition": "mid",
+  "photo": "thomas_peres.png",
+  "number": 20,
+  "age": 19,
+  "height": 1.85,
+  "weight": 75.0,
+  "shootingstats": 80,
+  "staminastats": 90,
+  "speedstats": 80,
+  "passingstats": 85     
+ }
+    ],
+    "teamStrength": 85
+  }
+]

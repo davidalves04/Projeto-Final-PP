@@ -1,5 +1,6 @@
 package api.league;
 
+import api.data.TeamImporterJSON;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.league.ISchedule;
@@ -7,7 +8,10 @@ import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import utils.JsonAccumulator;
 
 /**
  * Implementação da interface {@link ISeason} que representa uma época desportiva
@@ -26,7 +30,12 @@ public class Season implements ISeason {
     private final IClub[] clubs;
     private ISchedule schedule;
     private int currentRound;
+    private int numberOfClubs;
     private MatchSimulatorStrategy simulator;
+    private IMatch[][] generatedRounds;
+    private ITeam[] teams;
+    
+   private JsonAccumulator jsonAccumulator;
 
     /**
      * Constrói uma época com os parâmetros dados.
@@ -51,11 +60,21 @@ public class Season implements ISeason {
         this.pointsPerDraw = pointsPerDraw;
         this.pointsPerLoss = pointsPerLoss;
         this.clubs = clubs;
+        
         this.currentRound = 0;
 
-        IMatch[][] generatedRounds = MatchGenerator.generateRoundRobinMatches(clubs, maxRounds);
-        ITeam[] teams = java.util.Arrays.copyOf(clubs, clubs.length, ITeam[].class);
-        this.schedule = new Schedule(generatedRounds, teams);
+
+        
+
+        this.numberOfClubs = 0;
+        
+        
+       
+        
+        
+        
+        
+
     }
 
     /**
@@ -66,12 +85,47 @@ public class Season implements ISeason {
         return year;
     }
 
+
     /**
      * {@inheritDoc}
      */
+   
+    public void generateMatchesAutomatically() {
+    this.generatedRounds = MatchGenerator.generateRoundRobinMatches(clubs, maxRounds);
+    
+}
+    
+    
+     private int findClub(IClub club) {
+    int i = 0, pos = -1;
+    while (i < numberOfClubs && pos == -1) {
+        if (clubs[i].getCode().equals(club.getCode())) { 
+            pos = i;
+        }
+        i++;
+    }
+    
+    
+    return pos; //Devolve a posição caso seja encontrado senão ira retornar -1
+}
+    
+    
     @Override
     public boolean addClub(IClub iclub) {
-        return false; // funcionalidade não suportada
+        //Se o schedule for gerado nao pode adicionar
+        if (this.schedule != null) {
+        return false;
+    }
+
+    // Não pode adicionar se já atingiu o máximo
+    if (numberOfClubs >= maxTeams) {
+        return false;
+    }
+
+    clubs[numberOfClubs++] = iclub;
+    return true;
+       
+
     }
 
     /**
@@ -79,15 +133,33 @@ public class Season implements ISeason {
      */
     @Override
     public boolean removeClub(IClub iclub) {
-        return false; // funcionalidade não suportada
+
+    
+      // Se o schedule já foi gerado, não permite remover
+    if (schedule != null) {
+        return false;
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    int pos = findClub(iclub);
+    if (pos == -1) {
+        return false; // clube não encontrado
+    }
+
+    // Remove o clube deslocando os elementos do array
+    for (int i = pos; i < numberOfClubs - 1; i++) {
+        clubs[i] = clubs[i + 1];
+    }
+
+    clubs[--numberOfClubs] = null;
+
+    return true; // remoção bem sucedida
+}
+    
+
+
     @Override
     public void generateSchedule() {
-        // já gerado no construtor
+        this.schedule = new Schedule(generatedRounds, teams); //Chamar o metodo para gerar o Schedule
     }
 
     /**
@@ -98,9 +170,25 @@ public class Season implements ISeason {
         return schedule.getAllMatches();
     }
 
+
     /**
      * {@inheritDoc}
      */
+
+    
+    public void setTeams(String teamFile,IClub[] clubs) throws IOException{
+        
+        this.teams = TeamImporterJSON.squadsFromJson(teamFile, clubs);
+    }
+    
+    
+    public void setMatches(IMatch[][] matches){ //Quando for para importar as matches do ficheiro JSON
+                                                //Caso ja tenha sido gerado as matches
+        this.generatedRounds = matches;
+        
+    }
+    
+
     @Override
     public IMatch[] getMatches(int round) {
         return schedule.getMatchesForRound(round);
@@ -275,24 +363,35 @@ public class Season implements ISeason {
         return clubs;
     }
 
-    /**
-     * Define o caminho do ficheiro para exportar os resultados em JSON.
-     *
-     * @param file nome do ficheiro de destino
-     */
-    public void setExportFile(String file) {
-        if (schedule instanceof Schedule s) {
-            s.setFile(file);
-        }
+
+  
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
     }
 
-    /**
+  
+/**
      * Exporta os resultados da época para um ficheiro JSON.
      *
      * @throws IOException se ocorrer erro ao escrever no ficheiro
      */
+    
     @Override
     public void exportToJson() throws IOException {
-        schedule.exportToJson();
-    }
+        jsonAccumulator.append("  {");
+    jsonAccumulator.append("    \"name\": \"" + name + "\",");
+    jsonAccumulator.append("    \"year\": " + year + ",");
+    jsonAccumulator.append("    \"maxTeams\": " + maxTeams + ",");
+    jsonAccumulator.append("    \"maxRounds\": " + maxRounds + ",");
+    jsonAccumulator.append("    \"pointsPerWin\": " + pointsPerWin + ",");
+    jsonAccumulator.append("    \"pointsPerDraw\": " + pointsPerDraw + ",");
+    jsonAccumulator.append("    \"pointsPerLoss\": " + pointsPerLoss + ",");
+
+    ((Schedule) schedule).setJsonAccumulator(jsonAccumulator);
+    schedule.exportToJson();
+
+    jsonAccumulator.append("  }");
+}
+    
+
 }

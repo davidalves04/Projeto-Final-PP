@@ -226,9 +226,9 @@ public class Team implements IClub {
     }
 
     
-    public String squadJsonFile(){
-        
-        return getCode() + ".json"; //Devolve o ficheiro onde esta a squad
+    
+    public String playerJsonFile(){
+        return getCode() + ".json";
     }
     
     
@@ -247,9 +247,9 @@ public class Team implements IClub {
       writer.write("  \"code\": \"" + this.code + "\",\n");
       writer.write("  \"country\": \"" + this.country + "\",\n");
       writer.write("  \"logo\": \"" + this.logo + "\",\n");
-      writer.write("  \"foundedYear\": " + this.foundedYear + ",\n");
+      writer.write("  \"founded\": " + this.foundedYear + ",\n");
       writer.write("  \"name\": \"" + this.name + "\",\n");
-      writer.write("  \"stadiumName\": \"" + this.stadiumName + "\"\n");
+      writer.write("  \"stadium\": \"" + this.stadiumName + "\"\n");
       writer.write("}\n");
     } catch (IOException e) {
       System.out.println("Erro ao exportar equipa para JSON: " + e.getMessage());

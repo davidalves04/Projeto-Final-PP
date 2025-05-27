@@ -6,9 +6,9 @@ import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+
 import java.io.IOException;
+import utils.JsonAccumulator;
 
 /**
  * Implementação de um calendário de jogos (Schedule) para uma competição de futebol.
@@ -19,7 +19,8 @@ public class Schedule implements ISchedule {
     private final IMatch[][] rounds;
     private final IStanding[] standings;
     private int matchCount;
-    private String file;
+
+     private JsonAccumulator jsonAccumulator;
 
     /**
      * Construtor da classe Schedule.
@@ -27,6 +28,9 @@ public class Schedule implements ISchedule {
      * @param rounds Matriz de jogos organizada por jornadas.
      * @param teams  Array com todas as equipas participantes.
      */
+
+
+   
     public Schedule(IMatch[][] rounds, ITeam[] teams) {
         this.rounds = rounds;
         this.standings = new IStanding[teams.length];
@@ -178,44 +182,48 @@ public class Schedule implements ISchedule {
         }
     }
 
-    /**
-     * Retorna o caminho do ficheiro de exportação.
-     *
-     * @return Caminho do ficheiro.
-     */
-    public String getFile() {
-        return file;
-    }
 
-    /**
-     * Define o caminho do ficheiro de exportação.
-     *
-     * @param file Caminho do ficheiro.
-     */
-    public void setFile(String file) {
-        this.file = file;
+
+   
+    
+    
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
     }
 
     /**
      * Exporta o conteúdo do calendário para um ficheiro JSON.
      */
-    @Override
-    public void exportToJson() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            writer.write("{\n");
-            writer.write("\n  \"round_" + (matchCount + 1) + "\": \n");
+    
+    
+ @Override
+    public void exportToJson() throws IOException {
+       
+ jsonAccumulator.append("  \"rounds\": {");
 
-            for (int i = 0; i < rounds.length; i++) {
-                for (int j = 0; j < rounds[i].length; j++) {
-                    rounds[i][j].exportToJson();
-                }
+    for (int i = 0; i < rounds.length; i++) {
+        jsonAccumulator.append("    \"round_" + (i + 1) + "\": [");
+
+        for (int j = 0; j < rounds[i].length; j++) {
+            ((Match) rounds[i][j]).setJsonAccumulator(jsonAccumulator);
+            rounds[i][j].exportToJson();
+
+            if (j < rounds[i].length - 1) {
+                jsonAccumulator.append(",");
             }
-
-            writer.write("}\n");
-        } catch (IOException e) {
-            System.out.println("Erro ao exportar para JSON: " + e.getMessage());
         }
 
-        this.matchCount++;
+        jsonAccumulator.append("    ]" + (i < rounds.length - 1 ? "," : "")); //Se for o ultimo nao mete virgula
     }
+
+    jsonAccumulator.append("  }");
+ 
+    
+    
+    
+    }
+    
+    
+
 }

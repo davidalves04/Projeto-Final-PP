@@ -1,86 +1,252 @@
+
 package api.data;
 
+import static api.data.TeamImporterJSON.readTeamFromParser;
 import api.league.League;
+import api.league.Match;
+
+
+
+import api.league.Season;
+
+
+import api.team.Team;
 import com.fasterxml.jackson.core.JsonFactory;
+
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.ppstudios.footballmanager.api.contracts.league.ISeason;
+
+
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
+
 import java.io.File;
 import java.io.IOException;
 
 
+
+
+
+/**
+ *
+ * @author Utilizador
+ */
 public class LeagueImporterJSON {
-    private static League readLeagueFromParser(JsonParser parser) throws IOException {
-        String name = null;
-        // Temporariamente guardamos as seasons como null (ou vazio)
-        ISeason[] seasons = new ISeason[0];
 
-        while (parser.nextToken() != JsonToken.END_OBJECT) {
-            String field = parser.getCurrentName();
-            parser.nextToken();
+    public static League readLeagueFromFile(String filePath) throws IOException {
+    JsonFactory factory = new JsonFactory();
+    JsonParser parser = factory.createParser(new File(filePath));
 
-            switch (field) {
-                case "name" -> name = parser.getValueAsString();
-                case "seasons" -> {
-                    if (parser.currentToken() == JsonToken.START_ARRAY) {
-                       
-                        seasons = readSeasonsArray(parser);
-                    } else {
-                        parser.skipChildren();
-                    }
-                }
-                default -> parser.skipChildren();
-            }
-        }
+    String leagueName = null;
+    Season[] seasons = null;
+    int seasonsCount = 0;
 
-        League league = new League(name);
-
-        // Adiciona as seasons (aqui só adiciona as vazias, tu podes adaptar depois)
-        for (ISeason season : seasons) {
-            league.createSeason(season);
-        }
-        return league;
+    if (parser.nextToken() != JsonToken.START_OBJECT) {
+        parser.close();
+        throw new IOException("Esperado objeto JSON para a liga");
     }
 
-    // Método para ler array de seasons (por enquanto vazio)
-    private static ISeason[] readSeasonsArray(JsonParser parser) throws IOException {
-        // Avança até o fim do array ignorando o conteúdo por enquanto
-        while (parser.nextToken() != JsonToken.END_ARRAY) {
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+
+        if ("name".equals(field)) {
+            leagueName = parser.getValueAsString();
+        } else if ("seasons".equals(field)) {
+            if (parser.currentToken() != JsonToken.START_ARRAY) {
+                parser.close();
+                throw new IOException("Esperado array para seasons");
+            }
+            
+            // Primeiro passo: contar as seasons
+            JsonParser tempParser = factory.createParser(new File(filePath));
+            while (tempParser.nextToken() != JsonToken.START_ARRAY) {} // pular até array de seasons
+            seasonsCount = 0;
+            while (tempParser.nextToken() == JsonToken.START_OBJECT) {
+                seasonsCount++;
+                tempParser.skipChildren();
+            }
+            tempParser.close();
+
+            seasons = new Season[seasonsCount];
+
+            // Agora, ler as seasons de verdade (parser já está no começo do array)
+            int i = 0;
+            while (parser.nextToken() == JsonToken.START_OBJECT) {
+                seasons[i++] = readSeasonFromParser(parser);
+            }
+        } else {
             parser.skipChildren();
         }
-        return new ISeason[0];
+    }
+    parser.close();
+
+    League league = new League(leagueName);
+    for (int i = 0; i < seasonsCount; i++) {
+        league.createSeason(seasons[i]);
+    }
+
+    return league;
+}
+    
+    
+      
+    
+ 
+    
+     private static Season readSeasonFromParser(JsonParser parser) throws IOException {
+         
+         String name = null;
+    int year  = 0; 
+    int pointsPerWin = 0;
+    int pointsPerLoss = 0;
+    int pointsPerDraw = 0;
+    int maxTeams = 0;
+    int maxRounds = 0;
+    Match[][] currentMatches = null;
+
+    if (parser.currentToken() != JsonToken.START_OBJECT) {
+        throw new IOException("Esperado objeto de season");
+    }
+
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+
+        switch (field) {
+            case "name" -> name = parser.getValueAsString(); 
+            case "year" -> year = parser.getIntValue();
+            case "maxTeams" -> maxTeams = parser.getIntValue();
+            case "maxRounds" -> maxRounds = parser.getIntValue();
+            case "pointsPerWin" -> pointsPerWin = parser.getIntValue();
+            case "pointsPerLoss" -> pointsPerLoss = parser.getIntValue();
+            case "pointsPerDraw" -> pointsPerDraw = parser.getIntValue();
+            case "rounds" -> {
+                // Aqui o parser está no START_OBJECT de "rounds"
+                currentMatches = roundsFromJson(parser, maxRounds, 10);
+            }
+            default -> parser.skipChildren();
+        }
+    }
+
+    IClub[] clubs = TeamImporterJSON.teamsFromJson("clubs.json");
+    
+    
+    Season season = new Season(name, year, maxTeams, maxRounds, pointsPerWin, pointsPerLoss, pointsPerDraw, clubs);
+    if (currentMatches != null) {
+        season.setMatches(currentMatches);
+    }
+    season.setTeams("squad.json", clubs);
+    season.generateSchedule();
+    
+        return season;
+        
+    }
+    
+   
+    private static Match readMatchFromParser(JsonParser parser) throws IOException {
+        
+       Team home = null;
+    Team away = null;
+    boolean played = false;
+    int round = 0;
+
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+
+        switch (field) {
+            case "home" -> home = readTeamFromParser(parser);
+            case "away" -> away = readTeamFromParser(parser);
+            case "played" -> played = parser.getBooleanValue();
+            case "round" -> round = parser.getIntValue();
+            default -> parser.skipChildren();
+        }
+    }
+
+    Match match = new Match(home, away);
+    match.setRound(round);
+    if (played) {
+        match.setPlayed();
+    }
+    return match;
     }
 
     
-    // Importa um array de ligas a partir de um ficheiro JSON
-    public static League[] leaguesFromJson(String filePath) throws IOException {
-        JsonFactory factory = new JsonFactory();
-        JsonParser parser = factory.createParser(new File(filePath));
+public static Season[] readSeasonsFromFile(String filePath) throws IOException {
+    JsonFactory factory = new JsonFactory();
+    JsonParser parser = factory.createParser(new File(filePath));
 
-        if (parser.nextToken() != JsonToken.START_ARRAY) {
-            parser.close();
-            throw new IOException("JSON inválido: esperado um array de ligas");
-        }
+    Season[] seasons = null;
+    int seasonsCount = 0;
 
-        // Conta quantas ligas tem o array
-        int count = 0;
-        while (parser.nextToken() == JsonToken.START_OBJECT) {
-            count++;
+    if (parser.nextToken() != JsonToken.START_OBJECT) {
+        parser.close();
+        throw new IOException("Esperado objeto JSON no início");
+    }
+
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+
+        if ("seasons".equals(field)) {
+            if (parser.currentToken() != JsonToken.START_ARRAY) {
+                parser.close();
+                throw new IOException("Esperado array para seasons");
+            }
+
+            // Contar seasons
+            JsonParser tempParser = factory.createParser(new File(filePath));
+            while (tempParser.nextToken() != JsonToken.START_ARRAY) {} // pular até array seasons
+            seasonsCount = 0;
+            while (tempParser.nextToken() == JsonToken.START_OBJECT) {
+                seasonsCount++;
+                tempParser.skipChildren();
+            }
+            tempParser.close();
+
+            seasons = new Season[seasonsCount];
+
+            // Ler seasons para o array
+            int i = 0;
+            while (parser.nextToken() == JsonToken.START_OBJECT) {
+                seasons[i++] = readSeasonFromParser(parser);
+            }
+        } else {
             parser.skipChildren();
         }
-        parser.close();
+    }
+    parser.close();
 
-        League[] leagues = new League[count];
+    return seasons;
+}
+      
+    private static Match[][] roundsFromJson(JsonParser parser, int maxRounds, int matchesPerRound) throws IOException {
+    Match[][] rounds = new Match[maxRounds][matchesPerRound];
 
-        parser = factory.createParser(new File(filePath));
-        parser.nextToken(); // pula START_ARRAY
+    if (parser.currentToken() != JsonToken.START_OBJECT)
+        throw new IOException("Esperado objeto de rounds");
+
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String roundKey = parser.getCurrentName(); 
+        parser.nextToken();
+
+       int roundIndex = Integer.parseInt(roundKey.split("_")[1]) - 1;
+
+
+        if (parser.currentToken() != JsonToken.START_ARRAY)
+            throw new IOException("Esperado array de jogos para " + roundKey);
 
         int i = 0;
         while (parser.nextToken() == JsonToken.START_OBJECT) {
-            leagues[i++] = readLeagueFromParser(parser);
+            rounds[roundIndex][i++] = readMatchFromParser(parser);
         }
+    }
 
-        parser.close();
-        return leagues;
+    return rounds;
 }
+
+  
+    
+    
 }

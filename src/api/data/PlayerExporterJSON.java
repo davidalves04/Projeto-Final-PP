@@ -60,6 +60,7 @@ if (!existeConteudo) {
 // 3) Agora abre o arquivo para append, e para cada equipa chama exportToJson()
 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
     for (int i = 0; i < players.length; i++) {
+        players[i].setFile(playerFile);
         players[i].exportToJson(); // supondo que exportToJson agora recebe BufferedWriter
 
         if (i < players.length - 1) {

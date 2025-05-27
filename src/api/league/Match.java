@@ -6,9 +6,8 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import utils.JsonAccumulator;
 
 /**
  * Implementação da interface {@link IMatch}, representando um jogo entre dois clubes.
@@ -23,7 +22,7 @@ public class Match implements IMatch {
     private int round;
     private IEvent[] events;
     private int eventCount;
-    private String file;
+
 
     /**
      * Construtor que inicializa um jogo entre dois clubes.
@@ -31,12 +30,21 @@ public class Match implements IMatch {
      * @param home clube da casa
      * @param away clube visitante
      */
+
+
+
+    
+    private JsonAccumulator jsonAccumulator;
+
+    
+
     public Match(IClub home, IClub away) {
         this.home = home;
         this.away = away;
         this.played = false;
         this.events = new IEvent[100]; // tamanho máximo arbitrário
         this.eventCount = 0;
+       
     }
 
     /**
@@ -183,61 +191,49 @@ public class Match implements IMatch {
         }
     }
 
-    /**
-     * Retorna o caminho do ficheiro onde o jogo será exportado.
-     *
-     * @return caminho do ficheiro
-     */
-    public String getFile() {
-        return file;
-    }
-
-    /**
-     * Define o caminho do ficheiro onde o jogo será exportado.
-     *
-     * @param file caminho do ficheiro
-     */
-    public void setFile(String file) {
-        this.file = file;
-    }
-
+    
+    public void setJsonAccumulator(JsonAccumulator accumulator) {
+    this.jsonAccumulator = accumulator;
+}
+    
     /**
      * Exporta os dados do jogo para um ficheiro JSON.
      * Inclui dados dos clubes da casa e visitante, se o jogo foi jogado e o número da jornada.
      */
-    @Override
+    
+    
+   @Override
     public void exportToJson() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-            writer.write("{\n");
+    if (jsonAccumulator == null) {
+        System.err.println("JsonAccumulator não definido para Match!");
+        return;
+    }
 
-            writer.write(" \"home\": \n");
-            writer.write("{\n");
-            writer.write("  \"code\": \"" + home.getCode() + "\",\n");
-            writer.write("  \"country\": \"" + home.getCountry() + "\",\n");
-            writer.write("  \"logo\": \"" + home.getLogo() + "\",\n");
-            writer.write("  \"foundedYear\": " + home.getFoundedYear() + ",\n");
-            writer.write("  \"name\": \"" + home.getName() + "\",\n");
-            writer.write("  \"stadiumName\": \"" + home.getStadiumName() + "\"\n");
-            writer.write("},\n");
+    jsonAccumulator.append("{\n");
 
-            writer.write(" \"away\": \n");
-            writer.write("{\n");
-            writer.write("  \"code\": \"" + away.getCode() + "\",\n");
-            writer.write("  \"country\": \"" + away.getCountry() + "\",\n");
-            writer.write("  \"logo\": \"" + away.getLogo() + "\",\n");
-            writer.write("  \"foundedYear\": " + away.getFoundedYear() + ",\n");
-            writer.write("  \"name\": \"" + away.getName() + "\",\n");
-            writer.write("  \"stadiumName\": \"" + away.getStadiumName() + "\"\n");
-            writer.write("},\n");
+    jsonAccumulator.append(" \"home\": {\n");
+    jsonAccumulator.append("  \"code\": \"" + home.getCode() + "\",\n");
+    jsonAccumulator.append("  \"country\": \"" + home.getCountry() + "\",\n");
+    jsonAccumulator.append("  \"logo\": \"" + home.getLogo() + "\",\n");
+    jsonAccumulator.append("  \"foundedYear\": " + home.getFoundedYear() + ",\n");
+    jsonAccumulator.append("  \"name\": \"" + home.getName() + "\",\n");
+    jsonAccumulator.append("  \"stadiumName\": \"" + home.getStadiumName() + "\"\n");
+    jsonAccumulator.append(" },\n");
 
-            writer.write(" \"played\": " + played + ",\n");
-            writer.write(" \"round\": " + round + ",\n");
+    jsonAccumulator.append(" \"away\": {\n");
+    jsonAccumulator.append("  \"code\": \"" + away.getCode() + "\",\n");
+    jsonAccumulator.append("  \"country\": \"" + away.getCountry() + "\",\n");
+    jsonAccumulator.append("  \"logo\": \"" + away.getLogo() + "\",\n");
+    jsonAccumulator.append("  \"foundedYear\": " + away.getFoundedYear() + ",\n");
+    jsonAccumulator.append("  \"name\": \"" + away.getName() + "\",\n");
+    jsonAccumulator.append("  \"stadiumName\": \"" + away.getStadiumName() + "\"\n");
+    jsonAccumulator.append(" },\n");
 
-            writer.write("}\n");
+    jsonAccumulator.append(" \"played\": " + played + ",\n");
+    jsonAccumulator.append(" \"round\": " + round + "\n");
 
-        } catch (IOException e) {
-            System.out.println("Erro ao exportar para JSON: " + e.getMessage());
-        }
+    jsonAccumulator.append("}");
+
     }
 
     /**

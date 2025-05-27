@@ -6,6 +6,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import utils.JsonAccumulator;
 
 /**
  * Implementação da interface {@link ILeague}, representando uma liga de futebol
@@ -125,20 +126,44 @@ public class League implements ILeague {
      * Cada época também será exportada através do seu próprio método {@code exportToJson()}.
      * O ficheiro será escrito em modo de append.
      */
-    @Override
-    public void exportToJson() {
-        File fileLeague = new File(file);
+   
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileLeague, true))) {
-            writer.write("{\n");
-            writer.write("  \"name\": \"" + name + "\",\n");
-            writer.write("  \"seasons\": ");
-            for (int i = 0; i < seasons.length; i++) {
-                seasons[i].exportToJson();
-            }
-            writer.write("}\n");
-        } catch (IOException e) {
-            e.printStackTrace(); // ou logging apropriado
+    public void exportToJson() throws IOException {
+         JsonAccumulator acc = new JsonAccumulator();
+
+    if (seasons != null) {
+    for (ISeason s : seasons) {
+        if (s instanceof Season season) {
+            season.setJsonAccumulator(acc);
         }
     }
 }
+
+    acc.append("{\n");
+    acc.append("  \"name\": \"" + name + "\",\n");
+    acc.append("  \"seasons\": [\n");
+
+    if (seasons != null) {
+    for (int i = 0; i < seasonCount; i++) {
+        if (seasons[i] != null) {  // checagem extra só para garantir
+            seasons[i].exportToJson();
+            if (i < seasonCount - 1) {
+                acc.append(",\n");
+            }
+        }
+    }
+}
+
+    acc.append("\n  ]\n");
+    acc.append("}");
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+        writer.write(acc.getJson());
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+}
+    
+    
+

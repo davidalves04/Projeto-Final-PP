@@ -30,9 +30,8 @@ public class Squad  implements ITeam{
     private IPlayer []players;
     private int playerCount;
     
-    private String fileClub;
-    private String filePlayers;
-
+    private String file;
+    
     public Squad( IClub club,IFormation formation) {
        
         this.club = club;
@@ -193,12 +192,12 @@ public class Squad  implements ITeam{
     
     
     
-    public String getFileClub() {
-        return fileClub;
+    public String getFile() {
+        return file;
     }
 
-    public void setFileClub(String fileClub) {
-        this.fileClub = fileClub;
+    public void setFile(String fileClub) {
+        this.file = fileClub;
     }
 
 
@@ -210,13 +209,14 @@ public class Squad  implements ITeam{
     
     
 
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileClub))) {
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))) {
         
             
             
             
              // Formação
         writer.write("{\n");
+        writer.write("    \"clubName\": \"" + club.getName() + "\",\n");
         writer.write("    \"formation\": \"" + formation.getDisplayName() + "\",\n");
        
         for(int i = 0;i < this.playerCount;i++){
