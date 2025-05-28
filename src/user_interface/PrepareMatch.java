@@ -35,7 +35,7 @@ public class PrepareMatch {
             System.out.println((i + 1) + ". " + descricao);
         }
 
-        System.out.println((defaultFormations.length + 1) + ". Personalizada...");
+        
         
         
          Scanner scanner = new Scanner(System.in);

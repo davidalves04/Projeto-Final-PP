@@ -1,194 +1,216 @@
 [
-      {
-        "name": "Diogo Costa",
-        "birthDate": "1999-09-19",
-        "nationality": "Português",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/diogo-costa.jpg",
-        "number": 99
-      },
-      {
-        "name": "Cláudio Ramos",
-        "birthDate": "1991-11-16",
-        "nationality": "Português",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/claudio-ramos.jpg",
-        "number": 14
-      },
-      {
-        "name": "Samuel Portugal",
-        "birthDate": "1994-03-29",
-        "nationality": "Brasileiro",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/samuel-portugal.jpg",
-        "number": 94
-      },
-      {
-        "name": "Gonçalo Ribeiro",
-        "birthDate": "2006-01-15",
-        "nationality": "Português",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/goncalo-ribeiro.jpg",
-        "number": 91
-      },
-      {
-        "name": "Zaidu Sanusi",
-        "birthDate": "1997-06-13",
-        "nationality": "Nigeriano",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/zaidu-sanusi.jpg",
-        "number": 12
-      },
-      {
-        "name": "Iván Marcano",
-        "birthDate": "1987-06-23",
-        "nationality": "Espanhol",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/ivan-marcano.jpg",
-        "number": 4
-      },
-      {
-        "name": "Otávio",
-        "birthDate": "2002-04-21",
-        "nationality": "Brasileiro",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/otavio.jpg",
-        "number": 3
-      },
-      {
-        "name": "Tiago Djaló",
-        "birthDate": "2000-04-09",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/tiago-djalo.jpg",
-        "number": 2
-      },
-      {
-        "name": "Wendell",
-        "birthDate": "1994-07-20",
-        "nationality": "Brasileiro",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/wendell.jpg",
-        "number": 18
-      },
-      {
-        "name": "Nehuén Pérez",
-        "birthDate": "2000-06-24",
-        "nationality": "Argentino",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/nehuen-perez.jpg",
-        "number": 24
-      },
-      {
-        "name": "Martim Fernandes",
-        "birthDate": "2006-01-18",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/martim-fernandes.jpg",
-        "number": 52
-      },
-      {
-        "name": "Gabriel Brás",
-        "birthDate": "2004-03-25",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/gabriel-bras.jpg",
-        "number": 73
-      },
-      {
-        "name": "Francisco Moura",
-        "birthDate": "1999-04-16",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/francisco-moura.jpg",
-        "number": 74
-      },
-      {
-        "name": "Martim Cunha",
-        "birthDate": "2007-02-28",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/martim-cunha.jpg",
-        "number": 84
-      },
-      {
-        "name": "Zé Pedro",
-        "birthDate": "1997-06-06",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/ze-pedro.jpg",
-        "number": 97
-      },
-      {
-        "name": "Stephen Eustáquio",
-        "birthDate": "1996-12-21",
-        "nationality": "Canadiano",
-        "basePosition": "Midfielder",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/stephen-eustaquio.jpg",
-        "number": 6
-      },
-      {
-        "name": "Marko Grujić",
-        "birthDate": "1996-04-13",
-        "nationality": "Sérvio",
-        "basePosition": "Midfielder",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/marko-grujic.jpg",
-        "number": 8
-      },
-      {
-        "name": "Matheus Uribe",
-        "birthDate": "1991-01-21",
-        "nationality": "Colombiano",
-        "basePosition": "Midfielder",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/matheus-uribe.jpg",
-        "number": 5
-      },
-      {
-        "name": "Fábio Vieira",
-        "birthDate": "2000-05-30",
-        "nationality": "Portuguese",
-        "basePosition": "Midfielder",
-        "photo": "https://www.fcporto.pt/en/player/fabio-vieira",
-        "number": 20
-      },
-      {
-        "name": "Pepe",
-        "birthDate": "1983-02-26",
-        "nationality": "Português",
-        "basePosition": "Defender",
-        "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/pepe.jpg",
-        "number": 3
-      },
-      {
-        "name": "Mehdi Taremi",
-        "birthDate": "1992-07-18",
-        "nationality": "Iranian",
-        "basePosition": "Forward",
-        "photo": "https://www.fcporto.pt/en/player/mehdi-taremi",
-        "number": 9
-      },
-      {
-        "name": "Evanilson",
-        "birthDate": "2000-01-06",
-        "nationality": "Brazilian",
-        "basePosition": "Forward",
-        "photo": "https://www.fcporto.pt/en/player/evanilson",
-        "number": 11
-      },
-      {
-        "name": "Luis Díaz",
-        "birthDate": "1997-01-13",
-        "nationality": "Colombian",
-        "basePosition": "Forward",
-        "photo": "https://www.fcporto.pt/en/player/luis-diaz",
-        "number": 23
-      },
-      {
-        "name": "Samu Omorodion",
-        "birthDate": "2004-05-05",
-        "nationality": "Spain",
-        "basePosition": "Striker",
-        "photo": "https://www.fcporto.pt/en/player/samu-omorodion",
-        "number": 77
-      }
-    ]
+  {
+    "name": "Diogo Costa",
+    "birthDate": "1999-09-19",
+    "nationality": "Português",
+    "basePosition": "Goalkeeper",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/diogo-costa.jpg",
+    "number": 99,
+    "height": 1.85,
+    "weight": 82,
+    "shootingstats": 40,
+    "staminastats": 85,
+    "speedstats": 70,
+    "passingstats": 75
+  },
+  {
+    "name": "Francisco Moura",
+    "birthDate": "1999-07-20",
+    "nationality": "Português",
+    "basePosition": "Defender",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/francisco-moura.jpg",
+    "number": 13,
+    "height": 1.78,
+    "weight": 72,
+    "shootingstats": 60,
+    "staminastats": 88,
+    "speedstats": 85,
+    "passingstats": 85
+  },
+  {
+    "name": "Iván Marcano",
+    "birthDate": "1987-06-23",
+    "nationality": "Espanhol",
+    "basePosition": "Defender",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/ivan-marcano.jpg",
+    "number": 5,
+    "height": 1.88,
+    "weight": 82,
+    "shootingstats": 50,
+    "staminastats": 75,
+    "speedstats": 60,
+    "passingstats": 70
+  },
+  {
+    "name": "Nehuén Pérez",
+    "birthDate": "2000-06-24",
+    "nationality": "Argentino",
+    "basePosition": "Defender",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/nehuen-perez.jpg",
+    "number": 24,
+    "height": 1.85,
+    "weight": 73,
+    "shootingstats": 45,
+    "staminastats": 80,
+    "speedstats": 70,
+    "passingstats": 68
+  },
+  {
+    "name": "Zaidu Sanusi",
+    "birthDate": "1997-06-13",
+    "nationality": "Nigeriano",
+    "basePosition": "Defender",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/zaidu-sanusi.jpg",
+    "number": 12,
+    "height": 1.83,
+    "weight": 76,
+    "shootingstats": 50,
+    "staminastats": 85,
+    "speedstats": 90,
+    "passingstats": 70
+  },
+  {
+    "name": "Tiago Djaló",
+    "birthDate": "2000-04-09",
+    "nationality": "Português",
+    "basePosition": "Defender",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/tiago-djalo.jpg",
+    "number": 3,
+    "height": 1.91,
+    "weight": 83,
+    "shootingstats": 55,
+    "staminastats": 80,
+    "speedstats": 75,
+    "passingstats": 72
+  },
+  {
+    "name": "Stephen Eustáquio",
+    "birthDate": "1996-12-21",
+    "nationality": "Canadiano",
+    "basePosition": "Midfielder",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/stephen-eustaquio.jpg",
+    "number": 6,
+    "height": 1.78,
+    "weight": 70,
+    "shootingstats": 65,
+    "staminastats": 85,
+    "speedstats": 75,
+    "passingstats": 80
+  },
+{
+    "name": "Alan Varela",
+    "birthDate": "2000-03-13",
+    "nationality": "Argentino",
+    "basePosition": "Midfielder",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/alan-varela.jpg",
+    "number": 8,
+    "height": 1.80,
+    "weight": 72,
+    "shootingstats": 70,
+    "staminastats": 90,
+    "speedstats": 79,
+    "passingstats": 86
+  },
+
+  {
+    "name": "Thomas Peres",
+    "birthDate": "1996-04-13",
+    "nationality": "Argentino",
+    "basePosition": "Midfielder",
+    "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/thomas-peres.jpg",
+    "number": 8,
+    "height": 1.80,
+    "weight": 72,
+    "shootingstats": 80,
+    "staminastats": 90,
+    "speedstats": 83,
+    "passingstats": 90
+  },
+  {
+    "name": "Fábio Vieira",
+    "birthDate": "2000-05-30",
+    "nationality": "Português",
+    "basePosition": "Midfielder",
+    "photo": "https://www.fcporto.pt/en/player/fabio-vieira",
+    "number": 10,
+    "height": 1.70,
+    "weight": 65,
+    "shootingstats": 88,
+    "staminastats": 80,
+    "speedstats": 78,
+    "passingstats": 85
+  },
+  {
+    "name": "William Gomes",
+    "birthDate": "1992-07-18",
+    "nationality": "Brasileiro",
+    "basePosition": "Forward",
+    "photo": "https://www.fcporto.pt/en/player/william-gomes",
+    "number": 9,
+    "height": 1.87,
+    "weight": 80,
+    "shootingstats": 85,
+    "staminastats": 80,
+    "speedstats": 75,
+    "passingstats": 70
+  },
+  {
+    "name": "Rodrigo Mora",
+    "birthDate": "2007-05-16",
+    "nationality": "Português",
+    "basePosition": "Forward",
+    "photo": "https://www.fcporto.pt/en/player/evanilson",
+    "number": 86,
+    "height": 1.71,
+    "weight": 60,
+    "shootingstats": 93,
+    "staminastats": 85,
+    "speedstats": 87,
+    "passingstats": 87
+  },
+  {
+    "name": "Pepê",
+    "birthDate": "1997-01-13",
+    "nationality": "Brasileiro",
+    "basePosition": "Forward",
+    "photo": "https://www.fcporto.pt/en/player/pepê",
+    "number": 11,
+    "height": 1.75,
+    "weight": 70,
+    "shootingstats": 80,
+    "staminastats": 93,
+    "speedstats": 90,
+    "passingstats": 75
+  },
+  {
+    "name": "Samu Omorodion",
+    "birthDate": "2004-05-05",
+    "nationality": "Espanhol",
+    "basePosition": "Forward",
+    "photo": "https://www.fcporto.pt/en/player/samu-omorodion",
+    "number": 77,
+    "height": 1.93,
+    "weight": 88,
+    "shootingstats": 93,
+    "staminastats": 85,
+    "speedstats": 89,
+    "passingstats": 68
+  },
+{
+                "name": "Francisco Conceição",
+                "birthDate": "2003-05-02",
+                "nationality": "Portugues",
+                "basePosition": "Forward",
+                "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/francisco-conceicao",
+                "number": 36,
+                "height": 1.72,
+                "weight": 68,
+                "shootingstats": 86,
+                "staminastats": 90,
+                "speedstats": 93,
+                "passingstats": 77
+            }
+
+
+
+]

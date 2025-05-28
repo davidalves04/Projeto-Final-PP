@@ -16,6 +16,26 @@
       "isNationalTeam": false,
       "stadium": "Estádio do Dragão",
       "logo": "https://media.api-sports.io/football/teams/212.png"
+    },
+    {
+      "name": "Sporting Clube de Portugal",
+      "code": "SCP",
+      "country": "Portugal",
+      "founded": 1906,
+      "isNationalTeam": false,
+      "stadium": "Estádio de Alvalade",
+      "logo": "https://media.api-sports.io/football/teams/213.png"
+    },
+    {
+      "name": "Sporting Clube de Braga",
+      "code": "SCB",
+      "country": "Portugal",
+      "founded": 1910,
+      "isNationalTeam": false,
+      "stadium": "Estádio da Pedreira",
+      "logo": "https://media.api-sports.io/football/teams/214.png"
     }
+
+
 ]
  

@@ -60,7 +60,18 @@ public class Squad  implements ITeam{
    
     }
     
+       private int findPlayer(IPlayer player) {
+    int i = 0, pos = -1;
+    while (i < playerCount && pos == -1) {
+        if (players[i].getNumber() == player.getNumber()) {  //Ira procurar o player no array
+            pos = i;
+        }
+        i++;
+    }
     
+    
+    return pos; //Devolve a posição caso seja encontrado senão ira retornar -1
+}
 
     @Override
     public void addPlayer(IPlayer player) {
@@ -86,6 +97,23 @@ public class Squad  implements ITeam{
     }
 
 
+
+    public void removePlayer(IPlayer player) {
+ int pos = findPlayer(player);
+    if (pos == -1) {
+        return; // Jogador não encontrado,ou seja, nao remove nada
+    }
+
+    // Remove o jogador deslocando os restantes para a esquerda
+    for (int i = pos; i < playerCount - 1; i++) {
+        players[i] = players[i + 1];
+    }
+
+    players[--playerCount] = null; // Diminui o contador e limpa a última posição
+    }
+    
+    
+    
      @Override
     public void setFormation(IFormation formation) {
         

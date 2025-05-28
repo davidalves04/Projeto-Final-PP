@@ -67,7 +67,7 @@ public class MainMenu {
         
         
         IFormation myFormation = mySquad.getFormation();
-       
+        Team myTeam = (Team) mySquad.getClub();
         //Escolhe o melhor 11 inicial para o utilizador1
         
         SetStartingLineup lineup = new SetStartingLineup();
@@ -96,9 +96,12 @@ public class MainMenu {
 
             switch (opcao2) {
                 case 1:
-                    TeamView.showLineup(myLineup);
+                    TeamView.showSquad(mySquad);
                    
+                    SquadManager squadManager = new SquadManager();
                     
+                    squadManager.promptForSubstitution(mySquad.getPlayers(),mySquad);
+                   
                     break;
                 case 2:
                     ISeason season = liga.getSeason(0);

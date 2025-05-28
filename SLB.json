@@ -1,186 +1,184 @@
 [
-      {
-        "name": "André Gomes",
-        "birthDate": "2004-10-20",
-        "nationality": "Portuguese",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/andre-gomes",
-        "number": 75
-      },
-      {
-        "name": "Samuel Soares",
-        "birthDate": "2002-06-15",
-        "nationality": "Portuguese",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/samuel-soares",
-        "number": 24
-      },
-      {
-        "name": "Anatoliy Trubin",
-        "birthDate": "2001-08-01",
-        "nationality": "Ukrainian",
-        "basePosition": "Goalkeeper",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/anatoliy-trubin",
-        "number": 1
-      },
-      {
-        "name": "Álvaro Carreras",
-        "birthDate": "2003-03-23",
-        "nationality": "Spanish",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/alvaro-carreras",
-        "number": 3
-      },
-      {
-        "name": "António Silva",
-        "birthDate": "2003-10-30",
-        "nationality": "Portuguese",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/antonio-silva",
-        "number": 4
-      },
-      {
-        "name": "Nicolás Otamendi",
-        "birthDate": "1988-02-12",
-        "nationality": "Argentine",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/nicolas-otamendi",
-        "number": 30
-      },
-      {
-        "name": "Alexander Bah",
-        "birthDate": "1997-12-09",
-        "nationality": "Danish",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/alexander-bah",
-        "number": 6
-      },
-      {
-        "name": "Adrian Bajrami",
-        "birthDate": "2002-04-05",
-        "nationality": "Albanian",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/adrian-bajrami",
-        "number": 81
-      },
-      {
-        "name": "Jan-Niklas Beste",
-        "birthDate": "1999-01-04",
-        "nationality": "German",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/jan-niklas-beste",
-        "number": 37
-      },
-      {
-        "name": "Issa Kaboré",
-        "birthDate": "2001-05-12",
-        "nationality": "Burkinabe",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/issa-kabore",
-        "number": 28
-      },
-      {
-        "name": "Leandro Santos",
-        "birthDate": "2005-09-28",
-        "nationality": "Portuguese",
-        "basePosition": "Defender",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/leandro-santos",
-        "number": 71
-      },
-      {
-        "name": "Florentino Luís",
-        "birthDate": "1998-05-19",
-        "nationality": "Portuguese",
-        "basePosition": "Midfielder",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/florentino-luis",
-        "number": 61
-      },
-      {
-        "name": "Fredrik Aursnes",
-        "birthDate": "1994-03-13",
-        "nationality": "Norwegian",
-        "basePosition": "Midfielder",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/fredrik-aursnes",
-        "number": 8
-      },
-      {
-        "name": "Orkun Kökçü",
-        "birthDate": "2002-12-29",
-        "nationality": "Turkish",
-        "basePosition": "Midfielder",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/orkun-kokcu",
-        "number": 10
-      },
-      {
-        "name": "Ángel Di María",
-        "birthDate": "1988-02-14",
-        "nationality": "Argentine",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/angel-di-maria",
-        "number": 11
-      },
-      {
-        "name": "Renato Sanches",
-        "birthDate": "1997-08-18",
-        "nationality": "Portuguese",
-        "basePosition": "Midfielder",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/renato-sanches",
-        "number": 85
-      },
-      {
-        "name": "Manu Silva",
-        "birthDate": "2000-06-23",
-        "nationality": "Portuguese",
-        "basePosition": "Midfielder",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/manu-silva",
-        "number": 16
-      },
-      {
-        "name": "Hugo Sequeira",
-        "birthDate": "2002-04-01",
-        "nationality": "Portuguese",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/hugo-sequeira",
-        "number": 79
-      },
-      {
-        "name": "João Rêgo",
-        "birthDate": "2004-03-25",
-        "nationality": "Portuguese",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/joao-rego",
-        "number": 84
-      },
-      {
-        "name": "Gonçalo Ramos",
-        "birthDate": "2001-06-20",
-        "nationality": "Portuguese",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/goncalo-ramos",
-        "number": 21
-      },
-      {
-        "name": "Luka Jovic",
-        "birthDate": "1997-01-23",
-        "nationality": "Serbian",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/luka-jovic",
-        "number": 77
-      },
-      {
-        "name": "David Neres",
-        "birthDate": "1997-03-03",
-        "nationality": "Brazilian",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/david-neres",
-        "number": 50
-      },
-      {
-        "name": "Rafa Silva",
-        "birthDate": "1993-05-17",
-        "nationality": "Portuguese",
-        "basePosition": "Forward",
-        "photo": "https://www.slbenfica.pt/pt-pt/players/rafa-silva",
-        "number": 27
-      }
-    ]
+  {
+    "name": "Anatoliy Trubin",
+    "birthDate": "2001-08-01",
+    "nationality": "Ucraniano",
+    "basePosition": "Goalkeeper",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/anatoliy-trubin",
+    "number": 1,
+    "height": 1.99,
+    "weight": 88,
+    "shootingstats": 35,
+    "staminastats": 82,
+    "speedstats": 65,
+    "passingstats": 72
+  },
+  {
+    "name": "Alexander Bah",
+    "birthDate": "1997-12-09",
+    "nationality": "Dinamarquês",
+    "basePosition": "Defender",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/alexander-bah",
+    "number": 6,
+    "height": 1.83,
+    "weight": 76,
+    "shootingstats": 55,
+    "staminastats": 86,
+    "speedstats": 88,
+    "passingstats": 78
+  },
+  {
+    "name": "Nicolás Otamendi",
+    "birthDate": "1988-02-12",
+    "nationality": "Argentino",
+    "basePosition": "Defender",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/nicolas-otamendi",
+    "number": 30,
+    "height": 1.83,
+    "weight": 81,
+    "shootingstats": 55,
+    "staminastats": 78,
+    "speedstats": 65,
+    "passingstats": 74
+  },
+  {
+    "name": "António Silva",
+    "birthDate": "2003-10-30",
+    "nationality": "Português",
+    "basePosition": "Defender",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/antonio-silva",
+    "number": 4,
+    "height": 1.87,
+    "weight": 81,
+    "shootingstats": 52,
+    "staminastats": 82,
+    "speedstats": 75,
+    "passingstats": 76
+  },
+  {
+    "name": "David Jurásek",
+    "birthDate": "2000-08-07",
+    "nationality": "Checo",
+    "basePosition": "Defender",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/david-jurasek",
+    "number": 13,
+    "height": 1.86,
+    "weight": 79,
+    "shootingstats": 58,
+    "staminastats": 85,
+    "speedstats": 87,
+    "passingstats": 80
+  },
+  {
+    "name": "João Neves",
+    "birthDate": "2004-09-27",
+    "nationality": "Português",
+    "basePosition": "Midfielder",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/joao-neves",
+    "number": 87,
+    "height": 1.74,
+    "weight": 65,
+    "shootingstats": 68,
+    "staminastats": 92,
+    "speedstats": 83,
+    "passingstats": 85
+  },
+  {
+    "name": "Orkun Kökçü",
+    "birthDate": "2000-12-29",
+    "nationality": "Turco",
+    "basePosition": "Midfielder",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/orkun-kokcu",
+    "number": 8,
+    "height": 1.75,
+    "weight": 70,
+    "shootingstats": 80,
+    "staminastats": 88,
+    "speedstats": 78,
+    "passingstats": 90
+  },
+  {
+    "name": "Florentino Luís",
+    "birthDate": "1999-08-19",
+    "nationality": "Português",
+    "basePosition": "Midfielder",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/florentino-luis",
+    "number": 61,
+    "height": 1.84,
+    "weight": 74,
+    "shootingstats": 60,
+    "staminastats": 90,
+    "speedstats": 77,
+    "passingstats": 82
+  },
+  {
+    "name": "Ángel Di María",
+    "birthDate": "1988-02-14",
+    "nationality": "Argentino",
+    "basePosition": "Forward",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/angel-di-maria",
+    "number": 11,
+    "height": 1.80,
+    "weight": 75,
+    "shootingstats": 85,
+    "staminastats": 80,
+    "speedstats": 83,
+    "passingstats": 90
+  },
+  {
+    "name": "Rafa Silva",
+    "birthDate": "1993-05-17",
+    "nationality": "Português",
+    "basePosition": "Forward",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/rafa-silva",
+    "number": 27,
+    "height": 1.72,
+    "weight": 63,
+    "shootingstats": 84,
+    "staminastats": 85,
+    "speedstats": 90,
+    "passingstats": 80
+  },
+  {
+    "name": "Arthur Cabral",
+    "birthDate": "1998-04-25",
+    "nationality": "Brasileiro",
+    "basePosition": "Forward",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/arthur-cabral",
+    "number": 9,
+    "height": 1.86,
+    "weight": 86,
+    "shootingstats": 88,
+    "staminastats": 81,
+    "speedstats": 78,
+    "passingstats": 74
+  },
+  {
+    "name": "Marcos Leonardo",
+    "birthDate": "2003-05-02",
+    "nationality": "Brasileiro",
+    "basePosition": "Forward",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/marcos-leonardo",
+    "number": 36,
+    "height": 1.75,
+    "weight": 68,
+    "shootingstats": 86,
+    "staminastats": 83,
+    "speedstats": 84,
+    "passingstats": 77
+  },
+  {
+    "name": "Petar Musa",
+    "birthDate": "1998-03-04",
+    "nationality": "Croata",
+    "basePosition": "Forward",
+    "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/petar-musa",
+    "number": 33,
+    "height": 1.90,
+    "weight": 84,
+    "shootingstats": 82,
+    "staminastats": 80,
+    "speedstats": 79,
+    "passingstats": 72
+  }
+]
