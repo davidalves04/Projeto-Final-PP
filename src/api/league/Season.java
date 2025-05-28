@@ -201,6 +201,7 @@ public class Season implements ISeason {
     public void simulateRound() {
         if (!isSeasonComplete()) {
             IMatch[] matches = schedule.getMatchesForRound(currentRound);
+            
             for (IMatch match : matches) {
                 if (!match.isPlayed()) {
                     simulator.simulate(match);

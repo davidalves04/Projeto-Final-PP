@@ -133,10 +133,12 @@ public class LeagueImporterJSON {
     
     
     Season season = new Season(name, year, maxTeams, maxRounds, pointsPerWin, pointsPerLoss, pointsPerDraw, clubs);
+    
+    season.setTeams("squad.json", clubs);
     if (currentMatches != null) {
         season.setMatches(currentMatches);
     }
-    season.setTeams("squad.json", clubs);
+    
     season.generateSchedule();
     
         return season;
@@ -222,25 +224,36 @@ public static Season[] readSeasonsFromFile(String filePath) throws IOException {
 }
       
     private static Match[][] roundsFromJson(JsonParser parser, int maxRounds, int matchesPerRound) throws IOException {
-    Match[][] rounds = new Match[maxRounds][matchesPerRound];
+     Match[][] rounds = new Match[maxRounds][]; // cada jornada pode ter número diferente de jogos
 
     if (parser.currentToken() != JsonToken.START_OBJECT)
         throw new IOException("Esperado objeto de rounds");
 
     while (parser.nextToken() != JsonToken.END_OBJECT) {
-        String roundKey = parser.getCurrentName(); 
+        String roundKey = parser.getCurrentName(); // por exemplo, "round_1"
         parser.nextToken();
 
-       int roundIndex = Integer.parseInt(roundKey.split("_")[1]) - 1;
-
+        int roundIndex = Integer.parseInt(roundKey.split("_")[1]) - 1;
 
         if (parser.currentToken() != JsonToken.START_ARRAY)
             throw new IOException("Esperado array de jogos para " + roundKey);
 
-        int i = 0;
+        // Lê os jogos desta jornada para um array temporário
+        Match[] tempMatches = new Match[matchesPerRound];
+        int matchCount = 0;
+
         while (parser.nextToken() == JsonToken.START_OBJECT) {
-            rounds[roundIndex][i++] = readMatchFromParser(parser);
+            Match match = readMatchFromParser(parser);
+            tempMatches[matchCount++] = match;
         }
+
+        // Copia apenas os jogos válidos (não nulos) para um array do tamanho exato
+        Match[] matches = new Match[matchCount];
+        for (int i = 0; i < matchCount; i++) {
+            matches[i] = tempMatches[i];
+        }
+
+        rounds[roundIndex] = matches;
     }
 
     return rounds;

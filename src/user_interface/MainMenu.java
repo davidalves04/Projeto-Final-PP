@@ -1,21 +1,38 @@
 package user_interface;
 
+import api.data.TeamExporterJSON;
+import api.data.TeamImporterJSON;
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
+
 
 import api.simulation.LeagueSimulator;
+import api.team.Formation;
+import api.team.Squad;
+import api.team.Team;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.team.IFormation;
+import java.io.File;
+
+import java.io.IOException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMenu {
-    public void mostrarMenu(ILeague liga, IClub clube, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy) {
+    public void mostrarMenu(Squad mySquad,String mySquadFile,Squad[] totalSquads,ILeague liga, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy) throws IOException {
+        
+        
+        
+    
         Scanner scanner = new Scanner(System.in);
         int opcao;
 
+        
+        if(mySquad == null){ //Caso ainda nao esteja sido escolhido o plantel aparece este menu
         System.out.println("=== BEM-VINDO ===");
         System.out.println("1. Novo Jogo");
         System.out.println("2. Sair");
@@ -32,6 +49,10 @@ public class MainMenu {
         switch (opcao) {
             case 1:
                 System.out.println("Iniciando Nova Temporada...");
+                System.out.println("Escolha a sua Equipa");
+                mySquad = TeamSelector.selectTeam(totalSquads);
+                TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
+                
                 break;
             case 2:
                 System.out.println("A sair...");
@@ -41,16 +62,28 @@ public class MainMenu {
                 return;
         }
 
+        
+        }
+        
+        
+        IFormation myFormation = mySquad.getFormation();
+       
+        //Escolhe o melhor 11 inicial para o utilizador1
+        
+        SetStartingLineup lineup = new SetStartingLineup();
+        IPlayer[] myLineup = lineup.mySquadBestLineup(mySquad, mySquad.getFormation().getDisplayName());
+       
+        
         // Segunda parte do menu
         int opcao2 = 0;
         do {
             System.out.println("\n=== Menu Principal ===");
             System.out.println("1. Gerir Plantel");
-            System.out.println("2. Ver Classificação");
-            System.out.println("3. Ver Próximo Jogo");
+            System.out.println("2. Ver Calendário e Classificação");
+            System.out.println("3. Preparar Próximo Jogo");
             System.out.println("4. Simular Jornada");
             System.out.println("5. Estatísticas");
-            System.out.println("0. Sair");
+            System.out.println("0. Salvar e Sair");
             System.out.print("Escolha uma opção: ");
 
             try {
@@ -63,7 +96,9 @@ public class MainMenu {
 
             switch (opcao2) {
                 case 1:
-                    TeamView.mostrarPlantel(clube);
+                    TeamView.showLineup(myLineup);
+                   
+                    
                     break;
                 case 2:
                     ISeason season = liga.getSeason(0);
@@ -71,7 +106,15 @@ public class MainMenu {
                     StatsView.mostrarClassificacao(standings);
                     break;
                 case 3:
-                    MatchView.mostrarProximoJogo(liga, clube);
+                    myFormation = PrepareMatch.mostrarTaticas();
+                    mySquad.setFormation(myFormation);
+                    myLineup = lineup.mySquadBestLineup(mySquad,mySquad.getFormation().getDisplayName());
+                    
+                    
+                    TeamView.showLineup(myLineup);
+                    SetStartingLineup subsForMatch = new SetStartingLineup();
+                    subsForMatch.promptForSubstitution(myLineup, mySquad);
+                    
                     break;
                 case 4:
                     leagueSimulator.setMatchSimulator(strategy);
@@ -83,6 +126,7 @@ public class MainMenu {
                     break;
                 case 0:
                     System.out.println("A sair...");
+                    TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
                     break;
                 default:
                     System.out.println("Opção inválida.");

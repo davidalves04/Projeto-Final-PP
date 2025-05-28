@@ -140,9 +140,10 @@ public class TeamImporterJSON {
 
             case "clubName" -> {
                 clubName = parser.getValueAsString();
-                for (IClub c : clubs) {
+                for (IClub c : clubs) {  //Vai procurar no array de clubs pelo nome
+                    
                     if (c.getName().equalsIgnoreCase(clubName)) {
-                        squadClub = c;
+                        squadClub = c;  
                         break;
                     }
                 }
@@ -251,5 +252,20 @@ public class TeamImporterJSON {
         return squads;
 }
     
+    
+    public static Squad mySquadFromJson(String filePath, IClub[] clubs) throws IOException {
+    JsonFactory factory = new JsonFactory();
+    JsonParser parser = factory.createParser(new File(filePath));
+
+    if (parser.nextToken() != JsonToken.START_OBJECT) {
+        parser.close();
+        throw new IOException("JSON inválido: esperado um objeto de squad");
+    }
+
+    Squad squad = readSquadFromParser(parser, clubs);
+
+    parser.close();
+    return squad;
+}
 }
 

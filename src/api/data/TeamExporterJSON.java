@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class TeamExporterJSON {
 
+    
+    //Export do array de clubes 
     public void exportTeamsArrayToJson(Team[] teams, String teamFile) throws IOException {
         File file = new File(teamFile);
 boolean existeConteudo = false;
@@ -63,7 +65,7 @@ try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
 
     
     
-  //Export da Squad  
+  //Export do array de squads de cada clube
     public void exportSquadToJson(Squad[] squads, String squadFile) throws IOException {
            File file = new File(squadFile);
 boolean existeConteudo = false;
@@ -114,5 +116,23 @@ try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
 }
     
 }
+    
+  //A squad do utilizador sera num ficheiro separado  
+   public static void exportMySquad(Squad mySquad,String mySquadFile) throws IOException{
+       File file = new File(mySquadFile);
+
+    // Abre o arquivo para escrita e vai reescrever o conteúdo
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+       
+               
+
+        mySquad.setFile(mySquadFile);
+        mySquad.exportToJson(); 
+
+        
+    }
+   }
+    
+    
     
 }

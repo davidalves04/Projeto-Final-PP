@@ -4,6 +4,7 @@
  */
 package user_interface;
 
+import api.team.Squad;
 import api.team.Team;
 import java.util.Scanner;
 
@@ -12,17 +13,17 @@ import java.util.Scanner;
  * @author Utilizador
  */
 public class TeamSelector {
-      public static Team selectTeam(Team[] teams) {
-          int teamCount = Team.getTeamCount();
+      public static Squad selectTeam(Squad[] squads) {
+          int teamCount = squads.length;
           
-        if (teams == null || teamCount == 0) {
+        if (squads == null || teamCount == 0) {
             System.out.println("Nenhuma equipa disponível.");
             return null;
         }
 
         System.out.println("=== Equipas Disponíveis ===");
         for (int i = 0; i < teamCount; i++) {
-            System.out.println((i + 1) + ". " + teams[i].getName()); //i + 1 para começar no 1
+            System.out.println((i + 1) + ". " + squads[i].getClub().getName()); //i + 1 para começar no 1
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +39,6 @@ public class TeamSelector {
             }
         }
 
-        return teams[choice - 1]; // retorna a equipa escolhida
+        return squads[choice - 1]; // retorna a equipa escolhida
     }
 }
