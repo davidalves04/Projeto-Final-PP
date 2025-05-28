@@ -8,10 +8,29 @@ import java.util.Random;
 import api.event.GoalEvent;
 import api.event.MissedShotEvent;
 
+/**
+ * Implementação padrão da estratégia de simulação de partidas.
+ * 
+ * Esta classe simula um jogo entre duas equipas, criando eventos como golos e remates falhados
+ * de forma aleatória, com base nos jogadores disponíveis nas equipas.
+ * 
+ * Cada 5 minutos do jogo é simulada uma jogada, onde aleatoriamente uma das equipas ataca,
+ * podendo resultar num golo, remate falhado ou nenhum evento.
+ * 
+ * Após os 90 minutos simulados, o jogo é marcado como concluído.
+ * 
+ * @author david
+ */
 public class DefaultMatchSimulator implements MatchSimulatorStrategy {
 
     private final Random random = new Random();
 
+    /**
+     * Simula a partida entre as duas equipas fornecidas no objeto {@link IMatch}.
+     * Gera eventos a cada 5 minutos até completar os 90 minutos regulamentares.
+     * 
+     * @param match o objeto que representa o jogo a ser simulado
+     */
     @Override
     public void simulate(IMatch match) {
         IClub home = match.getHomeClub();

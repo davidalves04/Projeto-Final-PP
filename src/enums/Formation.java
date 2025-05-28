@@ -1,18 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package enums;
 
 /**
- *
- * @author Utilizador
+ * Enumeração que representa as formações táticas disponíveis para uma equipa de futebol.
+ * 
+ * As formações são nomeadas com palavras em português e mapeadas para uma string mais convencional
+ * com números (ex: "4-3-3", "4-4-2") através do método {@code formationToString}.
+ * 
+ * Formações disponíveis:
+ * <ul>
+ *   <li>QUATRO_TRES_TRES → "4-3-3"</li>
+ *   <li>QUATRO_QUATRO_DOIS → "4-4-2"</li>
+ *   <li>TRES_CINCO_DOIS → "3-5-2"</li>
+ *   <li>CINCO_TRES_DOIS → "5-3-2"</li>
+ *   <li>QUATRO_DOIS_TRES_UM → "4-2-3-1"</li>
+ * </ul>
+ * 
+ * @author Gabriel
  */
 public enum Formation {
-    QUATRO_TRES_TRES,QUATRO_QUATRO_DOIS,TRES_CINCO_DOIS,
-    CINCO_TRES_DOIS,QUATRO_DOIS_TRES_UM;
-    
-        public static String formationToString(Formation f) {
+    QUATRO_TRES_TRES,
+    QUATRO_QUATRO_DOIS,
+    TRES_CINCO_DOIS,
+    CINCO_TRES_DOIS,
+    QUATRO_DOIS_TRES_UM;
+
+    /**
+     * Converte uma formação {@code Formation} no seu formato textual convencional.
+     * 
+     * @param f a formação a ser convertida
+     * @return uma string representando a formação no formato numérico padrão (ex: "4-3-3")
+     */
+    public static String formationToString(Formation f) {
         switch (f) {
             case QUATRO_TRES_TRES:
                 return "4-3-3";
@@ -28,5 +46,4 @@ public enum Formation {
                 return "Desconhecida";
         }
     }
-
 }

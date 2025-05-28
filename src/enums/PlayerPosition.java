@@ -1,17 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package enums;
 
 /**
- *
- * @author david
+ * Enumeração que representa as posições básicas de um jogador em campo.
+ * 
+ * As posições disponíveis são:
+ * <ul>
+ *   <li>{@code GK} – Guarda-Redes</li>
+ *   <li>{@code DEF} – Defesa</li>
+ *   <li>{@code MID} – Médio</li>
+ *   <li>{@code FWD} – Avançado</li>
+ * </ul>
+ * 
+ * O método {@link #positionToString(PlayerPosition)} permite converter a posição para uma 
+ * descrição textual mais legível em português.
+ * 
+ * Esta enumeração pode ser usada para categorizar os jogadores de uma equipa com base na 
+ * sua função principal em campo.
+ * 
+ * @author David
  */
 public enum PlayerPosition {
-    GK, DEF, MID, FWD;
-    
-      public static String positionToString(PlayerPosition pos) {
+    /** Guarda-redes (Goalkeeper) */
+    GK,
+    /** Defesa (Defender) */
+    DEF,
+    /** Médio (Midfielder) */
+    MID,
+    /** Avançado (Forward) */
+    FWD;
+
+    /**
+     * Converte a posição {@code PlayerPosition} para uma string descritiva em português.
+     * 
+     * @param pos a posição a ser convertida
+     * @return a descrição da posição em português (ex: "Médio"), ou "Desconhecida" se não reconhecida
+     */
+    public static String positionToString(PlayerPosition pos) {
         switch (pos) {
             case GK:
                 return "Guarda-Redes";
@@ -25,5 +49,4 @@ public enum PlayerPosition {
                 return "Desconhecida";
         }
     }
-      
 }
