@@ -1,41 +1,27 @@
 package user_interface;
 
 import api.data.TeamExporterJSON;
-import api.data.TeamImporterJSON;
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
 import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.MatchHtmlGenerator;
 import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.SeasonHtmlGenerator;
-import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.LeagueHtmlGenerator;
-
-
-
 import api.simulation.LeagueSimulator;
-import api.team.Formation;
 import api.team.Squad;
 import api.team.Team;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.IFormation;
 import java.io.File;
-
 import java.io.IOException;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainMenu {
     public void mostrarMenu(Squad mySquad,String mySquadFile,Squad[] totalSquads,ILeague liga, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy) throws IOException {
-        
-        
-        
-    
         Scanner scanner = new Scanner(System.in);
         int opcao;
-
-        
-        if(mySquad == null){ //Caso ainda nao esteja sido escolhido o plantel aparece este menu
+        if(mySquad == null){ //Caso ainda nao tenha sido escolhido o plantel aparece este menu
         System.out.println("=== BEM-VINDO ===");
         System.out.println("1. Novo Jogo");
         System.out.println("2. Sair");
@@ -45,14 +31,14 @@ public class MainMenu {
             opcao = scanner.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Por favor insira um número válido.");
-            scanner.nextLine(); // limpa buffer
+            scanner.nextLine(); //Limpa o buffer
             return;
         }
 
         switch (opcao) {
             case 1:
-                System.out.println("Iniciando Nova Temporada...");
-                System.out.println("Escolha a sua Equipa");
+                System.out.println("A iniciar uma nova temporada...");
+                System.out.println("Escolha a sua equipa");
                 mySquad = TeamSelector.selectTeam(totalSquads);
                 TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
                 
@@ -64,48 +50,41 @@ public class MainMenu {
                 System.out.println("Opção inválida.");
                 return;
         }
-
-        
         }
         
-        
         IFormation myFormation = mySquad.getFormation();
-        Team myTeam = (Team) mySquad.getClub();
-        //Escolhe o melhor 11 inicial para o utilizador1
+        Team myTeam = (Team) mySquad.getClub(); //Escolhe o melhor 11 inicial para o utilizador1
         
         SetStartingLineup lineup = new SetStartingLineup();
         IPlayer[] myLineup = lineup.mySquadBestLineup(mySquad, mySquad.getFormation().getDisplayName());
        
         
-        // Segunda parte do menu
+        //Segunda parte do menu
         int opcao2 = 0;
         do {
             System.out.println("\n=== Menu Principal ===");
-            System.out.println("1. Gerir Plantel");
-            System.out.println("2. Ver Calendário e Classificação");
-            System.out.println("3. Preparar Próximo Jogo");
-            System.out.println("4. Simular Jornada");
+            System.out.println("1. Gerir plantel");
+            System.out.println("2. Ver calendário e classificação");
+            System.out.println("3. Preparar próximo jogo");
+            System.out.println("4. Simular jornada");
             System.out.println("5. Estatísticas");
             System.out.println("6. Exportar HTML");
-            System.out.println("0. Salvar e Sair");
+            System.out.println("0. Guardar e sair");
             System.out.print("Escolha uma opção: ");
 
             try {
                 opcao2 = scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Por favor insira um número válido.");
-                scanner.nextLine(); // limpa buffer
+                scanner.nextLine(); //Limpa o buffer
                 continue;
             }
 
             switch (opcao2) {
                 case 1:
                     TeamView.showSquad(mySquad);
-                   
                     SquadManager squadManager = new SquadManager();
-                    
                     squadManager.promptForSubstitution(mySquad.getPlayers(),mySquad);
-                   
                     break;
                 case 2:
                     ISeason season = liga.getSeason(0);
@@ -116,12 +95,9 @@ public class MainMenu {
                     myFormation = PrepareMatch.mostrarTaticas();
                     mySquad.setFormation(myFormation);
                     myLineup = lineup.mySquadBestLineup(mySquad,mySquad.getFormation().getDisplayName());
-                    
-                    
                     TeamView.showLineup(myLineup);
                     SetStartingLineup subsForMatch = new SetStartingLineup();
                     subsForMatch.promptForSubstitution(myLineup, mySquad);
-                    
                     break;
                 case 4:
                     leagueSimulator.setMatchSimulator(strategy);
@@ -132,21 +108,21 @@ public class MainMenu {
                     StatsView.mostrarClassificacao(liga.getSeason(0).getLeagueStandings());
                     break;
                 case 6:
-                    new File("output").mkdirs();
+                    new File("html").mkdirs();
                     try {
                         ISeason currentSeason = liga.getSeason(0);
 
-                        // Exportar Season (tabela e jogos)
-                        SeasonHtmlGenerator.generate(currentSeason, "output/season.html");
+                        //Exportar season (tabela e jogos)
+                        SeasonHtmlGenerator.generate(currentSeason, "html/season.html");
                         System.out.println("Temporada exportada para HTML com sucesso.");
 
-                        // Exportar League (se tiveres esse método a funcionar no futuro)
-                        // LeagueHtmlGenerator.generate("league.json", "output/league.html");
+                        //Exportar League
+                        //LeagueHtmlGenerator.generate("league.json", "html/league.html");
 
-                        // Exportar um jogo específico (exemplo: o primeiro jogo)
+                        //Exportar um jogo específico
                         if (currentSeason.getMatches().length > 0) {
-                            MatchHtmlGenerator.generate(currentSeason.getMatches()[0], "output/match1.html");
-                            System.out.println("Primeiro jogo exportado para HTML com sucesso.");
+                            MatchHtmlGenerator.generate(currentSeason.getMatches()[0], "html/match1.html");
+                            System.out.println("Jogo exportado para HTML com sucesso.");
                         }
 
                     } catch (IOException e) {
