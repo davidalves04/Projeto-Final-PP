@@ -6,6 +6,9 @@ import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
+import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.MatchHtmlGenerator;
+import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.SeasonHtmlGenerator;
+import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.LeagueHtmlGenerator;
 
 
 
@@ -83,6 +86,7 @@ public class MainMenu {
             System.out.println("3. Preparar Próximo Jogo");
             System.out.println("4. Simular Jornada");
             System.out.println("5. Estatísticas");
+            System.out.println("6. Exportar HTML");
             System.out.println("0. Salvar e Sair");
             System.out.print("Escolha uma opção: ");
 
@@ -127,6 +131,29 @@ public class MainMenu {
                 case 5:
                     StatsView.mostrarClassificacao(liga.getSeason(0).getLeagueStandings());
                     break;
+                case 6:
+                    new File("output").mkdirs();
+                    try {
+                        ISeason currentSeason = liga.getSeason(0);
+
+                        // Exportar Season (tabela e jogos)
+                        SeasonHtmlGenerator.generate(currentSeason, "output/season.html");
+                        System.out.println("Temporada exportada para HTML com sucesso.");
+
+                        // Exportar League (se tiveres esse método a funcionar no futuro)
+                        // LeagueHtmlGenerator.generate("league.json", "output/league.html");
+
+                        // Exportar um jogo específico (exemplo: o primeiro jogo)
+                        if (currentSeason.getMatches().length > 0) {
+                            MatchHtmlGenerator.generate(currentSeason.getMatches()[0], "output/match1.html");
+                            System.out.println("Primeiro jogo exportado para HTML com sucesso.");
+                        }
+
+                    } catch (IOException e) {
+                        System.out.println("Erro ao exportar para HTML: " + e.getMessage());
+                    }
+                    break;
+
                 case 0:
                     System.out.println("A sair...");
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
