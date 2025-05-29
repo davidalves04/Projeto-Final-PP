@@ -33,7 +33,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve a equipa associada a esta classificação.
+     *
+     * @return a equipa desta classificação
      */
     @Override
     public ITeam getTeam() {
@@ -41,7 +43,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o total de pontos obtidos pela equipa.
+     *
+     * @return total de pontos
      */
     @Override
     public int getPoints() {
@@ -49,7 +53,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Acrescenta um número de pontos à classificação da equipa.
+     *
+     * @param p número de pontos a adicionar
      */
     @Override
     public void addPoints(int p) {
@@ -57,7 +63,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Acrescenta um número de vitórias à classificação da equipa.
+     *
+     * @param i número de vitórias a adicionar
      */
     @Override
     public void addWin(int i) {
@@ -65,7 +73,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Acrescenta um número de empates à classificação da equipa.
+     *
+     * @param i número de empates a adicionar
      */
     @Override
     public void addDraw(int i) {
@@ -73,7 +83,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Acrescenta um número de derrotas à classificação da equipa.
+     *
+     * @param i número de derrotas a adicionar
      */
     @Override
     public void addLoss(int i) {
@@ -81,7 +93,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o número total de vitórias da equipa.
+     *
+     * @return total de vitórias
      */
     @Override
     public int getWins() {
@@ -89,7 +103,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o número total de empates da equipa.
+     *
+     * @return total de empates
      */
     @Override
     public int getDraws() {
@@ -97,7 +113,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o número total de derrotas da equipa.
+     *
+     * @return total de derrotas
      */
     @Override
     public int getLosses() {
@@ -105,7 +123,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o número total de jogos disputados pela equipa.
+     *
+     * @return total de jogos (vitórias + empates + derrotas)
      */
     @Override
     public int getTotalMatches() {
@@ -113,7 +133,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o total de golos marcados pela equipa.
+     *
+     * @return total de golos marcados
      */
     @Override
     public int getGoalScored() {
@@ -121,7 +143,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve o total de golos sofridos pela equipa.
+     *
+     * @return total de golos sofridos
      */
     @Override
     public int getGoalsConceded() {
@@ -129,7 +153,9 @@ public class Standing implements IStanding {
     }
 
     /**
-     * {@inheritDoc}
+     * Devolve a diferença entre golos marcados e golos sofridos.
+     *
+     * @return diferença de golos (marcados - sofridos)
      */
     @Override
     public int getGoalDifference() {
@@ -137,7 +163,7 @@ public class Standing implements IStanding {
     }
 
     /**
-     * Adiciona um número de golos marcados à estatística atual.
+     * Adiciona um número de golos marcados às estatísticas da equipa.
      *
      * @param goals número de golos marcados a adicionar
      */
@@ -146,7 +172,7 @@ public class Standing implements IStanding {
     }
 
     /**
-     * Adiciona um número de golos sofridos à estatística atual.
+     * Adiciona um número de golos sofridos às estatísticas da equipa.
      *
      * @param goals número de golos sofridos a adicionar
      */
@@ -155,11 +181,11 @@ public class Standing implements IStanding {
     }
 
     /**
-     * Atualiza todas as estatísticas da classificação com base nos golos
-     * marcados e sofridos de um jogo.
+     * Atualiza todas as estatísticas da equipa com base nos golos marcados e sofridos num jogo,
+     * ajustando pontos, vitórias, empates e derrotas conforme o resultado.
      *
-     * @param goalsScored     número de golos marcados pela equipa
-     * @param goalsConceded   número de golos sofridos pela equipa
+     * @param goalsScored   número de golos marcados pela equipa no jogo
+     * @param goalsConceded número de golos sofridos pela equipa no jogo
      */
     public void updateStats(int goalsScored, int goalsConceded) {
         this.goalsScored += goalsScored;
@@ -177,7 +203,7 @@ public class Standing implements IStanding {
     }
 
     /**
-     * Reinicia todas as estatísticas da classificação para os valores iniciais.
+     * Reinicia todas as estatísticas da equipa para os valores iniciais.
      */
     public void reset() {
         this.points = 0;

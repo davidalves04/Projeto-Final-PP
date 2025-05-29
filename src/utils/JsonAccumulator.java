@@ -1,20 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package utils;
 
 /**
- *
- * @author Utilizador
+ * Classe auxiliar para acumular linhas de texto JSON num buffer de string.
+ * Permite adicionar várias linhas e recuperar o conteúdo acumulado como uma única string.
  */
 public class JsonAccumulator {
-      private final StringBuilder sb = new StringBuilder();
+    
+    private final StringBuilder sb = new StringBuilder();
 
+    /**
+     * Adiciona uma linha JSON ao acumulador, adicionando uma nova linha após o texto.
+     * 
+     * @param jsonLine Linha JSON a ser adicionada.
+     */
     public void append(String jsonLine) {
         sb.append(jsonLine).append("\n");
     }
 
+    /**
+     * Obtém o conteúdo JSON acumulado até ao momento, como uma string.
+     * 
+     * @return String contendo todas as linhas JSON acumuladas.
+     */
     public String getJson() {
         return sb.toString();
     }

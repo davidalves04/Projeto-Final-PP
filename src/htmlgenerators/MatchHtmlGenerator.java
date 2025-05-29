@@ -5,8 +5,23 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Classe responsável por gerar um ficheiro HTML que apresenta informações
+ * de um jogo de futebol, incluindo as equipas e os jogadores que participaram.
+ * 
+ * O ficheiro HTML contém o nome das equipas em confronto e detalhes dos
+ * jogadores de cada equipa.
+ */
 public class MatchHtmlGenerator {
 
+    /**
+     * Gera um ficheiro HTML com os detalhes do jogo, incluindo nome das equipas
+     * e informações individuais dos jogadores de ambas as equipas.
+     * 
+     * @param match Objeto que representa o jogo, contendo as equipas e jogadores.
+     * @param outputPath Caminho do ficheiro onde o HTML será guardado.
+     * @throws IOException Se ocorrer algum erro ao escrever no ficheiro.
+     */
     public static void generate(IMatch match, String outputPath) throws IOException {
         StringBuilder html = new StringBuilder();
         html.append("<html><body>");
@@ -33,6 +48,13 @@ public class MatchHtmlGenerator {
         }
     }
 
+    /**
+     * Adiciona ao HTML um bloco com as informações do jogador, incluindo nome,
+     * idade, nacionalidade e um valor geral médio das suas capacidades.
+     * 
+     * @param html StringBuilder onde o conteúdo HTML será acrescentado.
+     * @param player Jogador cujas informações serão apresentadas.
+     */
     private static void appendPlayerCard(StringBuilder html, IPlayer player) {
         int overall = (player.getShooting() + player.getPassing() + player.getStamina() + player.getSpeed()) / 4;
         html.append("<div class='player-card'>")

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.data;
 
 import api.player.Player;
@@ -12,65 +8,74 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 /**
- *
- * @author Utilizador
+ * Classe responsável por exportar objetos {@link Player} para um ficheiro JSON.
+ * Permite adicionar múltiplos jogadores a um ficheiro JSON, mantendo o formato correto de array.
+ * 
+ * Esta classe assume que cada {@code Player} possui um método {@code exportToJson()} 
+ * que escreve o conteúdo JSON para o ficheiro indicado anteriormente com {@code setFile()}.
+ * 
+ * @author Gabriel
  */
 public class PlayerExporterJSON {
-    
-    
-    
-    
+
+    /**
+     * Exporta um array de jogadores para um ficheiro JSON.
+     * Se o ficheiro já contém dados, os novos jogadores são adicionados ao array existente.
+     * Caso contrário, um novo array JSON será iniciado.
+     *
+     * @param players Array de objetos Player a exportar.
+     * @param playerFile Caminho para o ficheiro JSON de destino.
+     * @throws IOException Se ocorrer um erro de escrita/leitura do ficheiro.
+     */
     public void exportPlayersArrayToJson(Player[] players, String playerFile) throws IOException {
- File file = new File(playerFile);
-boolean existeConteudo = false;
+        File file = new File(playerFile);
+        boolean existeConteudo = false;
 
-// 1) Le o conteúdo para verificar se já tem conteúdo JSON
-if (file.exists() && file.length() > 0) {
-    
-    StringBuilder conteudo = new StringBuilder();
-    try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-        String line;
-        while ((line = reader.readLine()) != null) {
-            conteudo.append(line).append("\n");
+        // 1) Verifica se o ficheiro existe e tem conteúdo
+        if (file.exists() && file.length() > 0) {
+            StringBuilder conteudo = new StringBuilder();
+            try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    conteudo.append(line).append("\n");
+                }
+            }
+
+            String sConteudo = conteudo.toString().trim();
+            if (sConteudo.endsWith("]")) {
+                existeConteudo = true;
+                // Remove o último ']' para continuar o array
+                sConteudo = sConteudo.substring(0, sConteudo.length() - 1);
+
+                // Reescreve o conteúdo sem o ']', seguido de uma vírgula
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+                    writer.write(sConteudo);
+                    writer.write(",\n"); // Pronto para adicionar novos objetos
+                }
+            }
+        }
+
+        // 2) Se o ficheiro está vazio ou não existe, inicia um novo array JSON
+        if (!existeConteudo) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+                writer.write("[\n");
+            }
+        }
+
+        // 3) Adiciona cada jogador ao ficheiro
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
+            for (int i = 0; i < players.length; i++) {
+                players[i].setFile(playerFile);
+                players[i].exportToJson(); // Supõe que o método escreve no ficheiro já definido
+
+                if (i < players.length - 1) {
+                    writer.write(",\n");
+                }
+            }
+
+            // 4) Fecha o array JSON
+            writer.write("\n]");
         }
     }
-    String sConteudo = conteudo.toString().trim();
-    if (sConteudo.endsWith("]")) {
-        existeConteudo = true;
-        // remover o ] para continuar o array
-        sConteudo = sConteudo.substring(0, sConteudo.length() - 1);
-        
-        // Sobrescreve o arquivo, sem o ] e mete uma ,
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
-            writer.write(sConteudo);
-            writer.write(",\n"); // pronto para adicionar novos objetos
-        }
-    }
-}
-
-// 2) Se arquivo esta vazio ou não existe, cria com [
-if (!existeConteudo) {
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
-        writer.write("[\n");
-    }
-}
-
-// 3) Agora abre o arquivo para append, e para cada equipa chama exportToJson()
-try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
-    for (int i = 0; i < players.length; i++) {
-        players[i].setFile(playerFile);
-        players[i].exportToJson(); // supondo que exportToJson agora recebe BufferedWriter
-
-        if (i < players.length - 1) {
-            writer.write(",\n");
-        }
-    }
-
-    // 4) Fecha o array
-    writer.write("\n]");
-}
-}
-    
 }

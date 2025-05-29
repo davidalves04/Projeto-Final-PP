@@ -23,6 +23,7 @@ public class Match implements IMatch {
     private IEvent[] events;
     private int eventCount;
 
+    private JsonAccumulator jsonAccumulator;
 
     /**
      * Construtor que inicializa um jogo entre dois clubes.
@@ -30,21 +31,12 @@ public class Match implements IMatch {
      * @param home clube da casa
      * @param away clube visitante
      */
-
-
-
-    
-    private JsonAccumulator jsonAccumulator;
-
-    
-
     public Match(IClub home, IClub away) {
         this.home = home;
         this.away = away;
         this.played = false;
         this.events = new IEvent[100]; // tamanho máximo arbitrário
         this.eventCount = 0;
-       
     }
 
     /**
@@ -178,7 +170,8 @@ public class Match implements IMatch {
     }
 
     /**
-     * Atribui uma equipa ao jogo. A primeira equipa atribuída será a da casa, a segunda será a visitante.
+     * Atribui uma equipa ao jogo. A primeira equipa atribuída será a da casa,
+     * a segunda será a visitante.
      *
      * @param team equipa a associar
      */
@@ -191,17 +184,20 @@ public class Match implements IMatch {
         }
     }
 
-    
+    /**
+     * Define o acumulador JSON usado para exportar dados do jogo.
+     *
+     * @param accumulator acumulador JSON a usar
+     */
     public void setJsonAccumulator(JsonAccumulator accumulator) {
-    this.jsonAccumulator = accumulator;
-}
-    
+        this.jsonAccumulator = accumulator;
+    }
+
     /**
      * Exporta os dados do jogo para um ficheiro JSON.
-     * Inclui dados dos clubes da casa e visitante, se o jogo foi jogado e o número da jornada.
+     * Inclui dados dos clubes da casa e visitante, golos, resultado,
+     * estado do jogo, número da jornada e eventos registados.
      */
-    
-    
     @Override
     public void exportToJson() {
         if (jsonAccumulator == null) {
@@ -256,7 +252,6 @@ public class Match implements IMatch {
         jsonAccumulator.append("}");
     }
 
-
     /**
      * Adiciona um evento ao jogo.
      *
@@ -272,7 +267,7 @@ public class Match implements IMatch {
     /**
      * Retorna todos os eventos registados no jogo.
      *
-     * @return array de eventos
+     * @return array com os eventos registados
      */
     @Override
     public IEvent[] getEvents() {
@@ -286,7 +281,7 @@ public class Match implements IMatch {
     /**
      * Retorna o número total de eventos registados no jogo.
      *
-     * @return número de eventos
+     * @return número total de eventos
      */
     @Override
     public int getEventCount() {

@@ -7,15 +7,34 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Classe responsável por remover um objeto JSON com um código específico
+ * de um ficheiro JSON que contém um array de objetos.
+ */
 public class TeamRemoverJSON {
 
+    /** Caminho para o ficheiro JSON. */
     private final String filePath;
 
+    /**
+     * Construtor da classe TeamRemoverJSON.
+     *
+     * @param filePath Caminho para o ficheiro JSON onde se encontram os objetos.
+     */
     public TeamRemoverJSON(String filePath) {
         this.filePath = filePath;
     }
 
- public void removeObjectByCod(String teamCode) throws IOException {
+    /**
+     * Remove do ficheiro JSON o objeto que contém o código fornecido.
+     * O ficheiro deve conter um array de objetos JSON, e o método processa
+     * manualmente o conteúdo para remover o objeto com a chave "code" igual ao
+     * valor fornecido.
+     *
+     * @param teamCode Código da equipa a remover.
+     * @throws IOException Se ocorrer um erro ao ler ou escrever no ficheiro.
+     */
+    public void removeObjectByCod(String teamCode) throws IOException {
         File file = new File(filePath);
 
         // 1) Ler conteúdo completo do arquivo
@@ -71,7 +90,6 @@ public class TeamRemoverJSON {
 
             String obj = content.substring(startIndex, endIndex + 1).trim();
 
-            
             if (obj.indexOf(pattern) == -1) {
                 if (!first) {
                     filteredJson.append(",\n");
@@ -85,13 +103,10 @@ public class TeamRemoverJSON {
 
         filteredJson.append("\n]");
 
-      
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
             writer.write(filteredJson.toString());
         }
 
         System.out.println("Objeto com code '" + teamCode + "' removido do JSON.");
     }
- 
- 
 }

@@ -1,15 +1,8 @@
- /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.data;
-
-
 
 import api.league.Season;
 
 import java.io.BufferedReader;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
@@ -18,12 +11,22 @@ import java.io.IOException;
 
 import utils.JsonAccumulator;
 
-
 /**
- *
- * @author Utilizador
+ * Classe responsável por exportar temporadas (seasons) para um ficheiro JSON de uma liga existente.
+ * Permite adicionar uma nova temporada ao array de temporadas no ficheiro JSON.
+ * 
+ * @author Gabriel
  */
 public class LeagueExporterJSON {
+
+    /**
+     * Adiciona uma temporada a um ficheiro JSON de uma liga já existente.
+     *
+     * @param season Objeto Season a ser adicionado.
+     * @param leagueFilePath Caminho para o ficheiro da liga.
+     * @throws IOException Se ocorrer um erro de leitura ou escrita no ficheiro, 
+     *                     ou se o formato JSON estiver incorreto.
+     */
     public void appendSeasonToExistingLeague(Season season, String leagueFilePath) throws IOException {
         File file = new File(leagueFilePath);
         if (!file.exists()) {
@@ -82,7 +85,14 @@ public class LeagueExporterJSON {
         }
     }
 
-    // Método auxiliar para encontrar o índice de fechamento do colchete correspondente
+    /**
+     * Encontra o índice do colchete de fecho correspondente ao colchete de abertura de um array.
+     *
+     * @param str String JSON onde procurar.
+     * @param startIndex Índice do colchete de abertura.
+     * @return Índice do colchete de fecho correspondente.
+     * @throws IOException Se não for encontrado um colchete de fecho correspondente.
+     */
     private int findMatchingBracketIndex(String str, int startIndex) throws IOException {
         int count = 0;
         for (int i = startIndex; i < str.length(); i++) {

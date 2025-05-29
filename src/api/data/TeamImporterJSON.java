@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.data;
 
 import api.player.Player;
@@ -14,33 +10,36 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
-
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
-
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 
 /**
- *
- * @author Utilizador
+ * Classe responsável por importar dados de clubes e plantéis (Squads) a partir de ficheiros JSON.
+ * Utiliza a biblioteca Jackson para fazer parsing do JSON.
+ * Permite importar clubes completos, plantéis dos clubes e o plantel do utilizador.
+ * 
+ * @author Gabriel
  */
 public class TeamImporterJSON {
+
     private final static int MAX_TEAM = 18;
-    // Importa um objeto Team a partir de um JSON
+
+    /**
+     * Lê e cria um objeto {@link Team} a partir de um parser JSON.
+     * Também tenta carregar os jogadores do clube, caso exista um ficheiro correspondente.
+     *
+     * @param parser Parser JSON já posicionado no início do objeto.
+     * @return Objeto Team construído a partir do JSON.
+     * @throws IOException Se ocorrer um erro durante a leitura.
+     */
     public static Team readTeamFromParser(JsonParser parser) throws IOException {
-        String filePlayers;
-        String code = null;
-        String country = null;
-        String logo = null;
+        String code = null, country = null, logo = null, name = null, stadiumName = null;
         int foundedYear = 0;
-        String name = null;
-        String stadiumName = null;
-        
-        
 
         while (parser.nextToken() != JsonToken.END_OBJECT) {
             String field = parser.getCurrentName();
@@ -58,30 +57,32 @@ public class TeamImporterJSON {
         }
 
         Team club = new Team(code, country, logo, foundedYear, name, stadiumName);
-        
-        // Usa o nome diretamente como ficheiro
         String fileName = club.playerJsonFile();
 
         File playerFile = new File(fileName);
-        
         if (playerFile.exists()) {
-         try {
-        IPlayer[] teamPlayers = PlayerImporterJSON.playersFromJson(fileName);
-        for (IPlayer p : teamPlayers) {
-            club.addPlayer(p);
+            try {
+                IPlayer[] teamPlayers = PlayerImporterJSON.playersFromJson(fileName);
+                for (IPlayer p : teamPlayers) {
+                    club.addPlayer(p);
+                }
+            } catch (Exception e) {
+                System.out.println("Erro ao carregar jogadores para o clube " + name + ": " + e.getMessage());
+            }
+        } else {
+            System.out.println("Ficheiro de jogadores não encontrado para o clube " + name + ": " + fileName);
         }
-    } catch (Exception e) {
-        System.out.println("Erro ao carregar jogadores para o clube " + name + ": " + e.getMessage());
-    }
-} else {
-    System.out.println("Ficheiro de jogadores não encontrado para o clube " + name + ": " + fileName);
-}
-        
-        
+
         return club;
     }
 
-    // Importa todos os clubes do ficheiro JSON (array de objetos Team)
+    /**
+     * Lê um ficheiro JSON com uma lista de clubes e converte cada um num objeto {@link Team}.
+     *
+     * @param filePath Caminho para o ficheiro JSON.
+     * @return Array de objetos Team lidos do ficheiro.
+     * @throws IOException Se o JSON estiver mal formado ou ocorrer erro de leitura.
+     */
     public static Team[] teamsFromJson(String filePath) throws IOException {
         JsonFactory factory = new JsonFactory();
         JsonParser parser = factory.createParser(new File(filePath));
@@ -91,7 +92,7 @@ public class TeamImporterJSON {
             throw new IOException("JSON inválido: esperado um array de clubes");
         }
 
-        // Conta quantos clubes existem
+        // Contar número de clubes
         int count = 0;
         while (parser.nextToken() == JsonToken.START_OBJECT) {
             count++;
@@ -100,9 +101,8 @@ public class TeamImporterJSON {
         parser.close();
 
         Team[] teams = new Team[count];
-
         parser = factory.createParser(new File(filePath));
-        parser.nextToken(); // pula START_ARRAY
+        parser.nextToken(); // Avança o START_ARRAY
 
         int i = 0;
         while (parser.nextToken() == JsonToken.START_OBJECT) {
@@ -111,126 +111,126 @@ public class TeamImporterJSON {
 
         parser.close();
         return teams;
-        
     }
-    
-    
-    //Importa a squad 
-    private static Squad readSquadFromParser(JsonParser parser,IClub[] clubs) throws IOException {
-        
-    Formation formation = null;
-    Player[] players = new Player[MAX_TEAM];
-    int playerCount = 0;
 
-    LocalDate birthDate = null;
-    PreferredFoot preferredFoot = PreferredFoot.Right;
-    String name = null, nationality = null, basePosition = null, photo = null;
-    int number = 0, age = 0, shooting = 0, stamina = 0, speed = 0, passing = 0;
-    float height = 0f, weight = 0f;
-    IClub squadClub = null;
+    /**
+     * Lê e constrói um objeto {@link Squad} a partir de um parser JSON.
+     * Procura o clube correspondente no array fornecido.
+     *
+     * @param parser Parser JSON já posicionado no início do objeto Squad.
+     * @param clubs  Array de clubes disponíveis.
+     * @return Squad lido do ficheiro.
+     * @throws IOException Se faltar o campo do clube ou se ocorrer erro de parsing.
+     */
+    private static Squad readSquadFromParser(JsonParser parser, IClub[] clubs) throws IOException {
+        Formation formation = null;
+        Player[] players = new Player[MAX_TEAM];
+        int playerCount = 0;
+        IClub squadClub = null;
 
-    String clubName = null;
+        // Variáveis temporárias para jogador
+        LocalDate birthDate = null;
+        PreferredFoot preferredFoot = PreferredFoot.Right;
+        String name = null, nationality = null, basePosition = null, photo = null;
+        int number = 0, age = 0, shooting = 0, stamina = 0, speed = 0, passing = 0;
+        float height = 0f, weight = 0f;
 
-    while (parser.nextToken() != JsonToken.END_OBJECT) {
-        String fieldName = parser.getCurrentName();
-        if (fieldName == null) continue;
-        parser.nextToken();
+        String clubName = null;
 
-        switch (fieldName) {
+        while (parser.nextToken() != JsonToken.END_OBJECT) {
+            String fieldName = parser.getCurrentName();
+            if (fieldName == null) continue;
+            parser.nextToken();
 
-            case "clubName" -> {
-                clubName = parser.getValueAsString();
-                for (IClub c : clubs) {  //Vai procurar no array de clubs pelo nome
-                    
-                    if (c.getName().equalsIgnoreCase(clubName)) {
-                        squadClub = c;  
-                        break;
+            switch (fieldName) {
+                case "clubName" -> {
+                    clubName = parser.getValueAsString();
+                    for (IClub c : clubs) {
+                        if (c.getName().equalsIgnoreCase(clubName)) {
+                            squadClub = c;
+                            break;
+                        }
+                    }
+                    if (squadClub == null) {
+                        throw new IOException("Clube não encontrado: " + clubName);
                     }
                 }
-                if (squadClub == null) {
-                    throw new IOException("Clube não encontrado: " + clubName);
-                }
-            }
+                case "formation" -> formation = new Formation(parser.getValueAsString());
 
-            case "formation" -> {
-                String formationName = parser.getValueAsString();
-                 formation = new Formation(formationName);
-            }
-
-            case "players" -> {
-                if (parser.currentToken() == JsonToken.START_ARRAY) {
-                    while (parser.nextToken() != JsonToken.END_ARRAY) {
-                        // Ler jogador
-                        while (parser.nextToken() != JsonToken.END_OBJECT) {
-                            String playerField = parser.getCurrentName();
-                            parser.nextToken();
-                            switch (playerField) {
-                                case "name" -> name = parser.getValueAsString();
-                                case "birthDate" -> birthDate = LocalDate.parse(parser.getValueAsString());
-                                case "nationality" -> nationality = parser.getValueAsString();
-                                case "basePosition" -> basePosition = parser.getValueAsString();
-                                case "photo" -> photo = parser.getValueAsString();
-                                case "number" -> number = parser.getIntValue();
-                                case "age" -> age = parser.getIntValue();
-                                case "preferredFoot" -> preferredFoot = PreferredFoot.fromString(parser.getValueAsString());
-                                case "height" -> height = (float) parser.getDoubleValue();
-                                case "weight" -> weight = (float) parser.getDoubleValue();
-                                case "shootingstats" -> shooting = parser.getIntValue();
-                                case "staminastats" -> stamina = parser.getIntValue();
-                                case "speedstats" -> speed = parser.getIntValue();
-                                case "passingstats" -> passing = parser.getIntValue();
-                                default -> parser.skipChildren();
+                case "players" -> {
+                    if (parser.currentToken() == JsonToken.START_ARRAY) {
+                        while (parser.nextToken() != JsonToken.END_ARRAY) {
+                            while (parser.nextToken() != JsonToken.END_OBJECT) {
+                                String playerField = parser.getCurrentName();
+                                parser.nextToken();
+                                switch (playerField) {
+                                    case "name" -> name = parser.getValueAsString();
+                                    case "birthDate" -> birthDate = LocalDate.parse(parser.getValueAsString());
+                                    case "nationality" -> nationality = parser.getValueAsString();
+                                    case "basePosition" -> basePosition = parser.getValueAsString();
+                                    case "photo" -> photo = parser.getValueAsString();
+                                    case "number" -> number = parser.getIntValue();
+                                    case "age" -> age = parser.getIntValue();
+                                    case "preferredFoot" -> preferredFoot = PreferredFoot.fromString(parser.getValueAsString());
+                                    case "height" -> height = (float) parser.getDoubleValue();
+                                    case "weight" -> weight = (float) parser.getDoubleValue();
+                                    case "shootingstats" -> shooting = parser.getIntValue();
+                                    case "staminastats" -> stamina = parser.getIntValue();
+                                    case "speedstats" -> speed = parser.getIntValue();
+                                    case "passingstats" -> passing = parser.getIntValue();
+                                    default -> parser.skipChildren();
+                                }
                             }
+
+                            if (playerCount < MAX_TEAM) {
+                                PlayerStats stats = new PlayerStats(shooting, passing, stamina, speed);
+                                IPlayerPosition position = new Position(basePosition);
+                                players[playerCount++] = new Player(name, birthDate, age, nationality, number, photo, stats, position, preferredFoot, height, weight);
+                            }
+
+                            // Reset para o próximo jogador
+                            birthDate = null;
+                            name = nationality = basePosition = photo = null;
+                            number = age = shooting = stamina = speed = passing = 0;
                         }
-
-                        if (playerCount < MAX_TEAM) {
-                            PlayerStats stats = new PlayerStats(shooting, passing, stamina, speed);
-                            IPlayerPosition position = new Position(basePosition);
-
-                            players[playerCount++] = new Player(name, birthDate, age, nationality, number, photo, stats, position, preferredFoot, height, weight);
-                        }
-
-                        // Reset variáveis para o próximo jogador
-                        birthDate = null;
-                        name = nationality = basePosition = photo = null;
-                        number = age = shooting = stamina = speed = passing = 0;
                     }
                 }
+
+                case "teamStrength" -> parser.skipChildren();
+                default -> parser.skipChildren();
             }
-
-            case "teamStrength" -> parser.skipChildren();
-
-            default -> parser.skipChildren();
         }
+
+        if (squadClub == null) {
+            throw new IOException("Campo clubName não encontrado no JSON da squad.");
+        }
+
+        Squad squad = new Squad(squadClub, formation);
+        for (int i = 0; i < playerCount; i++) {
+            squad.addPlayer(players[i]);
+        }
+
+        return squad;
     }
 
-    if (squadClub == null) {
-        throw new IOException("Campo clubName não encontrado no JSON da squad.");
-    }
-
-    Squad squad = new Squad(squadClub, formation);
-
-    for (int i = 0; i < playerCount; i++) {
-        squad.addPlayer(players[i]);
-    }
-
-    return squad; 
-        
-   
-}
-    
-    
-    
-    public static Squad[] squadsFromJson(String filePath,IClub[] clubs) throws IOException {
-     JsonFactory factory = new JsonFactory();
+    /**
+     * Importa vários objetos {@link Squad} a partir de um ficheiro JSON.
+     * Cada objeto Squad deve ter um campo "clubName" que seja compatível com os clubes disponíveis.
+     *
+     * @param filePath Caminho para o ficheiro JSON.
+     * @param clubs Array de clubes já carregados.
+     * @return Array de squads lidos.
+     * @throws IOException Se o ficheiro estiver mal formado ou clube não for encontrado.
+     */
+    public static Squad[] squadsFromJson(String filePath, IClub[] clubs) throws IOException {
+        JsonFactory factory = new JsonFactory();
         JsonParser parser = factory.createParser(new File(filePath));
 
         if (parser.nextToken() != JsonToken.START_ARRAY) {
             parser.close();
-            throw new IOException("JSON inválido: esperado um array de clubes");
+            throw new IOException("JSON inválido: esperado um array de squads");
         }
 
-        // Conta quantos clubes existem
         int count = 0;
         while (parser.nextToken() == JsonToken.START_OBJECT) {
             count++;
@@ -239,33 +239,37 @@ public class TeamImporterJSON {
         parser.close();
 
         Squad[] squads = new Squad[count];
-
         parser = factory.createParser(new File(filePath));
-        parser.nextToken(); // pula START_ARRAY
+        parser.nextToken();
 
         int i = 0;
         while (parser.nextToken() == JsonToken.START_OBJECT) {
-            squads[i++] = readSquadFromParser(parser,clubs);
+            squads[i++] = readSquadFromParser(parser, clubs);
         }
 
         parser.close();
         return squads;
-}
-    
-    
-    public static Squad mySquadFromJson(String filePath, IClub[] clubs) throws IOException {
-    JsonFactory factory = new JsonFactory();
-    JsonParser parser = factory.createParser(new File(filePath));
-
-    if (parser.nextToken() != JsonToken.START_OBJECT) {
-        parser.close();
-        throw new IOException("JSON inválido: esperado um objeto de squad");
     }
 
-    Squad squad = readSquadFromParser(parser, clubs);
+    /**
+     * Importa o plantel (Squad) personalizado do utilizador a partir de um ficheiro JSON.
+     *
+     * @param filePath Caminho para o ficheiro JSON do plantel.
+     * @param clubs Array de clubes disponíveis para associar o plantel.
+     * @return Squad do utilizador lido do ficheiro.
+     * @throws IOException Se ocorrer erro no parsing ou se o clube não for encontrado.
+     */
+    public static Squad mySquadFromJson(String filePath, IClub[] clubs) throws IOException {
+        JsonFactory factory = new JsonFactory();
+        JsonParser parser = factory.createParser(new File(filePath));
 
-    parser.close();
-    return squad;
-}
-}
+        if (parser.nextToken() != JsonToken.START_OBJECT) {
+            parser.close();
+            throw new IOException("JSON inválido: esperado um objeto de squad");
+        }
 
+        Squad squad = readSquadFromParser(parser, clubs);
+        parser.close();
+        return squad;
+    }
+}

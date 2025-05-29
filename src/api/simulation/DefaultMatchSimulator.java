@@ -7,10 +7,36 @@ import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import java.util.Random;
 import api.event.*;
 
+/**
+ * Implementação padrão da estratégia de simulação de um jogo de futebol.
+ * 
+ * Esta classe simula um jogo com eventos aleatórios durante os 90 minutos,
+ * tais como faltas, passes, remates e golos, baseando-se nos atributos dos jogadores.
+ * 
+ * A simulação adiciona eventos ao objeto {@link IMatch} recebido e marca o jogo como jogado no final.
+ * 
+ * A probabilidade de ocorrência dos eventos é determinada por valores aleatórios e
+ * atributos técnicos dos jogadores, como remate, passe e resistência.
+ * 
+ * @author 
+ */
 public class DefaultMatchSimulator implements MatchSimulatorStrategy {
 
     private final Random random = new Random();
 
+    /**
+     * Simula um jogo de futebol adicionando eventos durante 90 minutos.
+     * 
+     * Em cada minuto há 20% de chance de ocorrer um evento, que pode ser:
+     * falta, passe, remate (golo, remate enquadrado ou falhado).
+     * 
+     * Os eventos são determinados com base nas estatísticas do jogador atacante
+     * e adicionados ao objeto {@code match}.
+     * 
+     * No fim, o jogo é marcado como jogado.
+     * 
+     * @param match jogo a ser simulado, onde os eventos serão registados
+     */
     @Override
     public void simulate(IMatch match) {
         IClub home = match.getHomeClub();

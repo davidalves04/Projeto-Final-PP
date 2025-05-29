@@ -7,18 +7,38 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Classe responsável por remover objetos de jogadores de um ficheiro JSON,
+ * com base no número de camisola.
+ * A manipulação do ficheiro é feita de forma textual, assumindo que o ficheiro
+ * contém um array JSON válido de objetos de jogadores.
+ * 
+ * @author Gabriel
+ */
 public class PlayerRemoverJSON {
 
     private final String filePath;
 
+    /**
+     * Construtor da classe.
+     *
+     * @param filePath Caminho para o ficheiro JSON onde estão guardados os jogadores.
+     */
     public PlayerRemoverJSON(String filePath) {
         this.filePath = filePath;
     }
 
+    /**
+     * Remove do ficheiro JSON o objeto que representa o jogador com o número indicado.
+     * O conteúdo é lido, filtrado e regravado no mesmo ficheiro.
+     *
+     * @param numberToRemove Número do jogador a remover.
+     * @throws IOException Caso ocorra erro na leitura ou escrita do ficheiro.
+     */
     public void removeObjectByNumber(int numberToRemove) throws IOException {
         File file = new File(filePath);
 
-        // 1) Ler conteúdo completo do arquivo
+        // 1) Lê o conteúdo completo do ficheiro
         StringBuilder contentBuilder = new StringBuilder();
         if (file.exists() && file.length() > 0) {
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -31,14 +51,12 @@ public class PlayerRemoverJSON {
 
         String content = contentBuilder.toString().trim();
 
-        // 2) Remover o [ e ] do array JSON
+        // 2) Remove os colchetes [] do array JSON para facilitar o processamento
         if (content.startsWith("[") && content.endsWith("]")) {
             content = content.substring(1, content.length() - 1).trim();
         }
 
-        // 3) Separar os objetos JSON manualmente sem coleções
-        // Aqui vamos dividir a string em objetos JSON simples, assumindo que cada objeto começa com '{' e termina com '}'
-        // Como não podemos usar regex split para arrays, vamos fazer um parse simples por índice
+        // 3) Divide manualmente os objetos JSON dentro do array
         int length = content.length();
         StringBuilder filteredJson = new StringBuilder();
         filteredJson.append("[\n");
@@ -48,13 +66,12 @@ public class PlayerRemoverJSON {
 
         int i = 0;
         while (i < length) {
-            // Encontrar o próximo objeto JSON entre {}
-            // Encontrar o índice de abertura {
+            // Encontra o próximo objeto JSON (delimitado por chaves {})
             int startIndex = content.indexOf('{', i);
             if (startIndex == -1) {
-                break; // sem mais objetos
+                break;
             }
-            // Encontrar o índice de fechamento correspondente }
+
             int braceCount = 0;
             int endIndex = -1;
             for (int j = startIndex; j < length; j++) {
@@ -68,14 +85,14 @@ public class PlayerRemoverJSON {
             }
 
             if (endIndex == -1) {
-                // objeto mal formado, sai do loop
+                // Objeto mal formado, termina a leitura
                 break;
             }
 
             String obj = content.substring(startIndex, endIndex + 1).trim();
 
-            // Verifica se o objeto contem o "number": numberToRemove
-            if (obj.indexOf(pattern) == -1) {
+            // Verifica se o objeto NÃO tem o número a remover
+            if (!obj.contains(pattern)) {
                 if (!first) {
                     filteredJson.append(",\n");
                 }
@@ -88,7 +105,7 @@ public class PlayerRemoverJSON {
 
         filteredJson.append("\n]");
 
-        // 4) Reescrever o arquivo com o JSON filtrado
+        // 4) Reescreve o ficheiro com os objetos restantes
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
             writer.write(filteredJson.toString());
         }

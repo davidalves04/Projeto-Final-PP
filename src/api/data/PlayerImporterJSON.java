@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package api.data;
 
 import api.player.Player;
@@ -12,16 +8,68 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 
 /**
- *
- * @author Utilizador
+ * Classe responsável por importar jogadores a partir de ficheiros JSON.
+ * Utiliza a biblioteca Jackson para fazer o parsing do conteúdo.
+ * Pode importar um único jogador (internamente) ou um array completo de jogadores.
+ * 
+ * @author Gabriel
  */
 public class PlayerImporterJSON {
-        // Importa um jogador a partir de um JSON
+
+    /**
+     * Lê todos os jogadores de um ficheiro JSON que contém um array de objetos.
+     *
+     * @param filePath Caminho para o ficheiro JSON contendo os jogadores.
+     * @return Um array de objetos {@link Player}.
+     * @throws IOException Caso o ficheiro esteja mal formatado ou ocorra erro de leitura.
+     */
+    public static Player[] playersFromJson(String filePath) throws IOException {
+        JsonFactory factory = new JsonFactory();
+        JsonParser parser = factory.createParser(new File(filePath));
+
+        // Verifica se o conteúdo começa com um array JSON
+        if (parser.nextToken() != JsonToken.START_ARRAY) {
+            parser.close();
+            throw new IOException("JSON inválido: esperado um array de jogadores");
+        }
+
+        // Conta quantos jogadores existem
+        int count = 0;
+        while (parser.nextToken() == JsonToken.START_OBJECT) {
+            count++;
+            parser.skipChildren();
+        }
+        parser.close();
+
+        Player[] players = new Player[count];
+
+        // Reabre o parser para começar a leitura real dos objetos
+        parser = factory.createParser(new File(filePath));
+        parser.nextToken(); // pula START_ARRAY
+
+        int i = 0;
+        while (parser.nextToken() == JsonToken.START_OBJECT) {
+            players[i++] = readPlayerFromParser(parser);
+        }
+
+        parser.close();
+        return players;
+    }
+
+    /**
+     * Lê um jogador individual a partir de um objeto JSON.
+     * Este método é utilizado internamente no parsing do array.
+     *
+     * @param parser JsonParser posicionado no início de um objeto jogador.
+     * @return Um objeto {@link Player} com os dados lidos.
+     * @throws IOException Caso o JSON esteja mal estruturado.
+     */
     private static Player readPlayerFromParser(JsonParser parser) throws IOException {
         String name = null, nationality = null, photo = null, positionDesc = null;
         PreferredFoot preferredFoot = PreferredFoot.Right;
@@ -56,38 +104,5 @@ public class PlayerImporterJSON {
         IPlayerPosition position = new Position(positionDesc);
 
         return new Player(name, birthDate, age, nationality, number, photo, stats, position, preferredFoot, height, weight);
-    }
-    
-    
-    //Importar todos os jogadores do ficheiro JSON
-     public static Player[] playersFromJson(String filePath) throws IOException {
-        JsonFactory factory = new JsonFactory();
-        JsonParser parser = factory.createParser(new File(filePath));
-
-        if (parser.nextToken() != JsonToken.START_ARRAY) {
-            parser.close();
-            throw new IOException("JSON inválido: esperado um array de jogadores");
-        }
-
-        // Conta quantos jogadores
-        int count = 0;
-        while (parser.nextToken() == JsonToken.START_OBJECT) {
-            count++;
-            parser.skipChildren();
-        }
-        parser.close();
-
-        Player[] players = new Player[count];
-
-        parser = factory.createParser(new File(filePath));
-        parser.nextToken(); // pula START_ARRAY
-
-        int i = 0;
-        while (parser.nextToken() == JsonToken.START_OBJECT) {
-            players[i++] = readPlayerFromParser(parser);
-        }
-
-        parser.close();
-        return players;
     }
 }

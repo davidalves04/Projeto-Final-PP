@@ -13,11 +13,20 @@ import utils.JsonAccumulator;
  * que pode conter múltiplas épocas (seasons).
  */
 public class League implements ILeague {
+
+    /** Nome da liga. */
     private String name;
+
+    /** Array de épocas associadas à liga. */
     private ISeason[] seasons;
+
+    /** Contador do número atual de épocas registadas. */
     private int seasonCount;
+
+    /** Caminho do ficheiro de exportação. */
     private String file;
 
+    /** Número máximo de épocas permitidas na liga. */
     private static final int MAX_SEASONS = 10;
 
     /**
@@ -123,47 +132,47 @@ public class League implements ILeague {
 
     /**
      * Exporta os dados da liga para um ficheiro JSON.
-     * Cada época também será exportada através do seu próprio método {@code exportToJson()}.
-     * O ficheiro será escrito em modo de append.
+     * <p>
+     * Cada época associada será também exportada através do seu próprio método
+     * {@code exportToJson()}. Os dados são acumulados usando um {@link JsonAccumulator}
+     * e escritos no ficheiro especificado.
+     * </p>
+     *
+     * @throws IOException se ocorrer um erro ao escrever no ficheiro
      */
-   
-
     public void exportToJson() throws IOException {
-         JsonAccumulator acc = new JsonAccumulator();
+        JsonAccumulator acc = new JsonAccumulator();
 
-    if (seasons != null) {
-    for (ISeason s : seasons) {
-        if (s instanceof Season season) {
-            season.setJsonAccumulator(acc);
-        }
-    }
-}
-
-    acc.append("{\n");
-    acc.append("  \"name\": \"" + name + "\",\n");
-    acc.append("  \"seasons\": [\n");
-
-    if (seasons != null) {
-    for (int i = 0; i < seasonCount; i++) {
-        if (seasons[i] != null) {  // checagem extra só para garantir
-            seasons[i].exportToJson();
-            if (i < seasonCount - 1) {
-                acc.append(",\n");
+        if (seasons != null) {
+            for (ISeason s : seasons) {
+                if (s instanceof Season season) {
+                    season.setJsonAccumulator(acc);
+                }
             }
         }
+
+        acc.append("{\n");
+        acc.append("  \"name\": \"" + name + "\",\n");
+        acc.append("  \"seasons\": [\n");
+
+        if (seasons != null) {
+            for (int i = 0; i < seasonCount; i++) {
+                if (seasons[i] != null) {
+                    seasons[i].exportToJson();
+                    if (i < seasonCount - 1) {
+                        acc.append(",\n");
+                    }
+                }
+            }
+        }
+
+        acc.append("\n  ]\n");
+        acc.append("}");
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(acc.getJson());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
-
-    acc.append("\n  ]\n");
-    acc.append("}");
-
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-        writer.write(acc.getJson());
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-}
-}
-    
-    
-

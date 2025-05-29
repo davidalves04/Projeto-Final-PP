@@ -20,7 +20,7 @@ public class Schedule implements ISchedule {
     private final IStanding[] standings;
     private int matchCount;
 
-     private JsonAccumulator jsonAccumulator;
+    private JsonAccumulator jsonAccumulator;
 
     /**
      * Construtor da classe Schedule.
@@ -28,9 +28,6 @@ public class Schedule implements ISchedule {
      * @param rounds Matriz de jogos organizada por jornadas.
      * @param teams  Array com todas as equipas participantes.
      */
-
-
-   
     public Schedule(IMatch[][] rounds, ITeam[] teams) {
         this.rounds = rounds;
         this.standings = new IStanding[teams.length];
@@ -152,7 +149,7 @@ public class Schedule implements ISchedule {
      * Procura a classificação associada a um determinado clube.
      *
      * @param club Clube a procurar.
-     * @return Classificação correspondente ou null.
+     * @return Classificação correspondente ou null se não encontrada.
      */
     private IStanding getStandingByClub(IClub club) {
         for (IStanding standing : standings) {
@@ -182,48 +179,40 @@ public class Schedule implements ISchedule {
         }
     }
 
-
-
-   
-    
-    
-
+    /**
+     * Define o acumulador JSON para exportação.
+     *
+     * @param jsonAccumulator Instância de JsonAccumulator.
+     */
     public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
         this.jsonAccumulator = jsonAccumulator;
     }
 
     /**
      * Exporta o conteúdo do calendário para um ficheiro JSON.
+     *
+     * @throws IOException Caso ocorra erro na escrita do ficheiro JSON.
      */
-    
-    
- @Override
+    @Override
     public void exportToJson() throws IOException {
-       
- jsonAccumulator.append("  \"rounds\": {");
+        jsonAccumulator.append("  \"rounds\": {");
 
-    for (int i = 0; i < rounds.length; i++) {
-        jsonAccumulator.append("    \"round_" + (i + 1) + "\": [");
+        for (int i = 0; i < rounds.length; i++) {
+            jsonAccumulator.append("    \"round_" + (i + 1) + "\": [");
 
-        for (int j = 0; j < rounds[i].length; j++) {
-            ((Match) rounds[i][j]).setJsonAccumulator(jsonAccumulator);
-            rounds[i][j].exportToJson();
+            for (int j = 0; j < rounds[i].length; j++) {
+                ((Match) rounds[i][j]).setJsonAccumulator(jsonAccumulator);
+                rounds[i][j].exportToJson();
 
-            if (j < rounds[i].length - 1) {
-                jsonAccumulator.append(",");
+                if (j < rounds[i].length - 1) {
+                    jsonAccumulator.append(",");
+                }
             }
+
+            jsonAccumulator.append("    ]" + (i < rounds.length - 1 ? "," : ""));
         }
 
-        jsonAccumulator.append("    ]" + (i < rounds.length - 1 ? "," : "")); //Se for o ultimo nao mete virgula
+        jsonAccumulator.append("  }");
     }
-
-    jsonAccumulator.append("  }");
- 
-    
-    
-    
-    }
-    
-    
 
 }

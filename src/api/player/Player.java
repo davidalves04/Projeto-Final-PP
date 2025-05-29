@@ -63,26 +63,52 @@ public class Player implements IPlayer {
         this.weight = weight;
     }
 
+    /**
+     * Devolve o nome do jogador.
+     * 
+     * @return nome do jogador
+     */
     @Override
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Devolve a data de nascimento do jogador.
+     * 
+     * @return data de nascimento
+     */
     @Override
     public LocalDate getBirthDate() {
         return this.birth;
     }
 
+    /**
+     * Devolve a idade do jogador.
+     * 
+     * @return idade do jogador
+     */
     @Override
     public int getAge() {
         return this.age;
     }
 
+    /**
+     * Devolve a nacionalidade do jogador.
+     * 
+     * @return nacionalidade
+     */
     @Override
     public String getNationality() {
         return this.nationality;
     }
 
+    /**
+     * Define a posição principal do jogador.
+     * 
+     * @param position posição a definir
+     * @throws IllegalArgumentException se a posição for null
+     */
     @Override
     public void setPosition(IPlayerPosition position) {
         if (position == null) {
@@ -91,60 +117,110 @@ public class Player implements IPlayer {
         this.position = position;
     }
 
+    /**
+     * Devolve o caminho ou URL da foto do jogador.
+     * 
+     * @return caminho ou URL da foto
+     */
     @Override
     public String getPhoto() {
         return this.photo;
     }
 
+    /**
+     * Devolve o número do jogador na camisola.
+     * 
+     * @return número na camisola
+     */
     @Override
     public int getNumber() {
         return this.number;
     }
 
+    /**
+     * Devolve a capacidade de remate do jogador.
+     * 
+     * @return valor da capacidade de remate
+     */
     @Override
     public int getShooting() {
         return stats.getShooting();
     }
 
+    /**
+     * Devolve a capacidade de passe do jogador.
+     * 
+     * @return valor da capacidade de passe
+     */
     @Override
     public int getPassing() {
         return stats.getPassing();
     }
 
+    /**
+     * Devolve a resistência física do jogador.
+     * 
+     * @return valor da resistência
+     */
     @Override
     public int getStamina() {
         return stats.getStamina();
     }
 
+    /**
+     * Devolve a velocidade do jogador.
+     * 
+     * @return valor da velocidade
+     */
     @Override
     public int getSpeed() {
         return stats.getSpeed();
     }
 
+    /**
+     * Devolve a posição principal do jogador.
+     * 
+     * @return posição principal
+     */
     @Override
     public IPlayerPosition getPosition() {
         return this.position;
     }
 
+    /**
+     * Devolve a altura do jogador em metros.
+     * 
+     * @return altura em metros
+     */
     @Override
     public float getHeight() {
         return this.height;
     }
 
+    /**
+     * Devolve o peso do jogador em quilogramas.
+     * 
+     * @return peso em quilogramas
+     */
     @Override
     public float getWeight() {
         return this.weight;
     }
 
+    /**
+     * Devolve o pé preferencial do jogador.
+     * 
+     * @return pé preferencial
+     */
     @Override
     public PreferredFoot getPreferredFoot() {
         return this.preferredFoot;
     }
 
     /**
-     * Retorna o caminho do ficheiro para exportação.
+     * Devolve o caminho do ficheiro para exportação.
      *
-     * @return Caminho do ficheiro
+     * @return caminho do ficheiro
      */
     public String getFile() {
         return file;
@@ -153,14 +229,14 @@ public class Player implements IPlayer {
     /**
      * Define o caminho do ficheiro para exportação JSON.
      *
-     * @param file Caminho do ficheiro
+     * @param file caminho do ficheiro
      */
     public void setFile(String file) {
         this.file = file;
     }
 
     /**
-     * Exporta os dados do jogador para um ficheiro no formato JSON.
+     * Exporta os dados do jogador para um ficheiro em formato JSON.
      *
      * @throws IOException se ocorrer erro na escrita do ficheiro
      */
