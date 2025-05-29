@@ -1,18 +1,28 @@
 package api.event;
 
+import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
 
 /**
  * Representa um evento de remate falhado por um jogador durante um jogo de futebol.
  */
 public class MissedShotEvent implements IEvent {
 
+
     /** Jogador que falhou o remate. */
-    private final IPlayer player;
+    
 
     /** Minuto do jogo em que o remate foi falhado. */
     private final int minute;
+    
+    private final IClub club;
+    /** Jogador que falhou o remate. */
+    
+    private final Player attacker;
+    private final Player goalkeeper;
+
 
     /**
      * Construtor do evento de remate falhado.
@@ -21,8 +31,15 @@ public class MissedShotEvent implements IEvent {
      * @param player Jogador que falhou o remate.
      * @param minute Minuto do jogo em que o remate foi falhado.
      */
-    public MissedShotEvent(com.ppstudios.footballmanager.api.contracts.team.IClub club, IPlayer player, int minute) {
-        this.player = player;
+   
+
+    
+
+    public MissedShotEvent(IClub club, Player attacker,Player goalkeeper, int minute) {
+        this.club = club;
+        this.attacker = attacker;
+        this.goalkeeper = goalkeeper;
+
         this.minute = minute;
     }
 
@@ -33,7 +50,8 @@ public class MissedShotEvent implements IEvent {
      */
     @Override
     public String getDescription() {
-        return "Remate falhado por " + player.getName() + " ao minuto " + minute;
+        return "⏱️ " + minute + "'" + " EVENTO: " + attacker.getName() + " tentou rematar (Remate: " + attacker.getShooting() +
+                               "), mas " + goalkeeper.getName() + " defendeu (Defesa: " + goalkeeper.getDefense() + ")";
     }
 
     /**

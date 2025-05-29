@@ -301,34 +301,44 @@ public class Squad implements ITeam {
             writer.write("{\n");
             writer.write("  \"clubName\": \"" + club.getName() + "\",\n");
             writer.write("  \"formation\": \"" + formation.getDisplayName() + "\",\n");
-            writer.write("  \"players\": [\n");
+            
 
-            for (int i = 0; i < playerCount; i++) {
-                writer.write("    {\n");
-                writer.write("      \"name\": \"" + players[i].getName() + "\",\n");
-                writer.write("      \"birthDate\": \"" + players[i].getBirthDate() + "\",\n");
-                writer.write("      \"nationality\": \"" + players[i].getNationality() + "\",\n");
-                writer.write("      \"basePosition\": \"" + players[i].getPosition() + "\",\n");
-                writer.write("      \"photo\": \"" + players[i].getPhoto() + "\",\n");
-                writer.write("      \"number\": " + players[i].getNumber() + ",\n");
-                writer.write("      \"age\": " + players[i].getAge() + ",\n");
-                writer.write("      \"height\": " + players[i].getHeight() + ",\n");
-                writer.write("      \"weight\": " + players[i].getWeight() + ",\n");
-                writer.write("      \"shootingstats\": " + players[i].getShooting() + ",\n");
-                writer.write("      \"staminastats\": " + players[i].getStamina() + ",\n");
-                writer.write("      \"speedstats\": " + players[i].getSpeed() + ",\n");
-                writer.write("      \"passingstats\": " + players[i].getPassing() + "\n");
-                writer.write("    }");
+    writer.write("  \"players\": [\n");
 
-                if (i < playerCount - 1) writer.write(",");
-                writer.write("\n");
-            }
-
-            writer.write("  ],\n");
-            writer.write("  \"teamStrength\": " + getTeamStrength() + "\n");
-            writer.write("}");
-        } catch (IOException e) {
-            System.out.println("Erro ao exportar jogadores: " + e.getMessage());
+    for (int i = 0; i < playerCount; i++) {
+        writer.write("    {\n");
+        writer.write("      \"name\": \"" + players[i].getName() + "\",\n");
+        writer.write("      \"birthDate\": \"" + players[i].getBirthDate() + "\",\n");
+        writer.write("      \"nationality\": \"" + players[i].getNationality() + "\",\n");
+        writer.write("      \"basePosition\": \"" + players[i].getPosition() + "\",\n");
+        writer.write("      \"photo\": \"" + players[i].getPhoto() + "\",\n");
+        writer.write("      \"number\": " + players[i].getNumber() + ",\n");
+        writer.write("      \"age\": " + players[i].getAge() + ",\n");
+        writer.write("      \"height\": " + players[i].getHeight() + ",\n");
+        writer.write("      \"weight\": " + players[i].getWeight() + ",\n");
+        writer.write("      \"shootingstats\": " + players[i].getShooting() + ",\n");
+        writer.write("      \"staminastats\": " + players[i].getStamina() + ",\n");
+        writer.write("      \"speedstats\": " + players[i].getSpeed() + ",\n");
+        writer.write("      \"passingstats\": " + players[i].getPassing() + ",\n");
+        if (players[i] instanceof Player) {
+         Player p = (Player) players[i];
+         writer.write("      \"defensestats\": " + p.getDefense() + "\n");
         }
+        
+        writer.write("    }");
+
+        if (i < playerCount - 1) writer.write(",");
+        writer.write("\n");
     }
+
+    writer.write("  ],\n");
+    writer.write("  \"teamStrength\": " + getTeamStrength() + "\n");
+    writer.write("}");
+        
+    } catch (IOException e) {
+        System.out.println("Erro ao exportar jogadores: " + e.getMessage());
+
+    }
+}
+    
 }

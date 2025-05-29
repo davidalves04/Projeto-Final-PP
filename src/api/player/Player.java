@@ -176,6 +176,11 @@ public class Player implements IPlayer {
     public int getSpeed() {
         return stats.getSpeed();
     }
+    
+    public int getDefense(){
+        return stats.getDefense();
+    }
+    
 
     /**
      * Devolve a posição principal do jogador.
@@ -258,7 +263,9 @@ public class Player implements IPlayer {
             writer.write("  \"shootingstats\": " + getShooting() + ",\n");
             writer.write("  \"staminastats\": " + getStamina() + ",\n");
             writer.write("  \"speedstats\": " + getSpeed() + ",\n");
-            writer.write("  \"passingstats\": " + getPassing() + "\n");
+            writer.write("  \"passingstats\": " + getPassing() + ",\n");
+            writer.write("  \"defensestats\": " + getDefense() + "\n");
+            
             writer.write("}\n");
 
         } catch (IOException e) {

@@ -74,7 +74,7 @@ public class PlayerImporterJSON {
         String name = null, nationality = null, photo = null, positionDesc = null;
         PreferredFoot preferredFoot = PreferredFoot.Right;
         LocalDate birthDate = null;
-        int number = 0, shooting = 0, passing = 0, stamina = 0, speed = 0, age = 0;
+        int number = 0, shooting = 0, passing = 0, stamina = 0, speed = 0,defense = 0, age = 0;
         float height = 0f, weight = 0f;
 
         while (parser.nextToken() != JsonToken.END_OBJECT) {
@@ -96,11 +96,12 @@ public class PlayerImporterJSON {
                 case "passingstats" -> passing = parser.getIntValue();
                 case "staminastats" -> stamina = parser.getIntValue();
                 case "speedstats" -> speed = parser.getIntValue();
+                case "defensestats" -> defense = parser.getIntValue();
                 default -> parser.skipChildren();
             }
         }
 
-        PlayerStats stats = new PlayerStats(shooting, passing, stamina, speed);
+        PlayerStats stats = new PlayerStats(shooting, passing, stamina, speed,defense);
         IPlayerPosition position = new Position(positionDesc);
 
         return new Player(name, birthDate, age, nationality, number, photo, stats, position, preferredFoot, height, weight);

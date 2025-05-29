@@ -16,7 +16,9 @@
                 "shootingstats": 35,
                 "staminastats": 82,
                 "speedstats": 65,
-                "passingstats": 72
+                "passingstats": 72,
+"defensestats": 82
+
             },
             {
                 "name": "Alexander Bah",

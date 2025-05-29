@@ -13,6 +13,8 @@ public class PlayerStats {
     private int passing;
     private int speed;
     private int stamina;
+    private int defense;
+    
 
     /**
      * Construtor que inicializa os atributos técnicos do jogador.
@@ -21,12 +23,15 @@ public class PlayerStats {
      * @param passing Valor do passe (passing)
      * @param speed Valor da velocidade (speed)
      * @param stamina Valor da resistência (stamina)
+     * @param defense Valor de defesa(defense) 
      */
-    public PlayerStats(int shooting, int passing, int speed, int stamina) {
+    public PlayerStats(int shooting, int passing, int speed, int stamina,int defense) {
         this.shooting = shooting;
         this.passing = passing;
         this.speed = speed;
         this.stamina = stamina;
+        this.defense = defense;
+        
     }
 
     /**
@@ -65,6 +70,15 @@ public class PlayerStats {
         return stamina;
     }
 
+    
+     public int getDefense(){
+        return defense;
+    }
+    
+   
+
+    
+    
     /**
      * Define o valor do remate (shooting).
      * 
@@ -100,4 +114,10 @@ public class PlayerStats {
     public void setStamina(int stamina) {
         this.stamina = stamina;
     }
+    
+     public void setDefense(int defense){
+       this.defense = defense; 
+    }
+    
+    
 }

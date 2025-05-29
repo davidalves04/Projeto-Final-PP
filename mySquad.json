@@ -15,7 +15,8 @@
       "shootingstats": 40,
       "staminastats": 70,
       "speedstats": 85,
-      "passingstats": 75
+      "passingstats": 75,
+      "defensestats": 0
     },
     {
       "name": "Francisco Moura",
@@ -30,7 +31,8 @@
       "shootingstats": 60,
       "staminastats": 85,
       "speedstats": 88,
-      "passingstats": 85
+      "passingstats": 85,
+      "defensestats": 0
     },
     {
       "name": "Iván Marcano",
@@ -45,7 +47,8 @@
       "shootingstats": 50,
       "staminastats": 60,
       "speedstats": 75,
-      "passingstats": 70
+      "passingstats": 70,
+      "defensestats": 0
     },
     {
       "name": "Nehuén Pérez",
@@ -60,7 +63,8 @@
       "shootingstats": 45,
       "staminastats": 70,
       "speedstats": 80,
-      "passingstats": 68
+      "passingstats": 68,
+      "defensestats": 0
     },
     {
       "name": "Zaidu Sanusi",
@@ -75,7 +79,8 @@
       "shootingstats": 50,
       "staminastats": 90,
       "speedstats": 85,
-      "passingstats": 70
+      "passingstats": 70,
+      "defensestats": 0
     },
     {
       "name": "Tiago Djaló",
@@ -90,7 +95,8 @@
       "shootingstats": 55,
       "staminastats": 75,
       "speedstats": 80,
-      "passingstats": 72
+      "passingstats": 72,
+      "defensestats": 0
     },
     {
       "name": "Stephen Eustáquio",
@@ -105,7 +111,8 @@
       "shootingstats": 65,
       "staminastats": 75,
       "speedstats": 85,
-      "passingstats": 80
+      "passingstats": 80,
+      "defensestats": 0
     },
     {
       "name": "Alan Varela",
@@ -120,7 +127,8 @@
       "shootingstats": 70,
       "staminastats": 79,
       "speedstats": 90,
-      "passingstats": 86
+      "passingstats": 86,
+      "defensestats": 0
     },
     {
       "name": "Thomas Peres",
@@ -135,7 +143,8 @@
       "shootingstats": 80,
       "staminastats": 83,
       "speedstats": 90,
-      "passingstats": 90
+      "passingstats": 90,
+      "defensestats": 0
     },
     {
       "name": "Fábio Vieira",
@@ -150,7 +159,8 @@
       "shootingstats": 88,
       "staminastats": 78,
       "speedstats": 80,
-      "passingstats": 85
+      "passingstats": 85,
+      "defensestats": 0
     },
     {
       "name": "William Gomes",
@@ -165,7 +175,8 @@
       "shootingstats": 85,
       "staminastats": 75,
       "speedstats": 80,
-      "passingstats": 70
+      "passingstats": 70,
+      "defensestats": 0
     },
     {
       "name": "Rodrigo Mora",
@@ -180,7 +191,8 @@
       "shootingstats": 93,
       "staminastats": 87,
       "speedstats": 85,
-      "passingstats": 87
+      "passingstats": 87,
+      "defensestats": 0
     },
     {
       "name": "Pepê",
@@ -195,22 +207,24 @@
       "shootingstats": 80,
       "staminastats": 90,
       "speedstats": 93,
-      "passingstats": 75
+      "passingstats": 75,
+      "defensestats": 0
     },
     {
-      "name": "Francisco Conceição",
-      "birthDate": "2003-05-02",
-      "nationality": "Portugues",
+      "name": "Samu Omorodion",
+      "birthDate": "2004-05-05",
+      "nationality": "Espanhol",
       "basePosition": "Forward",
-      "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/francisco-conceicao",
-      "number": 36,
+      "photo": "https://www.fcporto.pt/en/player/samu-omorodion",
+      "number": 77,
       "age": 0,
-      "height": 1.72,
-      "weight": 68.0,
-      "shootingstats": 86,
-      "staminastats": 93,
-      "speedstats": 90,
-      "passingstats": 77
+      "height": 1.93,
+      "weight": 88.0,
+      "shootingstats": 93,
+      "staminastats": 89,
+      "speedstats": 85,
+      "passingstats": 68,
+      "defensestats": 0
     }
   ],
   "teamStrength": 77

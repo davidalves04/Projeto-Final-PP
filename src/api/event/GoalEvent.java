@@ -1,18 +1,26 @@
 package api.event;
 
+import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
 
 /**
  * Representa um evento de golo marcado por um jogador durante um jogo de futebol.
  */
 public class GoalEvent implements IGoalEvent {
 
+
     /** Jogador que marcou o golo. */
-    private final IPlayer player;
+    
 
     /** Minuto do jogo em que o golo foi marcado. */
     private final int minute;
+    private final IClub club;
+    
+    /** Jogador que marcou o golo. */
+    private final Player scorer;
+    private final Player goalkeeper;
 
     /**
      * Construtor do evento de golo.
@@ -21,8 +29,17 @@ public class GoalEvent implements IGoalEvent {
      * @param player Jogador que marcou o golo.
      * @param minute Minuto do jogo em que o golo foi marcado.
      */
-    public GoalEvent(com.ppstudios.footballmanager.api.contracts.team.IClub club, IPlayer player, int minute) {
-        this.player = player;
+    
+
+    
+   
+
+    public GoalEvent(IClub club, Player scorer,Player gk, int minute) {
+        this.club = club;
+        this.scorer = scorer;
+        this.goalkeeper = gk;
+        
+
         this.minute = minute;
     }
 
@@ -33,7 +50,8 @@ public class GoalEvent implements IGoalEvent {
      */
     @Override
     public String getDescription() {
-        return "Golo de " + player.getName() + " ao minuto " + minute;
+        return "⚽ GOLO! " + club.getName() + " - " + scorer.getName() + " (Remate: " + scorer.getShooting() +
+                               ") marcou a " + goalkeeper.getName() + " (Defesa: " + goalkeeper.getDefense() + ") ao minuto " + minute;
     }
 
     /**
@@ -53,7 +71,7 @@ public class GoalEvent implements IGoalEvent {
      */
     @Override
     public IPlayer getPlayer() {
-        return player;
+        return this.scorer;
     }
 
     /**

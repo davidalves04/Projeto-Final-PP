@@ -1,4 +1,4 @@
-package api.simulation;
+ package api.simulation;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
@@ -6,6 +6,7 @@ import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStra
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import java.util.Random;
 import api.event.*;
+import api.player.Player;
 
 /**
  * Implementação padrão da estratégia de simulação de um jogo de futebol.
@@ -38,50 +39,85 @@ public class DefaultMatchSimulator implements MatchSimulatorStrategy {
      * @param match jogo a ser simulado, onde os eventos serão registados
      */
     @Override
-    public void simulate(IMatch match) {
-        IClub home = match.getHomeClub();
-        IClub away = match.getAwayClub();
+ public void simulate(IMatch match) {
+    IClub home = match.getHomeClub();
+    IClub away = match.getAwayClub();
 
-        for (int minute = 1; minute <= 90; minute++) {
-            if (random.nextDouble() > 0.2) continue; // Apenas 20% de chance de haver evento
+    int homeGoals = 0;
+    int awayGoals = 0;
 
-            IClub attackingClub = random.nextBoolean() ? home : away;
-            IClub defendingClub = (attackingClub == home) ? away : home;
+    System.out.println("- Início do jogo entre " + home.getName() + " e " + away.getName());
 
-            IPlayer[] players = attackingClub.getPlayers();
-            if (players.length == 0) continue;
+    for (int minute = 1; minute <= 90; minute++) {
+        double eventProbability = random.nextDouble();
+        if (eventProbability > 0.06) continue; //Probabilidade de 7% de uma oportunidade(Se for maior que 7% sai do ciclo)
 
-            IPlayer player = players[random.nextInt(players.length)];
-            int shooting = player.getShooting();
-            int passing = player.getPassing();
-            int stamina = player.getStamina();
-            int speed = player.getSpeed();
+        boolean isCounterAttack = eventProbability < 0.03;
+        boolean isCorner = eventProbability < 0.04;
+        boolean isPassGood = eventProbability < 0.05;
 
-            double eventRoll = random.nextDouble();
+        IClub attackingClub = random.nextBoolean() ? home : away;
+        IClub defendingClub = (attackingClub == home) ? away : home;
 
-            if (eventRoll < 0.1) {
-                // Falta
-                match.addEvent(new FoulEvent(player, minute));
-            } else if (eventRoll < 0.3) {
-                // Passe
-                boolean success = random.nextInt(100) < passing;
-                match.addEvent(new PassEvent(player, minute, success));
-            } else if (eventRoll < 0.6) {
-                // Remate
-                int shootChance = random.nextInt(100);
-                if (shootChance < shooting) {
-                    // Golo
-                    match.addEvent(new GoalEvent(attackingClub, player, minute));
-                } else if (shootChance < shooting + 20) {
-                    // Remate enquadrado
-                    match.addEvent(new ShotEvent(player, minute));
-                } else {
-                    // Remate falhado
-                    match.addEvent(new MissedShotEvent(attackingClub, player, minute));
-                }
+        IPlayer[] attackers = attackingClub.getPlayers();
+        
+        IPlayer[] defenders = defendingClub.getPlayers();
+
+        if (attackers.length == 0 || defenders.length == 0) continue;
+
+        // 🔍 Selecionar o guarda-redes da equipa defensora
+        Player goalkeeper = null;
+        for (IPlayer p : defenders) {
+            if (p instanceof Player && ((Player)p).getPosition().getDescription().equalsIgnoreCase("Goalkeeper")) {
+                goalkeeper = (Player) p;
+                break;
             }
         }
 
-        match.setPlayed();
+       
+
+      
+        Player attacker = null;
+        Player playmaker = null;
+        
+        
+        while (attacker == null || playmaker == null) {
+            Player temp = (Player) attackers[random.nextInt(attackers.length)];
+            if (temp.getPosition().getDescription().equalsIgnoreCase("Forward")) {
+                attacker = temp;
+            }else if (temp.getPosition().getDescription().equalsIgnoreCase("Midfielder")) {
+                playmaker = temp;
+            }
+        }
+
+        
+        int shooting = attacker.getShooting();
+        int defense = goalkeeper.getDefense();
+
+        if (isCounterAttack) {
+            System.out.println(new CounterAttackEvent(attackingClub, playmaker, minute).getDescription());
+        } else if (isCorner) {
+            System.out.println(new CornerEvent(attackingClub, playmaker, minute).getDescription());
+        } else if(isPassGood){
+           System.out.println(new PassEvent(attackingClub, playmaker, minute).getDescription());
+        }
+
+        
+
+        if (shooting > defense) {
+            GoalEvent goal = new GoalEvent(attackingClub, attacker,goalkeeper, minute);
+            match.addEvent(goal);
+            System.out.println(goal.getDescription());
+            if (attackingClub == home) homeGoals++; else awayGoals++;
+        } else {
+            MissedShotEvent missedGoal = new MissedShotEvent(attackingClub,attacker,goalkeeper,minute);
+            System.out.println(missedGoal.getDescription());
+                    
+        }
     }
+
+    match.setPlayed();
+    System.out.println("\nResultado final:");
+    System.out.println(home.getName() + " " + homeGoals + " x " + awayGoals + " " + away.getName());
+}
 }

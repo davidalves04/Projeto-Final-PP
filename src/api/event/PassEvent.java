@@ -2,6 +2,7 @@ package api.event;
 
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
 
 /**
  * Representa um evento de passe realizado por um jogador durante um jogo de futebol.
@@ -12,11 +13,14 @@ public class PassEvent implements IEvent {
     /** Jogador que realizou o passe. */
     private final IPlayer player;
 
+
     /** Minuto do jogo em que o passe ocorreu. */
     private final int minute;
 
     /** Indica se o passe foi bem sucedido. */
-    private final boolean successful;
+   
+
+     private final IClub club;
 
     /**
      * Construtor do evento de passe.
@@ -25,10 +29,17 @@ public class PassEvent implements IEvent {
      * @param minute     Minuto do jogo em que o passe ocorreu.
      * @param successful Verdadeiro se o passe foi bem sucedido; falso se foi falhado.
      */
-    public PassEvent(IPlayer player, int minute, boolean successful) {
+   
+   
+
+    
+
+    public PassEvent(IClub club,IPlayer player, int minute) {
+
         this.player = player;
         this.minute = minute;
-        this.successful = successful;
+       
+        this.club = club;
     }
 
     /**
@@ -38,7 +49,8 @@ public class PassEvent implements IEvent {
      */
     @Override
     public String getDescription() {
-        return (successful ? "Passe bem sucedido de " : "Passe falhado de ") + player.getName() + " ao minuto " + minute;
+        return "⏱️ " + minute + "' - EVENTO:" + club.getName() + "\n" +
+               "- Passe perigoso de " + player.getName() + "!" + "(Passe: " + player.getPassing() + ")";
     }
 
     /**
