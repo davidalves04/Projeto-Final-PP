@@ -202,39 +202,60 @@ public class Match implements IMatch {
      */
     
     
-   @Override
+    @Override
     public void exportToJson() {
-    if (jsonAccumulator == null) {
-        System.err.println("JsonAccumulator não definido para Match!");
-        return;
+        if (jsonAccumulator == null) {
+            System.err.println("JsonAccumulator não definido para Match!");
+            return;
+        }
+
+        jsonAccumulator.append("{");
+
+        jsonAccumulator.append("  \"home\": {");
+        jsonAccumulator.append("    \"code\": \"" + home.getCode() + "\",");
+        jsonAccumulator.append("    \"name\": \"" + home.getName() + "\"");
+        jsonAccumulator.append("  },");
+
+        jsonAccumulator.append("  \"away\": {");
+        jsonAccumulator.append("    \"code\": \"" + away.getCode() + "\",");
+        jsonAccumulator.append("    \"name\": \"" + away.getName() + "\"");
+        jsonAccumulator.append("  },");
+
+        // Golos
+        int homeGoals = getTotalByEvent(IGoalEvent.class, home);
+        int awayGoals = getTotalByEvent(IGoalEvent.class, away);
+        jsonAccumulator.append("  \"homeGoals\": " + homeGoals + ",");
+        jsonAccumulator.append("  \"awayGoals\": " + awayGoals + ",");
+
+        // Resultado
+        String result;
+        if (homeGoals > awayGoals) {
+            result = "HOME_WIN";
+        } else if (awayGoals > homeGoals) {
+            result = "AWAY_WIN";
+        } else {
+            result = "DRAW";
+        }
+        jsonAccumulator.append("  \"result\": \"" + result + "\",");
+
+        // Outros metadados
+        jsonAccumulator.append("  \"played\": " + played + ",");
+        jsonAccumulator.append("  \"round\": " + round + ",");
+
+        // Eventos
+        jsonAccumulator.append("  \"events\": [");
+        for (int i = 0; i < eventCount; i++) {
+            IEvent e = events[i];
+            jsonAccumulator.append("    {");
+            jsonAccumulator.append("      \"minute\": " + e.getMinute() + ",");
+            jsonAccumulator.append("      \"description\": \"" + e.getDescription().replace("\"", "'") + "\"");
+            jsonAccumulator.append("    }" + (i < eventCount - 1 ? "," : ""));
+        }
+        jsonAccumulator.append("  ]");
+
+        jsonAccumulator.append("}");
     }
 
-    jsonAccumulator.append("{\n");
-
-    jsonAccumulator.append(" \"home\": {\n");
-    jsonAccumulator.append("  \"code\": \"" + home.getCode() + "\",\n");
-    jsonAccumulator.append("  \"country\": \"" + home.getCountry() + "\",\n");
-    jsonAccumulator.append("  \"logo\": \"" + home.getLogo() + "\",\n");
-    jsonAccumulator.append("  \"foundedYear\": " + home.getFoundedYear() + ",\n");
-    jsonAccumulator.append("  \"name\": \"" + home.getName() + "\",\n");
-    jsonAccumulator.append("  \"stadiumName\": \"" + home.getStadiumName() + "\"\n");
-    jsonAccumulator.append(" },\n");
-
-    jsonAccumulator.append(" \"away\": {\n");
-    jsonAccumulator.append("  \"code\": \"" + away.getCode() + "\",\n");
-    jsonAccumulator.append("  \"country\": \"" + away.getCountry() + "\",\n");
-    jsonAccumulator.append("  \"logo\": \"" + away.getLogo() + "\",\n");
-    jsonAccumulator.append("  \"foundedYear\": " + away.getFoundedYear() + ",\n");
-    jsonAccumulator.append("  \"name\": \"" + away.getName() + "\",\n");
-    jsonAccumulator.append("  \"stadiumName\": \"" + away.getStadiumName() + "\"\n");
-    jsonAccumulator.append(" },\n");
-
-    jsonAccumulator.append(" \"played\": " + played + ",\n");
-    jsonAccumulator.append(" \"round\": " + round + "\n");
-
-    jsonAccumulator.append("}");
-
-    }
 
     /**
      * Adiciona um evento ao jogo.
