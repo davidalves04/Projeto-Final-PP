@@ -6,8 +6,10 @@ import api.player.Position;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
+import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 import java.io.File;
 import java.io.IOException;
@@ -106,4 +108,11 @@ public class PlayerImporterJSON {
 
         return new Player(name, birthDate, age, nationality, number, photo, stats, position, preferredFoot, height, weight);
     }
+    
+    public static IPlayer findPlayerByName(String name, ITeam team) {
+    for (IPlayer player : team.getPlayers()) {
+        if (player.getName().equals(name)) return player;
+    }
+    return null;
+}
 }

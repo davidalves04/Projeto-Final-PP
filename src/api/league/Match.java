@@ -7,6 +7,7 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import java.io.IOException;
 
 import utils.JsonAccumulator;
 
@@ -200,33 +201,69 @@ public class Match implements IMatch {
      */
     
 
+@Override
+public void exportToJson() throws IOException {
+    if (jsonAccumulator == null) {
+        System.err.println("JsonAccumulator não definido para Match!");
+        return;
+    }
 
+    jsonAccumulator.append("{\n");
 
-    @Override
-    public void exportToJson() {
-        if (jsonAccumulator == null) {
-            System.err.println("JsonAccumulator não definido para Match!");
-            return;
-        }
-
-        jsonAccumulator.append("{\n");
-
+    // HOME TEAM
     jsonAccumulator.append("  \"home\": {\n");
     jsonAccumulator.append("    \"clubName\": \"" + homeTeam.getClub().getName() + "\",\n");
     jsonAccumulator.append("    \"formation\": \"" + homeTeam.getFormation().getDisplayName() + "\",\n");
     jsonAccumulator.append("    \"teamStrength\": " + homeTeam.getTeamStrength() + "\n");
     jsonAccumulator.append("  },\n");
 
+    // AWAY TEAM
     jsonAccumulator.append("  \"away\": {\n");
     jsonAccumulator.append("    \"clubName\": \"" + awayTeam.getClub().getName() + "\",\n");
     jsonAccumulator.append("    \"formation\": \"" + awayTeam.getFormation().getDisplayName() + "\",\n");
     jsonAccumulator.append("    \"teamStrength\": " + awayTeam.getTeamStrength() + "\n");
     jsonAccumulator.append("  },\n");
 
-    jsonAccumulator.append("  \"played\": " + this.played + "\n");
+    // MATCH STATUS
+    jsonAccumulator.append("  \"played\": " + this.played + ",\n");
+    jsonAccumulator.append("  \"round\": " + this.round + ",\n");
+
+    // EVENTS
+    jsonAccumulator.append("  \"events\": [\n");
+    for (int i = 0; i < eventCount; i++) {
+        IEvent event = events[i];
+
+        JsonAccumulator eventAccumulator = new JsonAccumulator();
+
+        try {
+            event.getClass().getMethod("setJsonAccumulator", JsonAccumulator.class)
+                 .invoke(event, eventAccumulator);
+        } catch (Exception e) {
+            System.err.println("Não foi possível injetar JsonAccumulator no evento: " + e.getMessage());
+            continue;
+        }
+
+        try {
+            event.exportToJson();
+        } catch (Exception e) {
+            System.err.println("Erro ao exportar evento: " + e.getMessage());
+            continue;
+        }
+
+        String eventJson = eventAccumulator.getJson().trim();  // Aqui está o fix importante
+
+        jsonAccumulator.append(eventJson);
+
+        if (i < eventCount - 1) {
+            jsonAccumulator.append(",\n");
+        } else {
+            jsonAccumulator.append("\n");
+        }
+    }
+    jsonAccumulator.append("  ]\n");
 
     jsonAccumulator.append("}");
-    }
+}
 
     /**
      * Adiciona um evento ao jogo.

@@ -36,7 +36,90 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 9,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 14,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Marcos Leonardo",
+  "scorerShooting": 86,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 31,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 48,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 69,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 71,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Marcos Leonardo",
+  "scorerShooting": 86,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 75,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Ángel Di María",
+  "scorerShooting": 85,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -62,7 +145,112 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 4,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 11,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 14,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 26,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 27,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 34,
+  "club": "Futebol Clube do Porto",
+  "scorer": "William Gomes",
+  "scorerShooting": 85,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 50,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 62,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 85,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
     ],
@@ -89,7 +277,134 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 10,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 16,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 20,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 24,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 28,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Banza",
+  "scorerShooting": 88,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 37,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 43,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 52,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 53,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 57,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 71,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -115,7 +430,24 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 43,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
     ],
@@ -142,7 +474,112 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 11,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 15,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 21,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 25,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 48,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Banza",
+  "scorerShooting": 88,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 53,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Paulinho",
+  "scorerShooting": 84,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 60,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 61,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 69,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -168,7 +605,46 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 14,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 28,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Rafa Silva",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 73,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Ángel Di María",
+  "scorerShooting": 85,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
     ],
@@ -195,7 +671,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 47,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Banza",
+  "scorerShooting": 88,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 61,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Álvaro Djaló",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 64,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 80,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Arthur Cabral",
+  "scorerShooting": 88,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -221,7 +747,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 15,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 22,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 52,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 54,
+  "club": "Futebol Clube do Porto",
+  "scorer": "William Gomes",
+  "scorerShooting": 85,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
     ],
@@ -248,7 +824,101 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 9,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 22,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 42,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 46,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 47,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 62,
+  "club": "Futebol Clube do Porto",
+  "scorer": "William Gomes",
+  "scorerShooting": 85,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 67,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 69,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -274,7 +944,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 18,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 34,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 56,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 80,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
     ],
@@ -301,7 +1021,68 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 18,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 44,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Paulinho",
+  "scorerShooting": 84,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 55,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 84,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 86,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Abel Ruiz",
+  "scorerShooting": 82,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -327,7 +1108,101 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 1,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Marcos Leonardo",
+  "scorerShooting": 86,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 30,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 32,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 43,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Marcos Leonardo",
+  "scorerShooting": 86,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 58,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Marcos Leonardo",
+  "scorerShooting": 86,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 64,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 72,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 88,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
     ],
@@ -354,7 +1229,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 13,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 22,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 51,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Álvaro Djaló",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 60,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
 ,
@@ -380,7 +1305,46 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 1,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Rodrigo Mora",
+  "scorerShooting": 93,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 60,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 71,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
     ],
@@ -407,7 +1371,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 29,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 47,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 71,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 83,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Banza",
+  "scorerShooting": 88,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -433,7 +1447,68 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 13,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Arthur Cabral",
+  "scorerShooting": 88,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 24,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 25,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Paulinho",
+  "scorerShooting": 84,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 34,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 63,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Viktor Gyökeres",
+  "scorerShooting": 92,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
     ],
@@ -460,7 +1535,35 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 3,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Antonio Adán",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 34,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Marcus Edwards",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -486,7 +1589,68 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 1,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Ángel Di María",
+  "scorerShooting": 85,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 16,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Petar Musa",
+  "scorerShooting": 82,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 17,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Ángel Di María",
+  "scorerShooting": 85,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 44,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Arthur Cabral",
+  "scorerShooting": 88,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 56,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Samu Omorodion",
+  "scorerShooting": 93,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+
+
+  ]
 
 }
     ],
@@ -513,7 +1677,57 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 6,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Álvaro Djaló",
+  "scorerShooting": 83,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 41,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Rafa Silva",
+  "scorerShooting": 84,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 59,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Anatoliy Trubin",
+  "goalkeeperDefense": 82
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 71,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Arthur Cabral",
+  "scorerShooting": 88,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
 ,
@@ -539,7 +1753,35 @@
 
   },
 
-  "played": false
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 60,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 73,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Francisco Trincão",
+  "scorerShooting": 80,
+  "goalkeeper": "Diogo Costa",
+  "goalkeeperDefense": 0
+}
+
+
+  ]
 
 }
     ],
@@ -566,7 +1808,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -592,7 +1840,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -619,7 +1873,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -645,7 +1905,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -672,7 +1938,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -698,7 +1970,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -725,7 +2003,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -751,7 +2035,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -778,7 +2068,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -804,7 +2100,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -831,7 +2133,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -857,7 +2165,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -884,7 +2198,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -910,7 +2230,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -937,7 +2263,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -963,7 +2295,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -990,7 +2328,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1016,7 +2360,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1043,7 +2393,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1069,7 +2425,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1096,7 +2458,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1122,7 +2490,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1149,7 +2523,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1175,7 +2555,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1202,7 +2588,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1228,7 +2620,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1255,7 +2653,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1281,7 +2685,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1308,7 +2718,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1334,7 +2750,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1361,7 +2783,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1387,7 +2815,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1414,7 +2848,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1440,7 +2880,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1467,7 +2913,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1493,7 +2945,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1520,7 +2978,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1546,7 +3010,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1573,7 +3043,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1599,7 +3075,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1626,7 +3108,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1652,7 +3140,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1679,7 +3173,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1705,7 +3205,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1732,7 +3238,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1758,7 +3270,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1785,7 +3303,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1811,7 +3335,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1838,7 +3368,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1864,7 +3400,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1891,7 +3433,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1917,7 +3465,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1944,7 +3498,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1970,7 +3530,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1997,7 +3563,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2023,7 +3595,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2050,7 +3628,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2076,7 +3660,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2103,7 +3693,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2129,7 +3725,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2156,7 +3758,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2182,7 +3790,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2209,7 +3823,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2235,7 +3855,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2262,7 +3888,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2288,7 +3920,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2315,7 +3953,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2341,7 +3985,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2368,7 +4018,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2394,7 +4050,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2421,7 +4083,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2447,7 +4115,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2474,7 +4148,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2500,7 +4180,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2527,7 +4213,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2553,7 +4245,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2580,7 +4278,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2606,7 +4310,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2633,7 +4343,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2659,7 +4375,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2686,7 +4408,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2712,7 +4440,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2739,7 +4473,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2765,7 +4505,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2792,7 +4538,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2818,7 +4570,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2845,7 +4603,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2871,7 +4635,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2898,7 +4668,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2924,7 +4700,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2951,7 +4733,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2977,7 +4765,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3004,7 +4798,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3030,7 +4830,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3057,7 +4863,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3083,7 +4895,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3110,7 +4928,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3136,7 +4960,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3163,7 +4993,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3189,7 +5025,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3216,7 +5058,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3242,7 +5090,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3269,7 +5123,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3295,7 +5155,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3322,7 +5188,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3348,7 +5220,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3375,7 +5253,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3401,7 +5285,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3428,7 +5318,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3454,7 +5350,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3481,7 +5383,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3507,7 +5415,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3534,7 +5448,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3560,7 +5480,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3587,7 +5513,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3613,7 +5545,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3640,7 +5578,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3666,7 +5610,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3693,7 +5643,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3719,7 +5675,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3746,7 +5708,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3772,7 +5740,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3799,7 +5773,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3825,7 +5805,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3852,7 +5838,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3878,7 +5870,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3905,7 +5903,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3931,7 +5935,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3958,7 +5968,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3984,7 +6000,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4011,7 +6033,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4037,7 +6065,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4064,7 +6098,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4090,7 +6130,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4117,7 +6163,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4143,7 +6195,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4170,7 +6228,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4196,7 +6260,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4223,7 +6293,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4249,7 +6325,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4276,7 +6358,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4302,7 +6390,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4329,7 +6423,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4355,7 +6455,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4382,7 +6488,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4408,7 +6520,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4435,7 +6553,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4461,7 +6585,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4488,7 +6618,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4514,7 +6650,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4541,7 +6683,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4567,7 +6715,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4594,7 +6748,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4620,7 +6780,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4647,7 +6813,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4673,7 +6845,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4700,7 +6878,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4726,7 +6910,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4753,7 +6943,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4779,7 +6975,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4806,7 +7008,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4832,7 +7040,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4859,7 +7073,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4885,7 +7105,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4912,7 +7138,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4938,7 +7170,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4965,7 +7203,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4991,7 +7235,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5018,7 +7268,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5044,7 +7300,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5071,7 +7333,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5097,7 +7365,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5124,7 +7398,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5150,7 +7430,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5177,7 +7463,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5203,7 +7495,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5230,7 +7528,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5256,7 +7560,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5283,7 +7593,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5309,7 +7625,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5336,7 +7658,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5362,7 +7690,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5389,7 +7723,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5415,7 +7755,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5442,7 +7788,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5468,7 +7820,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5495,7 +7853,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5521,7 +7885,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5548,7 +7918,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5574,7 +7950,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5601,7 +7983,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5627,7 +8015,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5654,7 +8048,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5680,7 +8080,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5707,7 +8113,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5733,7 +8145,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5760,7 +8178,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5786,7 +8210,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5813,7 +8243,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5839,7 +8275,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5866,7 +8308,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5892,7 +8340,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5919,7 +8373,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5945,7 +8405,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5972,7 +8438,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5998,7 +8470,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -6025,7 +8503,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -6051,7 +8535,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ]

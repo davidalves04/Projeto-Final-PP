@@ -232,6 +232,7 @@ public class Season implements ISeason {
                         }
 
                         dms.saveStatistics(match, homeStanding, awayStanding, this.pointsPerWin, this.pointsPerLoss, this.pointsPerDraw);
+                        
                     }
 
                     // Espera o Enter para continuar

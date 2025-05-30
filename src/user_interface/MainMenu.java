@@ -3,6 +3,7 @@ package user_interface;
 import api.data.LeagueExporterJSON;
 import api.data.LeagueImporterJSON;
 import api.data.TeamExporterJSON;
+import api.league.Season;
 import api.league.Standing;
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
@@ -103,7 +104,12 @@ public class MainMenu {
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
                     break;
                 case 2:
-                    break;
+                    if(mySquad == null){
+                      System.out.println("Ainda não tem equipa criada.");
+                    }else{
+                        break;
+                    }
+                   
                 case 3:
                     System.out.println("A sair...");
                     return null;
@@ -129,6 +135,12 @@ public class MainMenu {
 
      
         ISeason season = liga.getSeason(0);
+        
+        if(season instanceof Season s){
+            s.setMyTeam(mySquad);
+        }
+        
+        
         IStanding[] standings = season.getLeagueStandings();
 
         Standing[] s = new Standing[standings.length];
@@ -136,9 +148,6 @@ public class MainMenu {
         s[i] = (Standing) standings[i];  
         }
 
-        if(s != null){
-             s = LeagueImporterJSON.standingsFromJson("classificação.json");
-        }
         
         //Equipa do utilizador
         IFormation myFormation = mySquad.getFormation();
@@ -158,7 +167,7 @@ public class MainMenu {
         //Segunda parte do menu
         int opcao2 = 0;
 
-        if(mySquad != null){
+        
         do {
             System.out.println("\n=== Menu Principal ===");
             System.out.println("1. Gerir plantel");
@@ -233,7 +242,9 @@ public class MainMenu {
                 case 4:
                     leagueSimulator.setMatchSimulator(strategy);
                     leagueSimulator.simulateRound();
-                    System.out.println("Jornada simulada.");
+                    
+                  LeagueExporterJSON exLeague = new LeagueExporterJSON();
+                    exLeague.exportStandingArrayToJson(s,"classificação.json");
                     break;
                 case 5:
                    
@@ -245,9 +256,8 @@ public class MainMenu {
                 case 0:
                     System.out.println("A guardar...");
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
+                    liga.exportToJson();
                     
-                    LeagueExporterJSON exLeague = new LeagueExporterJSON();
-                    exLeague.exportStandingArrayToJson(s,"classificação.json");
                     
                     
                     break;
@@ -256,7 +266,6 @@ public class MainMenu {
         } while (opcao != 0);
     }
 
-    }
     /**
      * Exporta os dados da temporada, clubes e jogos para ficheiros HTML.
      *

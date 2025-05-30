@@ -2,8 +2,9 @@ package api.event;
 
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import utils.JsonAccumulator;
 
 /**
  * Representa um evento de passe realizado por um jogador durante um jogo de futebol.
@@ -11,6 +12,7 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
  */
 public class PassEvent implements IEvent {
 
+    
     /** Jogador que realizou o passe. */
     private final IPlayer player;
 
@@ -22,6 +24,8 @@ public class PassEvent implements IEvent {
    
 
      private final ITeam club;
+     
+     private JsonAccumulator jsonAccumulator;
 
     /**
      * Construtor do evento de passe.
@@ -64,14 +68,39 @@ public class PassEvent implements IEvent {
         return minute;
     }
 
+    public JsonAccumulator getJsonAccumulator() {
+        return jsonAccumulator;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+
+    
+    
+    
     /**
      * Exporta o evento para JSON.
      * <p>
      * Nota: Método não implementado. Pode ser implementado se necessário.
      * </p>
      */
-    @Override
+   @Override
     public void exportToJson() {
-        // Implementa exportação se necessário
+        if (jsonAccumulator == null) {
+            System.err.println("JsonAccumulator não definido para PassEvent!");
+            return;
+        }
+        jsonAccumulator.append("{");
+        jsonAccumulator.append("  \"type\": \"PassEvent\",");
+        jsonAccumulator.append("  \"minute\": " + minute + ",");
+        jsonAccumulator.append("  \"club\": \"" + escapeJson(club.getClub().getName()) + "\",");
+        jsonAccumulator.append("  \"player\": \"" + escapeJson(player.getName()) + "\",");
+        jsonAccumulator.append("  \"passing\": " + player.getPassing());
+        jsonAccumulator.append("}");
+    }
+
+    private String escapeJson(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
     }
 }

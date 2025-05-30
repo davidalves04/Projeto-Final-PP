@@ -2,14 +2,21 @@ package api.data;
 
 import static api.data.TeamImporterJSON.readSquadFromParser;
 import static api.data.TeamImporterJSON.readTeamFromParser;
+import api.event.CornerEvent;
+import api.event.CounterAttackEvent;
+import api.event.GoalEvent;
+import api.event.PassEvent;
 import api.league.League;
 import api.league.Match;
 import api.league.Season;
 import api.league.Standing;
+import api.player.Player;
 import api.team.Team;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.ppstudios.footballmanager.api.contracts.event.IEvent;
+import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
@@ -166,8 +173,8 @@ public class LeagueImporterJSON {
                 case "wins" -> wins =  parser.getIntValue();
                 case "losses" -> losses =  parser.getIntValue();
                 case "draws" -> draws =  parser.getIntValue();
-                case "goalsScored" -> goalsScored =  parser.getIntValue();
-                case "goalsConceded" -> goalsConceded =  parser.getIntValue();
+                case "goalsscored" -> goalsScored =  parser.getIntValue();
+                case "goalsconceded" -> goalsConceded =  parser.getIntValue();
                 
                 
                 default -> parser.skipChildren();
@@ -196,11 +203,13 @@ public class LeagueImporterJSON {
      * @throws IOException Se ocorrer erro na leitura.
      */
     private static Match readMatchFromParser(JsonParser parser) throws IOException {
-    IClub[] clubs = TeamImporterJSON.teamsFromJson("clubs.json");
+       IClub[] clubs = TeamImporterJSON.teamsFromJson("clubs.json");
     ITeam home = null;
     ITeam away = null;
     boolean played = false;
     int round = 0;
+
+    Match match = null;
 
     while (parser.nextToken() != JsonToken.END_OBJECT) {
         String field = parser.getCurrentName();
@@ -209,7 +218,7 @@ public class LeagueImporterJSON {
         switch (field) {
             case "home" -> {
                 if (parser.currentToken() == JsonToken.START_OBJECT) {
-                    home = readSquadFromParser(parser,clubs);
+                    home = readSquadFromParser(parser, clubs);
                 } else {
                     throw new IOException("\"home\" deve ser um objeto JSON.");
                 }
@@ -223,23 +232,110 @@ public class LeagueImporterJSON {
             }
             case "played" -> played = parser.getBooleanValue();
             case "round" -> round = parser.getIntValue();
+
+            case "events" -> {
+                if (parser.currentToken() != JsonToken.START_ARRAY) {
+                    throw new IOException("Esperado array para eventos");
+                }
+
+                // Garantir que match não seja null antes de adicionar eventos
+                if (home == null || away == null) {
+                    throw new IOException("Match incompleto: home ou away não definidos antes dos eventos.");
+                }
+
+                match = new Match(home, away);
+                match.setRound(round);
+                if (played) {
+                    match.setPlayed();
+                }
+
+                while (parser.nextToken() == JsonToken.START_OBJECT) {
+                    IEvent event = readEventFromParser(parser);
+                    match.addEvent(event);
+                }
+            }
+
             default -> parser.skipChildren();
         }
     }
 
-    if (home == null || away == null) {
-        throw new IOException("Dados incompletos para criar o Match (home ou away null).");
-    }
+    if (match == null) {
+        if (home == null || away == null) {
+            throw new IOException("Dados incompletos para criar o Match (home ou away null).");
+        }
 
-    Match match = new Match(home, away);
-    match.setRound(round);
-    if (played) {
-        match.setPlayed();
+        match = new Match(home, away);
+        match.setRound(round);
+        if (played) {
+            match.setPlayed();
+        }
     }
 
     return match;
     }
 
+    private static IEvent readEventFromParser(JsonParser parser) throws IOException {
+    String type = null;
+    int minute = 0;
+    String clubName = null;
+    String playerName = null;
+    String scorerName = null;
+    String goalkeeperName = null;
+    int scorerShooting = 0;
+    int goalkeeperDefense = 0;
+    int passing = 0;
+
+    if (parser.currentToken() != JsonToken.START_OBJECT) {
+        throw new IOException("Esperado objeto de evento");
+    }
+
+    // Leitura inicial de todos os campos do evento
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+        switch (field) {
+            case "minute" -> minute = parser.getIntValue();
+            case "club" -> clubName = parser.getValueAsString();
+            case "player" -> playerName = parser.getValueAsString();
+            case "scorer" -> scorerName = parser.getValueAsString();
+            case "scorerShooting" -> scorerShooting = parser.getIntValue();
+            case "goalkeeper" -> goalkeeperName = parser.getValueAsString();
+            case "goalkeeperDefense" -> goalkeeperDefense = parser.getIntValue();
+            case "passing" -> passing = parser.getIntValue();
+        }
+    }
+
+    // Obtenção do clube e jogadores (assumindo utilitários para isso)
+    IClub club = TeamImporterJSON.findClubByName(clubName);
+    
+    ITeam team = TeamImporterJSON.findTeamByClub(club);
+    if(team == null){
+        System.out.println("FODASSE");
+    }else{
+         System.out.println("ent nao sei");
+    }
+    Player player = (Player)PlayerImporterJSON.findPlayerByName(playerName, team);
+    Player scorer = (Player)PlayerImporterJSON.findPlayerByName(scorerName, team);
+    Player goalkeeper = (Player)PlayerImporterJSON.findPlayerByName(goalkeeperName, team);
+
+    // Determina o tipo de evento com base nos campos presentes
+    if (scorerName != null && goalkeeperName != null) {
+        return new GoalEvent(team, scorer, goalkeeper,minute);
+    } else if (passing != 0) {
+        return new PassEvent(team, player,minute);
+    } else if (playerName != null && scorerName == null && goalkeeperName == null) {
+        if (passing == 0) {
+            return new CounterAttackEvent(team, player,minute );
+        } else {
+            return new PassEvent(team, player,minute );
+        }
+    } else if (playerName != null) {
+        return new CornerEvent(team, player,minute );
+    }
+
+    throw new IOException("Não foi possível determinar o tipo do evento.");
+}
+    
     
      public static Standing[] standingsFromJson(String filePath) throws IOException {
         JsonFactory factory = new JsonFactory();

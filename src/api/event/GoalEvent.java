@@ -5,6 +5,7 @@ import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import utils.JsonAccumulator;
 
 /**
  * Representa um evento de golo marcado por um jogador durante um jogo de futebol.
@@ -22,6 +23,8 @@ public class GoalEvent implements IGoalEvent {
     /** Jogador que marcou o golo. */
     private final Player scorer;
     private final Player goalkeeper;
+    
+     private JsonAccumulator jsonAccumulator;
 
     /**
      * Construtor do evento de golo.
@@ -80,6 +83,17 @@ public class GoalEvent implements IGoalEvent {
         return this.scorer;
     }
 
+    public JsonAccumulator getJsonAccumulator() {
+        return jsonAccumulator;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+
+    
+    
+    
     /**
      * Exporta o evento para JSON.
      * <p>
@@ -87,8 +101,27 @@ public class GoalEvent implements IGoalEvent {
      * a exportação individual deste evento.
      * </p>
      */
-    @Override
+    
+        @Override
     public void exportToJson() {
-        // Se não for necessário exportar o evento individualmente, pode ficar vazio.
+        if (jsonAccumulator == null) {
+            System.err.println("JsonAccumulator não definido para GoalEvent!");
+            return;
+        }
+
+        jsonAccumulator.append("{");
+        jsonAccumulator.append("  \"type\": \"GoalEvent\",");
+        jsonAccumulator.append("  \"minute\": " + minute + ",");
+        jsonAccumulator.append("  \"club\": \"" + escapeJson(club.getClub().getName()) + "\",");
+        jsonAccumulator.append("  \"scorer\": \"" + escapeJson(scorer.getName()) + "\",");
+        jsonAccumulator.append("  \"scorerShooting\": " + scorer.getShooting() + ",");
+        jsonAccumulator.append("  \"goalkeeper\": \"" + escapeJson(goalkeeper.getName()) + "\",");
+        jsonAccumulator.append("  \"goalkeeperDefense\": " + goalkeeper.getDefense());
+        jsonAccumulator.append("}");
+    }
+
+    // Método simples para escapar aspas e barras no JSON
+    private String escapeJson(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
     }
 }

@@ -13,6 +13,7 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import com.ppstudios.footballmanager.api.contracts.player.PreferredFoot;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
+import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 import java.io.File;
 import java.io.IOException;
@@ -286,4 +287,40 @@ public class TeamImporterJSON {
         parser.close();
         return squad;
     }
+    
+   public static Squad findTeamByClub(IClub club) throws IOException {
+     for (Squad team : squadsFromJson("squad.json", new IClub[]{club})) {
+        if (team.getClub().getName().equalsIgnoreCase(club.getName())) {
+            return team;
+        }
+    }
+    return null;
+    
+   
+}
+
+public static Team findClubByName(String name) throws IOException {
+          
+     Team[] clubs = teamsFromJson("clubs.json");
+
+
+
+    for (Team club : clubs) {
+        String clubName = club.getName();
+        
+
+        if (normalize(clubName).equals(normalize(name))) {
+   
+            return club;
+        }
+    }
+
+
+    return null;
+}
+
+private static String normalize(String name) {
+    return name.trim().toLowerCase();
+}
+    
 }

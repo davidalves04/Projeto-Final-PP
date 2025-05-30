@@ -5,6 +5,7 @@ import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import utils.JsonAccumulator;
 
 /**
  * Representa um evento de remate falhado por um jogador durante um jogo de futebol.
@@ -23,6 +24,8 @@ public class MissedShotEvent implements IEvent {
     
     private final Player attacker;
     private final Player goalkeeper;
+    
+    private JsonAccumulator jsonAccumulator;
 
 
     /**
@@ -65,6 +68,16 @@ public class MissedShotEvent implements IEvent {
         return minute;
     }
 
+    public JsonAccumulator getJsonAccumulator() {
+        return jsonAccumulator;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+
+    
+    
     /**
      * Exporta o evento para JSON.
      * <p>
@@ -72,8 +85,25 @@ public class MissedShotEvent implements IEvent {
      * a exportação individual deste evento.
      * </p>
      */
-    @Override
+@Override
     public void exportToJson() {
-        // Se não for necessário exportar o evento individualmente, pode ficar vazio.
+        if (jsonAccumulator == null) {
+            System.err.println("JsonAccumulator não definido para MissedShotEvent!");
+            return;
+        }
+
+        jsonAccumulator.append("{");
+        jsonAccumulator.append("  \"type\": \"MissedShotEvent\",");
+        jsonAccumulator.append("  \"minute\": " + minute + ",");
+        jsonAccumulator.append("  \"club\": \"" + escapeJson(club.getClub().getName()) + "\",");
+        jsonAccumulator.append("  \"attacker\": \"" + escapeJson(attacker.getName()) + "\",");
+        jsonAccumulator.append("  \"attackerShooting\": " + attacker.getShooting() + ",");
+        jsonAccumulator.append("  \"goalkeeper\": \"" + escapeJson(goalkeeper.getName()) + "\",");
+        jsonAccumulator.append("  \"goalkeeperDefense\": " + goalkeeper.getDefense());
+        jsonAccumulator.append("}");
+    }
+
+    private String escapeJson(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
     }
 }

@@ -2,6 +2,7 @@ package api.event;
 
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import utils.JsonAccumulator;
 
 /**
  * Representa um evento de falta cometido por um jogador durante um jogo de futebol.
@@ -13,6 +14,9 @@ public class FoulEvent implements IEvent {
 
     /** Minuto do jogo em que a falta ocorreu. */
     private final int minute;
+    
+        private JsonAccumulator jsonAccumulator;
+
 
     /**
      * Construtor do evento de falta.
@@ -45,6 +49,16 @@ public class FoulEvent implements IEvent {
         return minute;
     }
 
+    public JsonAccumulator getJsonAccumulator() {
+        return jsonAccumulator;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+
+    
+    
     /**
      * Exporta o evento para JSON.
      * <p>
@@ -53,6 +67,21 @@ public class FoulEvent implements IEvent {
      */
     @Override
     public void exportToJson() {
-        // Implementa exportação se necessário
+         if (jsonAccumulator == null) {
+        System.err.println("JsonAccumulator não definido para FoulEvent!");
+        return;
+    }
+
+    jsonAccumulator.append("{\n");
+
+    jsonAccumulator.append("  \"minute\": ");
+    jsonAccumulator.append(Integer.toString(minute));
+    jsonAccumulator.append(",\n");
+
+    jsonAccumulator.append("  \"player\": \"");
+    jsonAccumulator.append(player.getName());
+    jsonAccumulator.append("\"\n");
+
+    jsonAccumulator.append("}");
     }
 }

@@ -68,6 +68,7 @@ public class DefaultMatchSimulator implements MatchSimulatorStrategy {
 
         IPlayer[] attackers = attackingClub.getPlayers();
         
+        
         IPlayer[] defenders = defendingClub.getPlayers();
 
         if (attackers.length == 0 || defenders.length == 0) continue;
@@ -231,6 +232,8 @@ public class DefaultMatchSimulator implements MatchSimulatorStrategy {
         }
     }
 
+    
+    
     // Atualiza os standings com os golos
     if (homeStanding instanceof Standing sh) {
         sh.updateStats(homeGoalsFromEvents, awayGoalsFromEvents);

@@ -1,12 +1,21 @@
 package api.event;
 
+
+
+
+import com.ppstudios.footballmanager.api.contracts.event.IEvent;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import utils.JsonAccumulator;
 
-public class CornerEvent {
+public class CornerEvent implements IEvent {
     private final IPlayer player;
     private final ITeam club;
     private final int minute;
+    
+    private JsonAccumulator jsonAccumulator;
 
     public CornerEvent(ITeam club, IPlayer player, int minute) {
         this.club = club;
@@ -22,5 +31,34 @@ public class CornerEvent {
    
     public int getMinute() {
         return minute;
+    }
+
+    public JsonAccumulator getJsonAccumulator() {
+        return jsonAccumulator;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+    
+    
+    
+  @Override
+    public void exportToJson() {
+        if (jsonAccumulator == null) {
+            System.err.println("JsonAccumulator não definido para CornerEvent!");
+            return;
+        }
+
+        jsonAccumulator.append("{");
+        jsonAccumulator.append("  \"type\": \"CornerEvent\",");
+        jsonAccumulator.append("  \"minute\": " + minute + ",");
+        jsonAccumulator.append("  \"club\": \"" + escapeJson(club.getClub().getName()) + "\",");
+        jsonAccumulator.append("  \"player\": \"" + escapeJson(player.getName()) + "\"");
+        jsonAccumulator.append("}");
+    }
+
+    private String escapeJson(String text) {
+        return text.replace("\\", "\\\\").replace("\"", "\\\"");
     }
 }
