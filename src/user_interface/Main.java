@@ -10,7 +10,7 @@ import api.data.LeagueImporterJSON;
 import api.data.TeamImporterJSON;
 import api.simulation.DefaultMatchSimulator;
 import api.simulation.LeagueSimulator;
-import api.league.League; // Adiciona o import para League
+import api.league.League; //Adiciona o import para League
 
 import api.team.Squad;
 import api.team.Team;

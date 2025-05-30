@@ -1,35 +1,23 @@
 package htmlgenerators;
 
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-/**
- * Classe responsável por gerar um ficheiro HTML simples para uma liga.
- * 
- * O ficheiro gerado contém um título com o nome da liga e um parágrafo
- * com conteúdo adicional padrão.
- * 
- * Exemplo de uso: gerar uma página HTML com o nome da liga e guardá-la
- * num ficheiro indicado.
- */
 public class LeagueHtmlGenerator {
 
-    /**
-     * Gera um ficheiro HTML com o nome da liga e guarda no caminho especificado.
-     * 
-     * @param leagueName O nome da liga a ser exibido no título da página.
-     * @param outputPath O caminho do ficheiro onde o HTML será guardado.
-     * @throws IOException Se ocorrer algum erro ao escrever no ficheiro.
-     */
-    public static void generate(String leagueName, String outputPath) throws IOException {
+    public LeagueHtmlGenerator() {}
+
+    public static void generate(String jsonFilePath, String outputPath) throws IOException {
+        String jsonContent = Files.readString(Paths.get(jsonFilePath));
+
         StringBuilder html = new StringBuilder();
-        html.append("<html><body>");
-        html.append("<h1>").append(leagueName).append("</h1>");
-        html.append("<p>Conteúdo adicional da liga pode ser inserido aqui.</p>");
+        html.append("<html><head><title>Época</title></head><body>");
+        html.append("<h1>Dados da Época (JSON)</h1>");
+        html.append("<pre>").append(jsonContent).append("</pre>");
         html.append("</body></html>");
 
-        try (FileWriter writer = new FileWriter(outputPath)) {
-            writer.write(html.toString());
-        }
+        Files.write(Paths.get("html/" + outputPath), html.toString().getBytes(StandardCharsets.UTF_8));
     }
 }

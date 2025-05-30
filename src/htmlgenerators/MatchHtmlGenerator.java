@@ -2,66 +2,48 @@ package htmlgenerators;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
 
-/**
- * Classe responsável por gerar um ficheiro HTML que apresenta informações
- * de um jogo de futebol, incluindo as equipas e os jogadores que participaram.
- * 
- * O ficheiro HTML contém o nome das equipas em confronto e detalhes dos
- * jogadores de cada equipa.
- */
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class MatchHtmlGenerator {
 
-    /**
-     * Gera um ficheiro HTML com os detalhes do jogo, incluindo nome das equipas
-     * e informações individuais dos jogadores de ambas as equipas.
-     * 
-     * @param match Objeto que representa o jogo, contendo as equipas e jogadores.
-     * @param outputPath Caminho do ficheiro onde o HTML será guardado.
-     * @throws IOException Se ocorrer algum erro ao escrever no ficheiro.
-     */
+    public MatchHtmlGenerator() {}
+
     public static void generate(IMatch match, String outputPath) throws IOException {
+        IClub home = match.getHomeClub();
+        IClub away = match.getAwayClub();
+
         StringBuilder html = new StringBuilder();
-        html.append("<html><body>");
-        html.append("<h1>")
-            .append(match.getHomeClub().getName())
-            .append(" vs ")
-            .append(match.getAwayClub().getName())
-            .append("</h1>");
+        html.append("<html><head><title>Jogo: ")
+            .append(home.getName()).append(" vs ").append(away.getName())
+            .append("</title></head><body>");
 
-        html.append("<h2>Equipa da Casa</h2>");
-        for (IPlayer player : match.getHomeTeam().getPlayers()) {
-            appendPlayerCard(html, player);
-        }
+        html.append("<h1>").append(home.getName()).append(" vs ").append(away.getName()).append("</h1>");
+        html.append("<p><strong>Ronda:</strong> ").append(match.getRound()).append("</p>");
+        html.append("<p><strong>Estado:</strong> ").append(match.isPlayed() ? "Jogado" : "Por jogar").append("</p>");
 
-        html.append("<h2>Equipa Visitante</h2>");
-        for (IPlayer player : match.getAwayTeam().getPlayers()) {
-            appendPlayerCard(html, player);
+        if (match.isPlayed()) {
+            html.append("<h2>Resultado</h2>")
+                .append("<p>")
+                .append(home.getName()).append(": ").append(match.getTotalByEvent(null, home)).append(" - ")
+                .append(away.getName()).append(": ").append(match.getTotalByEvent(null, away))
+                .append("</p>");
         }
 
         html.append("</body></html>");
-
-        try (FileWriter writer = new FileWriter(outputPath)) {
-            writer.write(html.toString());
-        }
+        Files.write(Paths.get("html/" + outputPath), html.toString().getBytes(StandardCharsets.UTF_8));
     }
 
-    /**
-     * Adiciona ao HTML um bloco com as informações do jogador, incluindo nome,
-     * idade, nacionalidade e um valor geral médio das suas capacidades.
-     * 
-     * @param html StringBuilder onde o conteúdo HTML será acrescentado.
-     * @param player Jogador cujas informações serão apresentadas.
-     */
     private static void appendPlayerCard(StringBuilder html, IPlayer player) {
-        int overall = (player.getShooting() + player.getPassing() + player.getStamina() + player.getSpeed()) / 4;
-        html.append("<div class='player-card'>")
-            .append("<strong>").append(player.getName()).append("</strong><br>")
-            .append("Idade: ").append(player.getAge()).append("<br>")
-            .append("Nacionalidade: ").append(player.getNationality()).append("<br>")
-            .append("Overall: ").append(overall).append("<br>")
-            .append("</div><br>");
+        html.append("<div style='border:1px solid #000;padding:10px;margin:5px;'>")
+            .append("<img src='").append(player.getPhoto()).append("' height='50'/>")
+            .append("<p><strong>").append(player.getName()).append("</strong></p>")
+            .append("<p>Idade: ").append(player.getAge()).append("</p>")
+            .append("<p>Posição: ").append(player.getPosition()).append("</p>")
+            .append("</div>");
     }
 }

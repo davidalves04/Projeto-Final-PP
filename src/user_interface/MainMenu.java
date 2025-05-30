@@ -10,8 +10,12 @@ import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.SeasonHtm
 import api.simulation.LeagueSimulator;
 import api.team.Squad;
 import api.team.Team;
+import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
+import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.IFormation;
+import htmlgenerators.ClubHtmlGenerator;
+import htmlgenerators.LeagueHtmlGenerator;
 import java.io.File;
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -112,23 +116,47 @@ public class MainMenu {
                     try {
                         ISeason currentSeason = liga.getSeason(0);
 
-                        //Exportar season (tabela e jogos)
+                        // Exportar Season (tabela e jogos)
                         SeasonHtmlGenerator.generate(currentSeason, "html/season.html");
                         System.out.println("Temporada exportada para HTML com sucesso.");
 
-                        //Exportar League
-                        //LeagueHtmlGenerator.generate("league.json", "html/league.html");
+                        // Exportar todos os clubes
+                        for (IClub club : currentSeason.getCurrentClubs()) {
+                            String filename = "club_" + club.getCode() + ".html";
+                            try {
+                                ClubHtmlGenerator.generate(club, filename);
+                                System.out.println("Clube exportado: " + club.getName());
+                            } catch (IOException e) {
+                                System.err.println("Erro ao exportar clube " + club.getName() + ": " + e.getMessage());
+                            }
+                        }
 
-                        //Exportar um jogo específico
-                        if (currentSeason.getMatches().length > 0) {
-                            MatchHtmlGenerator.generate(currentSeason.getMatches()[0], "html/match1.html");
-                            System.out.println("Jogo exportado para HTML com sucesso.");
+                        // Exportar todos os jogos
+                        int matchIndex = 1;
+                        for (IMatch match : currentSeason.getMatches()) {
+                            String filename = "html/match" + matchIndex++ + ".html";
+                            try {
+                                MatchHtmlGenerator.generate(match, filename);
+                                System.out.println("Jogo exportado: " + match.getHomeClub().getName() + " vs " + match.getAwayClub().getName());
+                            } catch (IOException e) {
+                                System.err.println("Erro ao exportar jogo: " + e.getMessage());
+                            }
+                        }
+
+                        //Exportar JSON da liga como HTML
+                        File leagueJson = new File("league.json");
+                        if (leagueJson.exists()) {
+                            LeagueHtmlGenerator.generate("league.json", "league.html");
+                            System.out.println("Liga exportada (via JSON) para HTML com sucesso.");
+                        } else {
+                            System.out.println("Ficheiro league.json não encontrado. Ignorado.");
                         }
 
                     } catch (IOException e) {
                         System.out.println("Erro ao exportar para HTML: " + e.getMessage());
                     }
                     break;
+
 
                 case 0:
                     System.out.println("A sair...");
