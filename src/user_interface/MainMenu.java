@@ -12,6 +12,7 @@ import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.SeasonHtm
 import api.simulation.LeagueSimulator;
 import api.team.Squad;
 import api.team.Team;
+import com.ppstudios.footballmanager.api.contracts.league.ISchedule;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
@@ -178,9 +179,49 @@ public class MainMenu {
                     squadManager.promptForSubstitution(mySquad.getPlayers(), mySquad);
                     break;
                 case 2:
-                    
+                    // Mostrar classificação
                     StatsView.mostrarClassificacao(season.getLeagueStandings());
+
+                    // Obter calendário
+                    ISchedule schedule = season.getSchedule();
+                    int totalRounds = schedule.getNumberOfRounds();
+
+                    // Menu de escolha da jornada
+                    System.out.println("Total de jornadas: " + totalRounds);
+                    System.out.print("Introduza o número da jornada que deseja ver (1-" + totalRounds + "), ou 0 para ver todas: ");
+
+                    int rondaEscolhida = lerOpcaoValida(0, totalRounds); // método existente para validar input
+
+                    if (rondaEscolhida != 0) {
+                        int rondaIndex = rondaEscolhida - 1;
+                        System.out.println("\n== Jornada " + rondaEscolhida + " ==");
+
+                        IMatch[] matches = schedule.getMatchesForRound(rondaIndex);
+
+                        for (IMatch match : matches) {
+                            String resultado = season.displayMatchResult(match);
+                            System.out.println(resultado);
+                        }
+                        System.out.println(); // espaço extra
+                    } else {
+                        // Mostrar todas as jornadas
+                        for (int i = 0; i < totalRounds; i++) {
+                            System.out.println("\n== Jornada " + (i + 1) + " ==");
+
+                            IMatch[] matches = schedule.getMatchesForRound(i);
+
+                            for (IMatch match : matches) {
+                                String resultado = season.displayMatchResult(match);
+                                System.out.println(resultado);
+                            }
+                        }
+                        System.out.println(); // espaço extra
+                    }
+
                     break;
+
+
+
                 case 3:
                     myFormation = PrepareMatch.mostrarTaticas();
                     mySquad.setFormation(myFormation);

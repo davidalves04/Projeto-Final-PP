@@ -1,32 +1,33 @@
+/**
+ * A classe {@code Schedule} implementa a interface {@code ISchedule} e representa a
+ * agenda de partidas de uma liga, incluindo os jogos por jornada e a classificação
+ * das equipas.
+ *
+ * <p>Esta classe permite obter jogos por jornada, por equipa, exportar dados em JSON,
+ * simular jogos e atualizar classificações automaticamente.
+ */
 package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.league.ISchedule;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.event.IGoalEvent;
 
 import java.io.IOException;
 import utils.JsonAccumulator;
 
-/**
- * Implementação de um calendário de jogos (Schedule) para uma competição de futebol.
- * Responsável por armazenar jornadas, resultados e estatísticas das equipas.
- */
 public class Schedule implements ISchedule {
 
     private final IMatch[][] rounds;
     private final IStanding[] standings;
-    private int matchCount;
-
     private JsonAccumulator jsonAccumulator;
 
     /**
-     * Construtor da classe Schedule.
+     * Cria um novo {@code Schedule} com as jornadas e as equipas especificadas.
      *
-     * @param rounds Matriz de jogos organizada por jornadas.
-     * @param teams  Array com todas as equipas participantes.
+     * @param rounds matriz de partidas organizadas por jornada
+     * @param teams  vetor de equipas participantes na liga
      */
     public Schedule(IMatch[][] rounds, ITeam[] teams) {
         this.rounds = rounds;
@@ -38,10 +39,10 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Retorna todos os jogos de uma jornada específica.
+     * Retorna os jogos de uma jornada específica.
      *
-     * @param i Índice da jornada (começa em 0).
-     * @return Array de jogos da jornada.
+     * @param i índice da jornada (base 0)
+     * @return vetor de partidas da jornada, ou vetor vazio se o índice for inválido
      */
     @Override
     public IMatch[] getMatchesForRound(int i) {
@@ -50,28 +51,39 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Retorna todos os jogos nos quais uma equipa participou.
+     * Retorna todos os jogos em que uma equipa participou.
      *
-     * @param team A equipa a procurar.
-     * @return Array de jogos da equipa.
+     * @param team equipa desejada
+     * @return vetor de partidas da equipa
      */
     @Override
     public IMatch[] getMatchesForTeam(ITeam team) {
-        java.util.List<IMatch> matches = new java.util.ArrayList<>();
+        int count = 0;
         for (IMatch[] round : rounds) {
             for (IMatch match : round) {
                 if (match.getHomeTeam() == team || match.getAwayTeam() == team) {
-                    matches.add(match);
+                    count++;
                 }
             }
         }
-        return matches.toArray(new IMatch[0]);
+
+        IMatch[] matches = new IMatch[count];
+        int index = 0;
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                if (match.getHomeTeam() == team || match.getAwayTeam() == team) {
+                    matches[index++] = match;
+                }
+            }
+        }
+
+        return matches;
     }
 
     /**
-     * Retorna o número total de jornadas no calendário.
+     * Retorna o número total de jornadas.
      *
-     * @return Número de jornadas.
+     * @return número de jornadas
      */
     @Override
     public int getNumberOfRounds() {
@@ -79,24 +91,33 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Retorna todos os jogos do calendário.
+     * Retorna todas as partidas da época.
      *
-     * @return Array de todos os jogos.
+     * @return vetor com todas as partidas
      */
     @Override
     public IMatch[] getAllMatches() {
-        java.util.List<IMatch> allMatches = new java.util.ArrayList<>();
+        int total = 0;
         for (IMatch[] round : rounds) {
-            java.util.Collections.addAll(allMatches, round);
+            total += round.length;
         }
-        return allMatches.toArray(new IMatch[0]);
+
+        IMatch[] allMatches = new IMatch[total];
+        int index = 0;
+        for (IMatch[] round : rounds) {
+            for (IMatch match : round) {
+                allMatches[index++] = match;
+            }
+        }
+
+        return allMatches;
     }
 
     /**
-     * Associa uma equipa ao seu respetivo índice no calendário e atualiza a classificação.
+     * Atualiza a equipa no índice especificado e nos jogos da agenda.
      *
-     * @param team  A equipa a configurar.
-     * @param index Índice da equipa.
+     * @param team  nova equipa
+     * @param index índice da equipa na classificação
      */
     @Override
     public void setTeam(ITeam team, int index) {
@@ -109,17 +130,16 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Retorna o array de classificações (standings) das equipas.
+     * Retorna a classificação atual de todas as equipas.
      *
-     * @return Array de standings.
+     * @return vetor de classificações
      */
     public IStanding[] getStandings() {
         return standings;
     }
 
     /**
-     * Simula todos os jogos do calendário que ainda não foram jogados
-     * e atualiza as estatísticas de cada equipa.
+     * Simula todos os jogos ainda não jogados, atualizando as estatísticas das equipas.
      */
     public void simulate() {
         for (IMatch[] round : rounds) {
@@ -129,8 +149,6 @@ public class Schedule implements ISchedule {
 
                     ITeam home = match.getHomeTeam();
                     ITeam away = match.getAwayTeam();
-                    
-                    
 
                     int homeGoals = match.getTotalByEvent(IGoalEvent.class, home.getClub());
                     int awayGoals = match.getTotalByEvent(IGoalEvent.class, away.getClub());
@@ -148,23 +166,23 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Procura a classificação associada a um determinado clube.
+     * Obtém a classificação correspondente a uma determinada equipa.
      *
-     * @param team Clube a procurar.
-     * @return Classificação correspondente ou null se não encontrada.
+     * @param team equipa desejada
+     * @return classificação da equipa, ou {@code null} se não encontrada
      */
     public IStanding getStandingByClub(ITeam team) {
         String teamName = team.getClub().getName();
-    for (IStanding standing : standings) {
-        if (standing.getTeam().getClub().getName().equals(teamName)) {
-            return standing;
+        for (IStanding standing : standings) {
+            if (standing.getTeam().getClub().getName().equals(teamName)) {
+                return standing;
+            }
         }
-    }
-    return null;
+        return null;
     }
 
     /**
-     * Reinicia o estado de todos os jogos e classificações.
+     * Reinicia todos os jogos e estatísticas das equipas.
      */
     public void reset() {
         for (IMatch[] round : rounds) {
@@ -183,18 +201,18 @@ public class Schedule implements ISchedule {
     }
 
     /**
-     * Define o acumulador JSON para exportação.
+     * Define o {@code JsonAccumulator} usado para exportação dos dados em JSON.
      *
-     * @param jsonAccumulator Instância de JsonAccumulator.
+     * @param jsonAccumulator acumulador JSON a utilizar
      */
     public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
         this.jsonAccumulator = jsonAccumulator;
     }
 
     /**
-     * Exporta o conteúdo do calendário para um ficheiro JSON.
+     * Exporta os dados das jornadas e respetivos jogos para JSON.
      *
-     * @throws IOException Caso ocorra erro na escrita do ficheiro JSON.
+     * @throws IOException se ocorrer erro durante a escrita
      */
     @Override
     public void exportToJson() throws IOException {
@@ -217,5 +235,4 @@ public class Schedule implements ISchedule {
 
         jsonAccumulator.append("  }");
     }
-
 }
