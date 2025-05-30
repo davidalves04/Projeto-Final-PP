@@ -31,6 +31,9 @@ public class Match implements IMatch {
     private int round;
     private IEvent[] events;
     private int eventCount;
+    
+    private int homeGoals;
+    private int awayGoals;
 
     private JsonAccumulator jsonAccumulator;
 
@@ -48,6 +51,23 @@ public class Match implements IMatch {
         this.eventCount = 0;
     }
 
+    
+      public int getHomeGoals() {
+        return homeGoals;
+    }
+
+    public void setHomeGoals(int goals) {
+        this.homeGoals = goals;
+    }
+
+    public int getAwayGoals() {
+        return awayGoals;
+    }
+
+    public void setAwayGoals(int goals) {
+        this.awayGoals = goals;
+    }
+    
     /**
      * Retorna o clube da casa.
      *

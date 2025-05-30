@@ -11,8 +11,7 @@ package user_interface;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
-import com.ppstudios.footballmanager.api.contracts.league.ILeague;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
 
 public class MatchView {
 
@@ -32,7 +31,4 @@ public class MatchView {
         System.out.println();
     }
     
-    public static void mostrarProximoJogo(ILeague liga, IClub clube) {
-        // lógica para encontrar e mostrar o próximo jogo
-    }
 }

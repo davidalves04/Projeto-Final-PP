@@ -14,6 +14,7 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
 import java.util.Random;
 import api.event.*;
+import api.league.Match;
 import api.league.Standing;
 import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
@@ -249,7 +250,10 @@ public class DefaultMatchSimulator implements MatchSimulatorStrategy {
         sa.updateStats(awayGoalsFromEvents, homeGoalsFromEvents);
     }
 
-    
+   if(match instanceof Match m){
+       m.setHomeGoals(homeGoalsFromEvents);
+       m.setAwayGoals(awayGoalsFromEvents);
+   }    
     
  }
      

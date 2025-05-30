@@ -334,12 +334,18 @@ public class Season implements ISeason {
      */
     @Override
     public String displayMatchResult(IMatch match) {
-        return match.getHomeClub().getName() + " " +
-               match.getTotalByEvent(com.ppstudios.footballmanager.api.contracts.event.IGoalEvent.class, match.getHomeClub()) +
-               " - " +
-               match.getTotalByEvent(com.ppstudios.footballmanager.api.contracts.event.IGoalEvent.class, match.getAwayClub()) +
-               " " + match.getAwayClub().getName();
+         if (!match.isPlayed()) {
+        return "Jogo ainda não realizado";
     }
+    
+         if(match instanceof Match m){
+             return m.getHomeTeam().getClub().getName() + " " + m.getHomeGoals() + " - " + m.getAwayGoals() + " " + m.getAwayTeam().getClub().getName();
+         }
+    
+         return null;
+      }
+    
+    
 
     /**
      * Define a estratégia usada para simular os jogos.

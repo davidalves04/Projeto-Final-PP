@@ -112,6 +112,15 @@ public class MainMenu {
                     System.out.println("Escolha a sua equipa");
                     mySquad = TeamSelector.selectTeam(totalSquads);
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
+                    
+                      // Limpar ficheiros JSON da classificação e liga
+    new File("classificação.json").delete(); // apaga o ficheiro anterior
+    new File("league.json").delete(); // apaga o ficheiro anterior
+
+    // Cria ficheiros vazios
+    new File("classificação.json").createNewFile();
+    new File("league.json").createNewFile();
+                    
                     break;
                 case 2:
                     if(mySquad == null){
@@ -203,6 +212,8 @@ public class MainMenu {
                     TeamView.showSquad(mySquad);
                     SquadManager squadManager = new SquadManager();
                     squadManager.promptForSubstitution(mySquad.getPlayers(), mySquad);
+                    
+                    
                     break;
                 case 2:
                     // Mostrar classificação
@@ -221,7 +232,7 @@ public class MainMenu {
                     if (rondaEscolhida != 0) {
                         int rondaIndex = rondaEscolhida - 1;
                         System.out.println("\n== Jornada " + rondaEscolhida + " ==");
-
+//
                         IMatch[] matches = schedule.getMatchesForRound(rondaIndex);
 
                         for (IMatch match : matches) {
