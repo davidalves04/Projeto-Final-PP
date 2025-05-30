@@ -18,6 +18,11 @@ import api.league.League; // Adiciona o import para League
 import api.league.Season;
 import api.team.Squad;
 import api.team.Team;
+
+
+import com.ppstudios.footballmanager.api.contracts.league.ISeason;
+
+
 import java.io.File;
 import java.io.IOException;
 
@@ -26,7 +31,7 @@ public class Main {
         try {
          
             // Caminho para o ficheiro JSON com os dados da liga
-            String leagueFile = "LigaFODASSE.json"; // <- ajusta se necessário
+            String leagueFile = "LigaPortuguesa.json"; // <- ajusta se necessário
             String clubsFile = "clubs.json";
             String squadsFile = "squad.json";
             String mySquadFile = "mySquad.json";
@@ -35,7 +40,7 @@ public class Main {
             
             
             
-           League league = LeagueImporterJSON.readLeagueFromFile(leagueFile);
+          
            
             Team[] totalClubs = TeamImporterJSON.teamsFromJson(clubsFile);
             Squad[] totalSquads = TeamImporterJSON.squadsFromJson(squadsFile, totalClubs);
@@ -47,19 +52,25 @@ public class Main {
                 mySquad = TeamImporterJSON.mySquadFromJson(mySquadFile, totalClubs);
             }
             
-           
+      
 
 
-       League league2 = new League("2024/2025");
-           Season s2 = new Season("2024/2025",2025,20,38,3,1,0,totalSquads,totalClubs);
-           s2.setTeams("squad.json", totalClubs);
-           s2.generateMatchesAutomatically();
-           s2.generateSchedule();
-           s2.setMyTeam(mySquad);
+      
+            League league = LeagueImporterJSON.readLeagueFromFile(leagueFile);
+            ISeason s1 = league.getSeason(0);
            
-           league2.createSeason(s2);
-           league2.setFile("LigaPortugal2.json");
-           league2.exportToJson();
+  ((Season) s1).generateMatchesAutomatically();
+            s1.generateSchedule();
+            ((Season)s1).setMyTeam(mySquad);
+            
+            league.setFile(leagueFile);
+            
+        
+         
+            
+            
+               
+
 
      
 
@@ -71,14 +82,18 @@ public class Main {
 
             // Inicializar estratégia de simulação e simulador
             MatchSimulatorStrategy strategy = new DefaultMatchSimulator();
+            
             LeagueSimulator simulator = new LeagueSimulator(league);
+            
 
             // Iniciar menu principal
             MainMenu menu = new MainMenu();
-            menu.mostrarMenu(mySquad,mySquadFile,totalSquads,league, simulator, strategy);
+            menu.mostrarMenu(mySquad,mySquadFile,totalSquads,league ,simulator, strategy);
 
         } catch (IOException e) {
             System.out.println("Erro ao iniciar o jogo: " + e.getMessage());
+            e.printStackTrace();  // <-- imprime onde o erro aconteceu no código
+            
         }
     }
 }

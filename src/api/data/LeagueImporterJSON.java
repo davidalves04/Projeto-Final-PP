@@ -20,6 +20,7 @@ import api.league.Match;
 import api.league.Season;
 import api.league.Standing;
 import api.player.Player;
+import api.team.Squad;
 import api.team.Team;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
@@ -134,7 +135,7 @@ public class LeagueImporterJSON {
                 case "pointsPerWin" -> pointsPerWin = parser.getIntValue();
                 case "pointsPerLoss" -> pointsPerLoss = parser.getIntValue();
                 case "pointsPerDraw" -> pointsPerDraw = parser.getIntValue();
-                case "rounds" -> currentMatches = roundsFromJson(parser, maxRounds, 10);
+                case "rounds" -> currentMatches = roundsFromJson(parser, maxRounds, 999);
                 default -> parser.skipChildren();
             }
         }
@@ -316,14 +317,14 @@ public class LeagueImporterJSON {
     IClub club = TeamImporterJSON.findClubByName(clubName);
     
     ITeam team = TeamImporterJSON.findTeamByClub(club);
-    if(team == null){
-        System.out.println("FODASSE");
-    }else{
-         System.out.println("ent nao sei");
-    }
+    
+    Squad opposingTeam = TeamImporterJSON.findOpposingTeam(goalkeeperName);
+    
+    
     Player player = (Player)PlayerImporterJSON.findPlayerByName(playerName, team);
+    
     Player scorer = (Player)PlayerImporterJSON.findPlayerByName(scorerName, team);
-    Player goalkeeper = (Player)PlayerImporterJSON.findPlayerByName(goalkeeperName, team);
+    Player goalkeeper = (Player)PlayerImporterJSON.findPlayerByName(goalkeeperName, opposingTeam);
 
     // Determina o tipo de evento com base nos campos presentes
     if (scorerName != null && goalkeeperName != null) {

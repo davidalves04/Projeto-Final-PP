@@ -296,38 +296,52 @@ public class TeamImporterJSON {
     }
     
    public static Squad findTeamByClub(IClub club) throws IOException {
-     for (Squad team : squadsFromJson("squad.json", new IClub[]{club})) {
+      Team[] clubes = TeamImporterJSON.teamsFromJson("clubs.json");
+    Squad[] squads = squadsFromJson("squad.json", clubes);
+
+    for (Squad team : squads) {
         if (team.getClub().getName().equalsIgnoreCase(club.getName())) {
             return team;
         }
     }
     return null;
-    
-   
 }
 
 public static Team findClubByName(String name) throws IOException {
-          
-     Team[] clubs = teamsFromJson("clubs.json");
-
-
-
-    for (Team club : clubs) {
-        String clubName = club.getName();
-        
-
-        if (normalize(clubName).equals(normalize(name))) {
+          Team[] clubes = TeamImporterJSON.teamsFromJson("clubs.json");
+for (Team c : clubes) {
+    
+}
+    
+    String normalizedTarget = name.trim().toLowerCase();
    
+    for (Team club : teamsFromJson("clubs.json")) {
+        String currentName = club.getName().trim().toLowerCase();
+       
+        if (currentName.equals(normalizedTarget)) {
+          
             return club;
         }
     }
-
-
+   
     return null;
 }
-
-private static String normalize(String name) {
-    return name.trim().toLowerCase();
-}
     
+
+public static Squad findOpposingTeam(String name) throws IOException{
+    Team[] clubes = TeamImporterJSON.teamsFromJson("clubs.json");
+    Squad[] squads = TeamImporterJSON.squadsFromJson("squad.json", clubes);
+
+    for (Squad squad : squads) {
+        for (IPlayer player : squad.getPlayers()) {  // assumindo getPlayers() devolve todos os jogadores da squad
+            if (player.getName().equalsIgnoreCase(name)) {
+                return squad;  // encontrou o jogador, devolve a squad
+            }
+        }
+    }
+
+    return null;  // jogador não encontrado em nenhuma squad
+    
+    
+}
 }

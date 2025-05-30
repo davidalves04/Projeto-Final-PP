@@ -248,6 +248,8 @@ public class MainMenu {
                     subsForMatch.promptForSubstitution(myLineup, mySquad);
                     break;
                 case 4:
+                    
+                            
                     leagueSimulator.setMatchSimulator(strategy);
                     leagueSimulator.simulateRound();
                     
@@ -264,6 +266,7 @@ public class MainMenu {
                 case 0:
                     System.out.println("A guardar...");
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
+                  
                     liga.exportToJson();
                     
                     

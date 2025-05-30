@@ -7,11 +7,11 @@
   {
     "name": "2024/2025",
     "year": 2025,
-    "maxTeams": 20,
-    "maxRounds": 999,
+    "maxTeams": 4,
+    "maxRounds": 128,
     "pointsPerWin": 3,
-    "pointsPerDraw": 1,
-    "pointsPerLoss": 0,
+    "pointsPerDraw": 0,
+    "pointsPerLoss": 1,
   "rounds": {
     "round_1": [
 {
@@ -36,7 +36,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -62,7 +68,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -89,7 +101,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -115,7 +133,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -142,7 +166,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -168,7 +198,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -195,7 +231,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -221,7 +263,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -248,7 +296,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -274,7 +328,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -301,7 +361,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -327,7 +393,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -354,7 +426,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -380,7 +458,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -407,7 +491,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -433,7 +523,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -460,7 +556,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -486,7 +588,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -513,7 +621,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -539,7 +653,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -566,7 +686,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -592,7 +718,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -619,7 +751,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -645,7 +783,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -672,7 +816,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -698,7 +848,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -725,7 +881,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -751,7 +913,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -778,7 +946,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -804,7 +978,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -831,7 +1011,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -857,7 +1043,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -884,7 +1076,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -910,7 +1108,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -937,7 +1141,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -963,7 +1173,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -990,7 +1206,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1016,7 +1238,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1043,7 +1271,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1069,7 +1303,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1096,7 +1336,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1122,7 +1368,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1149,7 +1401,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1175,7 +1433,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1202,7 +1466,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1228,7 +1498,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1255,7 +1531,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1281,7 +1563,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1308,7 +1596,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1334,7 +1628,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1361,7 +1661,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1387,7 +1693,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1414,7 +1726,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1440,7 +1758,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1467,7 +1791,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1493,7 +1823,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1520,7 +1856,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1546,7 +1888,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1573,7 +1921,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1599,7 +1953,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1626,7 +1986,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1652,7 +2018,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1679,7 +2051,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1705,7 +2083,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1732,7 +2116,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1758,7 +2148,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1785,7 +2181,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1811,7 +2213,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1838,7 +2246,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1864,7 +2278,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1891,7 +2311,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1917,7 +2343,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1944,7 +2376,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -1970,7 +2408,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -1997,7 +2441,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2023,7 +2473,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2050,7 +2506,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2076,7 +2538,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2103,7 +2571,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2129,7 +2603,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2156,7 +2636,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2182,7 +2668,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2209,7 +2701,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2235,7 +2733,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2262,7 +2766,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2288,7 +2798,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2315,7 +2831,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2341,7 +2863,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2368,7 +2896,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2394,7 +2928,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2421,7 +2961,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2447,7 +2993,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2474,7 +3026,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2500,7 +3058,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2527,7 +3091,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2553,7 +3123,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2580,7 +3156,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2606,7 +3188,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2633,7 +3221,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2659,7 +3253,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2686,7 +3286,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2712,7 +3318,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2739,7 +3351,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2765,7 +3383,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2792,7 +3416,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2818,7 +3448,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2845,7 +3481,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2871,7 +3513,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2898,7 +3546,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2924,7 +3578,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -2951,7 +3611,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -2977,7 +3643,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3004,7 +3676,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3030,7 +3708,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3057,7 +3741,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3083,7 +3773,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3110,7 +3806,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3136,7 +3838,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3163,7 +3871,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3189,7 +3903,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3216,7 +3936,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3242,7 +3968,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3269,7 +4001,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3295,7 +4033,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3322,7 +4066,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3348,7 +4098,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3375,7 +4131,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3401,7 +4163,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3428,7 +4196,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3454,7 +4228,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3481,7 +4261,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3507,7 +4293,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3534,7 +4326,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3560,7 +4358,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3587,7 +4391,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3613,7 +4423,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3640,7 +4456,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3666,7 +4488,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3693,7 +4521,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3719,7 +4553,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3746,7 +4586,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3772,7 +4618,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3799,7 +4651,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3825,7 +4683,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3852,7 +4716,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3878,7 +4748,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3905,7 +4781,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3931,7 +4813,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -3958,7 +4846,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -3984,7 +4878,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4011,7 +4911,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4037,7 +4943,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4064,7 +4976,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4090,7 +5008,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4117,7 +5041,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4143,7 +5073,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4170,7 +5106,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4196,7 +5138,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4223,7 +5171,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4249,7 +5203,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4276,7 +5236,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4302,7 +5268,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4329,7 +5301,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4355,7 +5333,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4382,7 +5366,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4408,7 +5398,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4435,7 +5431,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4461,7 +5463,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4488,7 +5496,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4514,7 +5528,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4541,7 +5561,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4567,7 +5593,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4594,7 +5626,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4620,7 +5658,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4647,7 +5691,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4673,7 +5723,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4700,7 +5756,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4726,7 +5788,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4753,7 +5821,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4779,7 +5853,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4806,7 +5886,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4832,7 +5918,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4859,7 +5951,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4885,7 +5983,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4912,7 +6016,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4938,7 +6048,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -4965,7 +6081,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -4991,7 +6113,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5018,7 +6146,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5044,7 +6178,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5071,7 +6211,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5097,7 +6243,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5124,7 +6276,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5150,7 +6308,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5177,7 +6341,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5203,7 +6373,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5230,7 +6406,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5256,7 +6438,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5283,7 +6471,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5309,7 +6503,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5336,7 +6536,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5362,7 +6568,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5389,7 +6601,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5415,7 +6633,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5442,7 +6666,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5468,7 +6698,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5495,7 +6731,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5521,7 +6763,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5548,7 +6796,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5574,7 +6828,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5601,7 +6861,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5627,7 +6893,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5654,7 +6926,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5680,7 +6958,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
     ],
@@ -5707,7 +6991,13 @@
 
   },
 
-  "played": false
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
 
 }
 ,
@@ -5733,325 +7023,13 @@
 
   },
 
-  "played": false
+  "played": false,
 
-}
-    ],
-    "round_109": [
-{
+  "round": 0,
 
-  "home": {
+  "events": [
 
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "away": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-    ],
-    "round_110": [
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "away": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "played": false
-
-}
-    ],
-    "round_111": [
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "away": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-    ],
-    "round_112": [
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "away": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-    ],
-    "round_113": [
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "away": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "played": false
-
-}
-    ],
-    "round_114": [
-{
-
-  "home": {
-
-    "clubName": "Sporting Clube de Braga",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 75
-
-  },
-
-  "away": {
-
-    "clubName": "Sporting Clube de Portugal",
-
-    "formation": "5-3-2",
-
-    "teamStrength": 76
-
-  },
-
-  "played": false
-
-}
-,
-{
-
-  "home": {
-
-    "clubName": "Futebol Clube do Porto",
-
-    "formation": "4-3-3",
-
-    "teamStrength": 77
-
-  },
-
-  "away": {
-
-    "clubName": "Sport Lisboa e Benfica",
-
-    "formation": "4-4-2",
-
-    "teamStrength": 77
-
-  },
-
-  "played": false
+  ]
 
 }
     ]

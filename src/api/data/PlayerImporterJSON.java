@@ -119,7 +119,10 @@ public class PlayerImporterJSON {
     public static IPlayer findPlayerByName(String name, ITeam team) {
     for (IPlayer player : team.getPlayers()) {
         if (player.getName().equals(name)) return player;
+        
+        
     }
+    
     return null;
 }
 }
