@@ -10,8 +10,8 @@
     "maxTeams": 8,
     "maxRounds": 7,
     "pointsPerWin": 3,
-    "pointsPerDraw": 0,
-    "pointsPerLoss": 1,
+    "pointsPerDraw": 1,
+    "pointsPerLoss": 0,
   "rounds": {
     "round_1": [
 {
@@ -36,33 +36,11 @@
 
   },
 
-  "played": true,
+  "played": false,
 
   "round": 0,
 
   "events": [
-
-{
-  "type": "GoalEvent",
-  "minute": 11,
-  "club": "Futebol Clube do Porto",
-  "scorer": "Pepê",
-  "scorerShooting": 80,
-  "goalkeeper": "Gabriel Batista",
-  "goalkeeperDefense": 79
-}
-,
-
-{
-  "type": "GoalEvent",
-  "minute": 20,
-  "club": "Futebol Clube do Porto",
-  "scorer": "Pepê",
-  "scorerShooting": 80,
-  "goalkeeper": "Gabriel Batista",
-  "goalkeeperDefense": 79
-}
-
 
   ]
 
@@ -90,22 +68,11 @@
 
   },
 
-  "played": true,
+  "played": false,
 
   "round": 0,
 
   "events": [
-
-{
-  "type": "GoalEvent",
-  "minute": 59,
-  "club": "Sport Lisboa e Benfica",
-  "scorer": "Rafa Silva",
-  "scorerShooting": 84,
-  "goalkeeper": "Luís Ribeiro",
-  "goalkeeperDefense": 78
-}
-
 
   ]
 
@@ -133,22 +100,11 @@
 
   },
 
-  "played": true,
+  "played": false,
 
   "round": 0,
 
   "events": [
-
-{
-  "type": "GoalEvent",
-  "minute": 12,
-  "club": "Sporting Clube de Portugal",
-  "scorer": "Paulinho",
-  "scorerShooting": 84,
-  "goalkeeper": "Jhonatan",
-  "goalkeeperDefense": 80
-}
-
 
   ]
 
@@ -176,55 +132,11 @@
 
   },
 
-  "played": true,
+  "played": false,
 
   "round": 0,
 
   "events": [
-
-{
-  "type": "GoalEvent",
-  "minute": 24,
-  "club": "Vitória Sport Clube",
-  "scorer": "Jota Silva",
-  "scorerShooting": 83,
-  "goalkeeper": "Matheus Magalhães",
-  "goalkeeperDefense": 81
-}
-,
-
-{
-  "type": "GoalEvent",
-  "minute": 40,
-  "club": "Sporting Clube de Braga",
-  "scorer": "Bruma",
-  "scorerShooting": 84,
-  "goalkeeper": "Bruno Varela",
-  "goalkeeperDefense": 80
-}
-,
-
-{
-  "type": "GoalEvent",
-  "minute": 64,
-  "club": "Sporting Clube de Braga",
-  "scorer": "Ricardo Horta",
-  "scorerShooting": 86,
-  "goalkeeper": "Bruno Varela",
-  "goalkeeperDefense": 80
-}
-,
-
-{
-  "type": "GoalEvent",
-  "minute": 74,
-  "club": "Vitória Sport Clube",
-  "scorer": "Nélson Oliveira",
-  "scorerShooting": 85,
-  "goalkeeper": "Matheus Magalhães",
-  "goalkeeperDefense": 81
-}
-
 
   ]
 
