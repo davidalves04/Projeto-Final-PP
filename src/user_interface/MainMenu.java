@@ -3,7 +3,6 @@ package user_interface;
 import api.data.TeamExporterJSON;
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
-import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
 import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.MatchHtmlGenerator;
 import com.ppstudios.footballmanager.api.contracts.data.htmlgenerators.SeasonHtmlGenerator;
@@ -16,7 +15,6 @@ import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.IFormation;
 import htmlgenerators.ClubHtmlGenerator;
 import htmlgenerators.LeagueHtmlGenerator;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -46,7 +44,7 @@ public class MainMenu {
         while (true) {
             mySquad = mostrarMenuInicial(mySquad, mySquadFile, totalSquads);
             if (mySquad == null) {
-                break; // O utilizador escolheu sair
+                break; //O utilizador escolheu sair
             }
 
             mostrarMenuPrincipal(mySquad, mySquadFile, liga, leagueSimulator, strategy);
