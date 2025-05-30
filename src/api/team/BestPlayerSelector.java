@@ -20,8 +20,6 @@ import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
  * 
  * A seleção é feita calculando a média dos atributos Passing, Shooting, Speed
  * e Stamina, retornando o jogador com maior valor médio para a posição indicada.
- * 
- * @author Utilizador
  */
 public class BestPlayerSelector implements IPlayerSelector {
     

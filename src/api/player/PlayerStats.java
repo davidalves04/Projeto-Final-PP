@@ -14,8 +14,6 @@ package api.player;
  * passe, velocidade e resistência.
  * 
  * Esta classe permite a leitura e modificação das estatísticas individuais.
- * 
- * @author David
  */
 public class PlayerStats {
     private int shooting;

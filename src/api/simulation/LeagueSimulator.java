@@ -21,8 +21,6 @@ import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStra
  * dos jogos.
  * 
  * Por padrão, utiliza a primeira temporada (índice 0) da liga.
- * 
- * @author david
  */
 public class LeagueSimulator {
 

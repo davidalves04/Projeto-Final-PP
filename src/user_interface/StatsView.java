@@ -10,7 +10,6 @@
 package user_interface;
 
 import api.data.LeagueImporterJSON;
-import api.league.Season;
 import api.league.Standing;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;

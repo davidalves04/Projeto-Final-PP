@@ -32,8 +32,6 @@ import java.time.LocalDate;
  * Classe responsável por importar dados de clubes e plantéis (Squads) a partir de ficheiros JSON.
  * Utiliza a biblioteca Jackson para fazer parsing do JSON.
  * Permite importar clubes completos, plantéis dos clubes e o plantel do utilizador.
- * 
- * @author Gabriel
  */
 public class TeamImporterJSON {
 

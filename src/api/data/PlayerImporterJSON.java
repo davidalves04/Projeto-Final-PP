@@ -28,8 +28,6 @@ import java.time.LocalDate;
  * Classe responsável por importar jogadores a partir de ficheiros JSON.
  * Utiliza a biblioteca Jackson para fazer o parsing do conteúdo.
  * Pode importar um único jogador (internamente) ou um array completo de jogadores.
- * 
- * @author Gabriel
  */
 public class PlayerImporterJSON {
 

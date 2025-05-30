@@ -28,8 +28,6 @@ import com.ppstudios.footballmanager.api.contracts.team.IFormation;
  *   <li>-1: desvantagem tática moderada</li>
  *   <li>-2: desvantagem tática bastante significativa</li>
  * </ul>
- * 
- * @author Utilizador
  */
 public class Formation implements IFormation {
     private String displayName;

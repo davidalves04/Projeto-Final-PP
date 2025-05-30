@@ -1,3 +1,12 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
 package api.data;
 
 import java.io.BufferedReader;
@@ -12,8 +21,6 @@ import java.io.IOException;
  * com base no número de camisola.
  * A manipulação do ficheiro é feita de forma textual, assumindo que o ficheiro
  * contém um array JSON válido de objetos de jogadores.
- * 
- * @author Gabriel
  */
 public class PlayerRemoverJSON {
 

@@ -12,10 +12,6 @@ package user_interface;
 import api.team.Formation;
 import java.util.Scanner;
 
-/**
- *
- * @author Utilizador
- */
 public class PrepareMatch {
      public static Formation mostrarTaticas() {
          

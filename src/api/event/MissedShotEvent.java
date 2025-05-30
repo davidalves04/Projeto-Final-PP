@@ -11,8 +11,6 @@ package api.event;
 
 import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
-import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 import utils.JsonAccumulator;
 

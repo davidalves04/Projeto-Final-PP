@@ -10,7 +10,6 @@
 package user_interface;
 
 import api.team.Squad;
-import api.team.Team;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 
 import java.io.IOException;

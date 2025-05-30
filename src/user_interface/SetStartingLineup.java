@@ -9,7 +9,6 @@
 */
 package user_interface;
 
-import api.player.Player;
 import api.player.Position;
 
 import api.team.Squad;
@@ -18,11 +17,6 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
 import java.io.IOException;
 import java.util.Scanner;
 
-
-/**
- *
- * @author Utilizador
- */
 public class SetStartingLineup {
        
          

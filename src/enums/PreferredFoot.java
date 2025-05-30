@@ -23,8 +23,6 @@ package enums;
  * 
  * Esta enumeração pode ser utilizada para representar a dominância de pé de um jogador,
  * útil em lógicas de posicionamento, remates, cruzamentos, entre outros.
- * 
- * @author David
  */
 public enum PreferredFoot {
     /** Pé esquerdo (Left foot) */

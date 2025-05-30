@@ -9,7 +9,6 @@
 */
 package api.team;
 
-import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
 
@@ -27,8 +26,6 @@ import java.io.IOException;
  * 
  * Permite adicionar, remover e selecionar jogadores, bem como exportar os dados do clube para JSON.
  * Mantém também uma contagem estática do número de clubes criados.
- * 
- * @author david
  */
 public class Team implements IClub {
     

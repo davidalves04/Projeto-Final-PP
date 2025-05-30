@@ -22,8 +22,6 @@ import utils.JsonAccumulator;
 /**
  * Classe responsável por exportar temporadas (seasons) para um ficheiro JSON de uma liga existente.
  * Permite adicionar uma nova temporada ao array de temporadas no ficheiro JSON.
- * 
- * @author Gabriel
  */
 public class LeagueExporterJSON {
 

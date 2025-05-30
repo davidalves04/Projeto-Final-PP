@@ -26,8 +26,6 @@ import java.io.IOException;
  * 
  * O ficheiro JSON gerado contém um array de objetos JSON, sendo atualizado
  * de forma incremental.
- * 
- * @author Gabriel
  */
 public class TeamExporterJSON {
 

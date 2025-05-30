@@ -16,8 +16,6 @@ import com.ppstudios.footballmanager.api.contracts.player.IPlayerPosition;
  * a posição base de um jogador em campo (ex: "Avançado", "Médio", "Defesa").
  * 
  * Esta classe armazena a descrição textual da posição.
- * 
- * @author Gabriel
  */
 public class Position implements IPlayerPosition {
     

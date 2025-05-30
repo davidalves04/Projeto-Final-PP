@@ -12,7 +12,6 @@ package api.simulation;
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import java.util.Random;
 import api.event.*;
 import api.league.Standing;
@@ -30,8 +29,6 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
  * 
  * A probabilidade de ocorrência dos eventos é determinada por valores aleatórios e
  * atributos técnicos dos jogadores, como remate, passe e resistência.
- * 
- * @author 
  */
 public class DefaultMatchSimulator implements MatchSimulatorStrategy {
 

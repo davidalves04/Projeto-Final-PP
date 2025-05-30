@@ -9,31 +9,17 @@
 */
 package user_interface;
 
-
-import api.data.LeagueExporterJSON;
-
-
 import com.ppstudios.footballmanager.api.contracts.simulation.MatchSimulatorStrategy;
-
 import api.data.LeagueImporterJSON;
 import api.data.TeamImporterJSON;
 import api.simulation.DefaultMatchSimulator;
 import api.simulation.LeagueSimulator;
-
-
 import api.league.League; // Adiciona o import para League
 import api.league.Season;
-
-
-
 import api.team.Squad;
 import api.team.Team;
-
 import java.io.File;
 import java.io.IOException;
-
-
-
 
 public class Main {
     public static void main(String[] args) {

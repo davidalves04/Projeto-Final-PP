@@ -23,8 +23,6 @@ package enums;
  *   <li>CINCO_TRES_DOIS → "5-3-2"</li>
  *   <li>QUATRO_DOIS_TRES_UM → "4-2-3-1"</li>
  * </ul>
- * 
- * @author Gabriel
  */
 public enum Formation {
     QUATRO_TRES_TRES,

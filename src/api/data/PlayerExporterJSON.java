@@ -23,8 +23,6 @@ import java.io.IOException;
  * 
  * Esta classe assume que cada {@code Player} possui um método {@code exportToJson()} 
  * que escreve o conteúdo JSON para o ficheiro indicado anteriormente com {@code setFile()}.
- * 
- * @author Gabriel
  */
 public class PlayerExporterJSON {
 

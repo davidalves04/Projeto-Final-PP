@@ -28,8 +28,6 @@ import java.io.IOException;
  * Permite adicionar e remover jogadores, consultar jogadores por posição,
  * obter força média da equipa e exportar os dados para um ficheiro JSON.
  * </p>
- * 
- * @author david
  */
 public class Squad implements ITeam {
 

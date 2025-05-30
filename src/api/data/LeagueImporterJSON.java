@@ -35,8 +35,6 @@ import java.io.IOException;
 /**
  * Classe responsável por importar dados de uma liga a partir de um ficheiro JSON.
  * Permite reconstruir objetos do tipo League, Season e Match a partir do conteúdo do ficheiro.
- * 
- * @author Gabriel
  */
 public class LeagueImporterJSON {
 

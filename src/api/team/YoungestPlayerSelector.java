@@ -24,8 +24,6 @@ import com.ppstudios.footballmanager.api.contracts.team.IPlayerSelector;
  * 
  * Caso o clube ou a posição sejam nulos, ou o clube esteja vazio,
  * lança exceções apropriadas.
- * 
- * @author Utilizador
  */
 public class YoungestPlayerSelector implements IPlayerSelector{
 

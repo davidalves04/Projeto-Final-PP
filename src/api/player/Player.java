@@ -23,8 +23,6 @@ import java.io.IOException;
  * Implementação da interface {@link IPlayer} que representa um jogador de futebol.
  * Esta classe armazena os dados pessoais, atributos técnicos e físicos do jogador,
  * bem como permite a exportação das informações em formato JSON.
- * 
- * @author David
  */
 public class Player implements IPlayer {
 

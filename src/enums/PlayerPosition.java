@@ -25,8 +25,6 @@ package enums;
  * 
  * Esta enumeração pode ser usada para categorizar os jogadores de uma equipa com base na 
  * sua função principal em campo.
- * 
- * @author David
  */
 public enum PlayerPosition {
     /** Guarda-redes (Goalkeeper) */

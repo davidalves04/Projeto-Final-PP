@@ -10,13 +10,8 @@
 package user_interface;
 
 import api.team.Squad;
-import api.team.Team;
 import java.util.Scanner;
 
-/**
- *
- * @author Utilizador
- */
 public class TeamSelector {
       public static Squad selectTeam(Squad[] squads) {
           int teamCount = squads.length;
