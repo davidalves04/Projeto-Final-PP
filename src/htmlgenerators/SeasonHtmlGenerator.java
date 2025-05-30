@@ -1,12 +1,3 @@
-/*  
-* Nome: David Sérgio Ferreira Alves
-* Número: 8240231
-* Turma: LSIRC T2
-*  
-* Nome: Gabriel Alexandre Meireles Moreira 
-* Número: 8240266  
-* Turma: LSIRC T2
-*/
 package htmlgenerators;
 
 import com.ppstudios.footballmanager.api.contracts.data.IExporter;
@@ -62,14 +53,19 @@ public class SeasonHtmlGenerator implements IExporter {
         html.append("<html><head><title>").append(season.getName()).append("</title></head><body>");
         html.append("<h1>").append(season.getName()).append(" - ").append(season.getYear()).append("</h1>");
 
+        // Substituindo o uso de coleção por um array
         html.append("<h2>Clubes Participantes</h2><ul>");
-        for (IClub club : season.getCurrentClubs()) {
-            html.append("<li>").append(club.getName()).append("</li>");
+        IClub[] clubs = season.getCurrentClubs(); // Supondo que 'getCurrentClubs()' retorna um array
+        for (int i = 0; i < clubs.length; i++) {
+            html.append("<li>").append(clubs[i].getName()).append("</li>");
         }
         html.append("</ul>");
 
+        // Substituindo o uso de coleção por um array
         html.append("<h2>Jogos</h2><ul>");
-        for (IMatch match : season.getMatches()) {
+        IMatch[] matches = season.getMatches(); // Supondo que 'getMatches()' retorna um array
+        for (int i = 0; i < matches.length; i++) {
+            IMatch match = matches[i];
             html.append("<li>").append(match.getHomeClub().getName())
                 .append(" vs ").append(match.getAwayClub().getName());
             if (match.isPlayed()) {

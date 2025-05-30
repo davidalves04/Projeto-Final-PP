@@ -1,12 +1,3 @@
-/*  
-* Nome: David Sérgio Ferreira Alves
-* Número: 8240231
-* Turma: LSIRC T2
-*  
-* Nome: Gabriel Alexandre Meireles Moreira 
-* Número: 8240266  
-* Turma: LSIRC T2
-*/
 package htmlgenerators;
 
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
@@ -46,7 +37,10 @@ public class ClubHtmlGenerator {
         html.append("<img src='").append(club.getLogo()).append("' alt='Logo' height='100'/>");
         html.append("<h2>Plantel</h2><ul>");
 
-        for (IPlayer player : club.getPlayers()) {
+        // Alterado para usar um array de jogadores em vez de coleção
+        IPlayer[] players = club.getPlayers(); // Supondo que getPlayers() retorna um array
+        for (int i = 0; i < players.length; i++) {
+            IPlayer player = players[i];
             html.append("<li>").append(player.getNumber()).append(" - ").append(player.getName())
                 .append(" (").append(player.getPosition()).append(")</li>");
         }
