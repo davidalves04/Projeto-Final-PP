@@ -64,7 +64,11 @@ public class MainMenu {
      */
     private Squad mostrarMenuInicial(Squad mySquad, String mySquadFile, Squad[] totalSquads) throws IOException {
         int opcao;
-
+        System.out.println("===========================================");
+        System.out.println("PPFootball Manager v1.0 - Temporada 2024/25");
+        System.out.println("===========================================");
+        System.out.println("Grupo 24");
+        System.out.println("");
         System.out.println("=== BEM-VINDO ===");
         if (mySquad == null) {
             System.out.println("1. Novo Jogo");
