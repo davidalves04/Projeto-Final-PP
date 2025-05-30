@@ -317,11 +317,11 @@ public class MainMenu {
                 }
             }
 
-            File leagueJson = new File("league.json");
+            File leagueJson = new File("LigaPortugal.json");
             if (leagueJson.exists()) {
-                LeagueHtmlGenerator.generate("league.json", "league.html");
+                LeagueHtmlGenerator.generate("LigaPortugal.json", "LigaPortugal.html");
             } else {
-                System.out.println("Ficheiro league.json não encontrado. Ignorado.");
+                System.out.println("Ficheiro LigaPortugal.json não encontrado. Ignorado.");
             }
 
             System.out.println("Exportação concluída.");
