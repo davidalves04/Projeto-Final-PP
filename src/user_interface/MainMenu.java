@@ -19,13 +19,27 @@ import htmlgenerators.LeagueHtmlGenerator;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Classe responsável por gerir a interface principal do utilizador, incluindo o menu inicial e o menu principal.
+ * Permite iniciar um novo jogo, continuar uma temporada existente, gerir o plantel, simular jornadas e exportar dados.
+ */
 public class MainMenu {
 
     private final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Inicia o menu principal da aplicação.
+     *
+     * @param mySquad        Plantel atual do utilizador (pode ser nulo se for um novo jogo).
+     * @param mySquadFile    Caminho para o ficheiro JSON onde o plantel é guardado.
+     * @param totalSquads    Lista de todos os plantéis disponíveis para seleção.
+     * @param liga           Liga que está a ser gerida.
+     * @param leagueSimulator Simulador da liga.
+     * @param strategy       Estratégia de simulação de jogos.
+     * @throws IOException Se ocorrer um erro durante a leitura ou escrita de ficheiros.
+     */
     public void mostrarMenu(Squad mySquad, String mySquadFile, Squad[] totalSquads,
                             ILeague liga, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy) throws IOException {
 
@@ -41,6 +55,15 @@ public class MainMenu {
         scanner.close();
     }
 
+    /**
+     * Mostra o menu inicial com as opções de novo jogo, continuar ou sair.
+     *
+     * @param mySquad     Plantel atual do utilizador (pode ser nulo).
+     * @param mySquadFile Caminho para o ficheiro JSON onde o plantel é guardado.
+     * @param totalSquads Lista de todos os plantéis disponíveis para seleção.
+     * @return O plantel selecionado ou carregado pelo utilizador, ou null se escolher sair.
+     * @throws IOException Se ocorrer um erro ao exportar o plantel.
+     */
     private Squad mostrarMenuInicial(Squad mySquad, String mySquadFile, Squad[] totalSquads) throws IOException {
         int opcao;
 
@@ -48,48 +71,51 @@ public class MainMenu {
         if (mySquad == null) {
             System.out.println("1. Novo Jogo");
             System.out.println("2. Sair");
-        } else {
-            System.out.println("1. Novo Jogo");
-            System.out.println("2. Continuar");
-            System.out.println("3. Sair");
-        }
-
-        System.out.print("Escolha uma opção: ");
-        try {
-            opcao = scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Por favor insira um número válido.");
-            scanner.nextLine();
-            return mySquad;
-        }
-
-        switch (opcao) {
-            case 1:
+            System.out.print("Escolha uma opção: ");
+            opcao = lerOpcaoValida(1, 2);
+            if (opcao == 1) {
                 System.out.println("A iniciar uma nova temporada...");
                 System.out.println("Escolha a sua equipa");
                 mySquad = TeamSelector.selectTeam(totalSquads);
                 TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
-                break;
-            case 2:
-                if (mySquad == null) {
+            } else {
+                System.out.println("A sair...");
+                return null;
+            }
+        } else {
+            System.out.println("1. Novo Jogo");
+            System.out.println("2. Continuar");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = lerOpcaoValida(1, 3);
+            switch (opcao) {
+                case 1:
+                    System.out.println("A iniciar uma nova temporada...");
+                    System.out.println("Escolha a sua equipa");
+                    mySquad = TeamSelector.selectTeam(totalSquads);
+                    TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
+                    break;
+                case 2:
+                    break;
+                case 3:
                     System.out.println("A sair...");
                     return null;
-                }
-                break;
-            case 3:
-                if (mySquad != null) {
-                    System.out.println("A sair...");
-                    return null;
-                }
-                System.out.println("Opção inválida.");
-                break;
-            default:
-                System.out.println("Opção inválida.");
+            }
         }
 
         return mySquad;
     }
 
+    /**
+     * Mostra o menu principal com as opções de gestão da equipa, simulação e exportação.
+     *
+     * @param mySquad         Plantel do utilizador.
+     * @param mySquadFile     Caminho para o ficheiro JSON do plantel.
+     * @param liga            Liga ativa.
+     * @param leagueSimulator Simulador da liga.
+     * @param strategy        Estratégia de simulação dos jogos.
+     * @throws IOException Se ocorrer erro ao ler ou exportar dados.
+     */
     private void mostrarMenuPrincipal(Squad mySquad, String mySquadFile,
                                       ILeague liga, LeagueSimulator leagueSimulator,
                                       MatchSimulatorStrategy strategy) throws IOException {
@@ -98,9 +124,9 @@ public class MainMenu {
         Team myTeam = (Team) mySquad.getClub();
 
         SetStartingLineup lineup = new SetStartingLineup();
-        IPlayer[] myLineup = lineup.mySquadBestLineup(mySquad, mySquad.getFormation().getDisplayName());
+        IPlayer[] myLineup = lineup.mySquadBestLineup(mySquad, myFormation.getDisplayName());
 
-        int opcao = 0;
+        int opcao;
         do {
             System.out.println("\n=== Menu Principal ===");
             System.out.println("1. Gerir plantel");
@@ -112,13 +138,7 @@ public class MainMenu {
             System.out.println("0. Guardar e sair");
             System.out.print("Escolha uma opção: ");
 
-            try {
-                opcao = scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Por favor insira um número válido.");
-                scanner.nextLine();
-                continue;
-            }
+            opcao = lerOpcaoValida(0, 6);
 
             switch (opcao) {
                 case 1:
@@ -128,13 +148,12 @@ public class MainMenu {
                     break;
                 case 2:
                     ISeason season = liga.getSeason(0);
-                    IStanding[] standings = season.getLeagueStandings();
-                    StatsView.mostrarClassificacao(standings);
+                    StatsView.mostrarClassificacao(season.getLeagueStandings());
                     break;
                 case 3:
                     myFormation = PrepareMatch.mostrarTaticas();
                     mySquad.setFormation(myFormation);
-                    myLineup = lineup.mySquadBestLineup(mySquad, mySquad.getFormation().getDisplayName());
+                    myLineup = lineup.mySquadBestLineup(mySquad, myFormation.getDisplayName());
                     TeamView.showLineup(myLineup);
                     SetStartingLineup subsForMatch = new SetStartingLineup();
                     subsForMatch.promptForSubstitution(myLineup, mySquad);
@@ -154,13 +173,16 @@ public class MainMenu {
                     System.out.println("A guardar...");
                     TeamExporterJSON.exportMySquad(mySquad, mySquadFile);
                     break;
-                default:
-                    System.out.println("Opção inválida.");
             }
 
         } while (opcao != 0);
     }
 
+    /**
+     * Exporta os dados da temporada, clubes e jogos para ficheiros HTML.
+     *
+     * @param liga Liga da qual se pretende exportar os dados.
+     */
     private void exportarHtml(ILeague liga) {
         new File("html").mkdirs();
         try {
@@ -198,5 +220,30 @@ public class MainMenu {
         } catch (IOException e) {
             System.out.println("Erro ao exportar para HTML: " + e.getMessage());
         }
+    }
+
+    /**
+     * Lê e valida uma opção inserida pelo utilizador dentro de um intervalo.
+     *
+     * @param min Valor mínimo permitido.
+     * @param max Valor máximo permitido.
+     * @return A opção escolhida pelo utilizador.
+     */
+    private int lerOpcaoValida(int min, int max) {
+        int opcao = -1;
+        while (true) {
+            String input = scanner.nextLine();
+            try {
+                opcao = Integer.parseInt(input);
+                if (opcao >= min && opcao <= max) {
+                    break;
+                } else {
+                    System.out.print("Por favor insira um número entre " + min + " e " + max + ": ");
+                }
+            } catch (NumberFormatException e) {
+                System.out.print("Entrada inválida. Por favor insira um número: ");
+            }
+        }
+        return opcao;
     }
 }
