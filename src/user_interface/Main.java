@@ -18,6 +18,7 @@ import api.league.League; // Adiciona o import para League
 import api.league.Season;
 import api.team.Squad;
 import api.team.Team;
+import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 
 
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
@@ -31,7 +32,11 @@ public class Main {
         try {
          
             // Caminho para o ficheiro JSON com os dados da liga
+
             String leagueFile = "LigaPortuguesa.json"; // <- ajusta se necessário
+
+           
+
             String clubsFile = "clubs.json";
             String squadsFile = "squad.json";
             String mySquadFile = "mySquad.json";
@@ -55,21 +60,22 @@ public class Main {
       
 
 
+
       
             League league = LeagueImporterJSON.readLeagueFromFile(leagueFile);
             ISeason s1 = league.getSeason(0);
            
   ((Season) s1).generateMatchesAutomatically();
+
+            
+            
+            ((Season) s1).generateMatchesAutomatically();
+
             s1.generateSchedule();
             ((Season)s1).setMyTeam(mySquad);
             
             league.setFile(leagueFile);
-            
-        
-         
-            
-            
-               
+
 
 
      
