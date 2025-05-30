@@ -109,50 +109,53 @@ public class LeagueImporterJSON {
      * @return Objeto Season reconstruído.
      * @throws IOException Se ocorrer erro na leitura.
      */
-    private static Season readSeasonFromParser(JsonParser parser) throws IOException {
-        String name = null;
-        int year  = 0;
-        int pointsPerWin = 0;
-        int pointsPerLoss = 0;
-        int pointsPerDraw = 0;
-        int maxTeams = 0;
-        int maxRounds = 0;
-        Match[][] currentMatches = null;
+  private static Season readSeasonFromParser(JsonParser parser) throws IOException {
+    String name = null;
+    int year = 0;
+    int pointsPerWin = 0;
+    int pointsPerLoss = 0;
+    int pointsPerDraw = 0;
+    int maxTeams = 0;
+    int maxRounds = 0;
 
-        if (parser.currentToken() != JsonToken.START_OBJECT) {
-            throw new IOException("Esperado objeto de season");
-        }
+    Match[][] currentMatches = null;
 
-        while (parser.nextToken() != JsonToken.END_OBJECT) {
-            String field = parser.getCurrentName();
-            parser.nextToken();
-
-            switch (field) {
-                case "name" -> name = parser.getValueAsString();
-                case "year" -> year = parser.getIntValue();
-                case "maxTeams" -> maxTeams = parser.getIntValue();
-                case "maxRounds" -> maxRounds = parser.getIntValue();
-                case "pointsPerWin" -> pointsPerWin = parser.getIntValue();
-                case "pointsPerLoss" -> pointsPerLoss = parser.getIntValue();
-                case "pointsPerDraw" -> pointsPerDraw = parser.getIntValue();
-                case "rounds" -> currentMatches = roundsFromJson(parser, maxRounds, 999);
-                default -> parser.skipChildren();
-            }
-        }
-
-        IClub[] clubs = TeamImporterJSON.teamsFromJson("clubs.json");
-        ITeam[] squads = TeamImporterJSON.squadsFromJson("squad.json", clubs);
-
-        Season season = new Season(name, year, maxTeams, maxRounds, pointsPerWin, pointsPerLoss, pointsPerDraw,squads, clubs);
-        season.setTeams("squad.json", clubs);
-
-        if (currentMatches != null) {
-            season.setMatches(currentMatches);
-        }
-
-        season.generateSchedule();
-        return season;
+    if (parser.currentToken() != JsonToken.START_OBJECT) {
+        throw new IOException("Esperado objeto de season");
     }
+
+    while (parser.nextToken() != JsonToken.END_OBJECT) {
+        String field = parser.getCurrentName();
+        parser.nextToken();
+
+        switch (field) {
+            case "name" -> name = parser.getValueAsString();
+            case "year" -> year = parser.getIntValue();
+            case "maxTeams" -> maxTeams = parser.getIntValue();
+            case "maxRounds" -> maxRounds = parser.getIntValue();
+            case "pointsPerWin" -> pointsPerWin = parser.getIntValue();
+            case "pointsPerLoss" -> pointsPerLoss = parser.getIntValue();
+            case "pointsPerDraw" -> pointsPerDraw = parser.getIntValue();
+            case "rounds" -> {
+                int i = maxRounds;          // Número de jornadas
+                int j = maxTeams / 2;       // Jogos por jornada (2 equipas por jogo)
+                currentMatches = roundsFromJson(parser, i, j);
+            }
+            default -> parser.skipChildren();
+        }
+    }
+
+    IClub[] clubs = TeamImporterJSON.teamsFromJson("clubs.json");
+    ITeam[] squads = TeamImporterJSON.squadsFromJson("squad.json", clubs);
+
+    Season season = new Season(name, year, maxTeams, maxRounds, pointsPerWin, pointsPerLoss, pointsPerDraw, squads, clubs);
+
+    if (currentMatches != null) {
+        season.setMatches(currentMatches);
+    }
+
+    return season;
+}
     
     
      private static Standing readStandingFromParser(JsonParser parser) throws IOException {
@@ -467,8 +470,11 @@ public class LeagueImporterJSON {
                 matches[i] = tempMatches[i];
             }
 
-            rounds[roundIndex] = matches;
-        }
+           if (roundIndex >= 0 && roundIndex < rounds.length) {
+    rounds[roundIndex] = matches;
+}
+}
+        
 
         return rounds;
     }

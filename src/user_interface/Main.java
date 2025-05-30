@@ -33,10 +33,7 @@ public class Main {
          
             // Caminho para o ficheiro JSON com os dados da liga
 
-            String leagueFile = "LigaPortuguesa.json"; // <- ajusta se necessário
-
-           
-
+            String leagueFile = "LigaPortugal.json"; // <- ajusta se necessário
             String clubsFile = "clubs.json";
             String squadsFile = "squad.json";
             String mySquadFile = "mySquad.json";
@@ -64,37 +61,25 @@ public class Main {
       
             League league = LeagueImporterJSON.readLeagueFromFile(leagueFile);
             ISeason s1 = league.getSeason(0);
+        
+            
            
-  ((Season) s1).generateMatchesAutomatically();
-
+             ((Season)s1).generateMatchesAutomatically();
             
-            
-            ((Season) s1).generateMatchesAutomatically();
-
             s1.generateSchedule();
             ((Season)s1).setMyTeam(mySquad);
             
             league.setFile(leagueFile);
-
-
-
-     
-
-            
-             
-            
-         
-            
-
             // Inicializar estratégia de simulação e simulador
             MatchSimulatorStrategy strategy = new DefaultMatchSimulator();
             
             LeagueSimulator simulator = new LeagueSimulator(league);
             
+            
 
             // Iniciar menu principal
             MainMenu menu = new MainMenu();
-            menu.mostrarMenu(mySquad,mySquadFile,totalSquads,league ,simulator, strategy);
+            menu.mostrarMenu(mySquad,mySquadFile,totalSquads,league ,simulator, strategy,totalSquads,totalClubs);
 
         } catch (IOException e) {
             System.out.println("Erro ao iniciar o jogo: " + e.getMessage());

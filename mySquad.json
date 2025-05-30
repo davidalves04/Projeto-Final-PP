@@ -13,10 +13,26 @@
       "height": 1.85,
       "weight": 82.0,
       "shootingstats": 40,
-      "staminastats": 70,
-      "speedstats": 85,
+      "staminastats": 85,
+      "speedstats": 70,
       "passingstats": 75,
-      "defensestats": 0
+      "defensestats": 84
+    },
+    {
+      "name": "Wendell",
+      "birthDate": "1993-07-20",
+      "nationality": "Brasileiro",
+      "basePosition": "Defender",
+      "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/wendell.jpg",
+      "number": 18,
+      "age": 0,
+      "height": 1.78,
+      "weight": 72.0,
+      "shootingstats": 60,
+      "staminastats": 84,
+      "speedstats": 80,
+      "passingstats": 79,
+      "defensestats": 78
     },
     {
       "name": "Francisco Moura",
@@ -29,10 +45,10 @@
       "height": 1.78,
       "weight": 72.0,
       "shootingstats": 60,
-      "staminastats": 85,
-      "speedstats": 88,
+      "staminastats": 88,
+      "speedstats": 85,
       "passingstats": 85,
-      "defensestats": 0
+      "defensestats": 78
     },
     {
       "name": "Iván Marcano",
@@ -45,10 +61,10 @@
       "height": 1.88,
       "weight": 82.0,
       "shootingstats": 50,
-      "staminastats": 60,
-      "speedstats": 75,
+      "staminastats": 75,
+      "speedstats": 60,
       "passingstats": 70,
-      "defensestats": 0
+      "defensestats": 83
     },
     {
       "name": "Nehuén Pérez",
@@ -61,10 +77,10 @@
       "height": 1.85,
       "weight": 73.0,
       "shootingstats": 45,
-      "staminastats": 70,
-      "speedstats": 80,
+      "staminastats": 80,
+      "speedstats": 70,
       "passingstats": 68,
-      "defensestats": 0
+      "defensestats": 80
     },
     {
       "name": "Zaidu Sanusi",
@@ -77,10 +93,10 @@
       "height": 1.83,
       "weight": 76.0,
       "shootingstats": 50,
-      "staminastats": 90,
-      "speedstats": 85,
+      "staminastats": 85,
+      "speedstats": 90,
       "passingstats": 70,
-      "defensestats": 0
+      "defensestats": 77
     },
     {
       "name": "Tiago Djaló",
@@ -93,10 +109,10 @@
       "height": 1.91,
       "weight": 83.0,
       "shootingstats": 55,
-      "staminastats": 75,
-      "speedstats": 80,
+      "staminastats": 80,
+      "speedstats": 75,
       "passingstats": 72,
-      "defensestats": 0
+      "defensestats": 81
     },
     {
       "name": "Stephen Eustáquio",
@@ -109,10 +125,10 @@
       "height": 1.78,
       "weight": 70.0,
       "shootingstats": 65,
-      "staminastats": 75,
-      "speedstats": 85,
+      "staminastats": 85,
+      "speedstats": 75,
       "passingstats": 80,
-      "defensestats": 0
+      "defensestats": 76
     },
     {
       "name": "Alan Varela",
@@ -125,10 +141,10 @@
       "height": 1.8,
       "weight": 72.0,
       "shootingstats": 70,
-      "staminastats": 79,
-      "speedstats": 90,
+      "staminastats": 90,
+      "speedstats": 79,
       "passingstats": 86,
-      "defensestats": 0
+      "defensestats": 78
     },
     {
       "name": "Thomas Peres",
@@ -141,10 +157,10 @@
       "height": 1.8,
       "weight": 72.0,
       "shootingstats": 80,
-      "staminastats": 83,
-      "speedstats": 90,
+      "staminastats": 90,
+      "speedstats": 83,
       "passingstats": 90,
-      "defensestats": 0
+      "defensestats": 79
     },
     {
       "name": "Fábio Vieira",
@@ -157,10 +173,26 @@
       "height": 1.7,
       "weight": 65.0,
       "shootingstats": 88,
-      "staminastats": 78,
-      "speedstats": 80,
+      "staminastats": 80,
+      "speedstats": 78,
       "passingstats": 85,
-      "defensestats": 0
+      "defensestats": 75
+    },
+    {
+      "name": "Otávio Ataíde",
+      "birthDate": "2002-11-11",
+      "nationality": "Brasileiro",
+      "basePosition": "Midfielder",
+      "photo": "https://www.fcporto.pt/-/media/images/fcporto/plantel/2024-2025/otavio-ataide.jpg",
+      "number": 16,
+      "age": 0,
+      "height": 1.8,
+      "weight": 74.0,
+      "shootingstats": 72,
+      "staminastats": 82,
+      "speedstats": 80,
+      "passingstats": 80,
+      "defensestats": 75
     },
     {
       "name": "William Gomes",
@@ -173,10 +205,10 @@
       "height": 1.87,
       "weight": 80.0,
       "shootingstats": 85,
-      "staminastats": 75,
-      "speedstats": 80,
+      "staminastats": 80,
+      "speedstats": 75,
       "passingstats": 70,
-      "defensestats": 0
+      "defensestats": 68
     },
     {
       "name": "Rodrigo Mora",
@@ -189,10 +221,10 @@
       "height": 1.71,
       "weight": 60.0,
       "shootingstats": 93,
-      "staminastats": 87,
-      "speedstats": 85,
+      "staminastats": 85,
+      "speedstats": 87,
       "passingstats": 87,
-      "defensestats": 0
+      "defensestats": 65
     },
     {
       "name": "Pepê",
@@ -205,10 +237,10 @@
       "height": 1.75,
       "weight": 70.0,
       "shootingstats": 80,
-      "staminastats": 90,
-      "speedstats": 93,
+      "staminastats": 93,
+      "speedstats": 90,
       "passingstats": 75,
-      "defensestats": 0
+      "defensestats": 68
     },
     {
       "name": "Samu Omorodion",
@@ -221,10 +253,26 @@
       "height": 1.93,
       "weight": 88.0,
       "shootingstats": 93,
-      "staminastats": 89,
-      "speedstats": 85,
+      "staminastats": 85,
+      "speedstats": 89,
       "passingstats": 68,
-      "defensestats": 0
+      "defensestats": 67
+    },
+    {
+      "name": "Francisco Conceição",
+      "birthDate": "2003-05-02",
+      "nationality": "Portugues",
+      "basePosition": "Forward",
+      "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/francisco-conceicao",
+      "number": 36,
+      "age": 0,
+      "height": 1.72,
+      "weight": 68.0,
+      "shootingstats": 86,
+      "staminastats": 90,
+      "speedstats": 93,
+      "passingstats": 77,
+      "defensestats": 66
     }
   ],
   "teamStrength": 77

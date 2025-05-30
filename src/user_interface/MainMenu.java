@@ -1,3 +1,4 @@
+
 /*  
 * Nome: David Sérgio Ferreira Alves
 * Número: 8240231
@@ -11,6 +12,7 @@ package user_interface;
 
 import api.data.LeagueExporterJSON;
 import api.data.TeamExporterJSON;
+import api.data.TeamImporterJSON;
 import api.league.Season;
 import api.league.Standing;
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
@@ -53,7 +55,7 @@ public class MainMenu {
      * @throws IOException Se ocorrer um erro durante a leitura ou escrita de ficheiros.
      */
     public void mostrarMenu(Squad mySquad, String mySquadFile, Squad[] totalSquads,
-                            ILeague liga, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy) throws IOException {
+                            ILeague liga, LeagueSimulator leagueSimulator, MatchSimulatorStrategy strategy,Squad[] squads,Team[] clubs) throws IOException {
 
         while (true) {
             mySquad = mostrarMenuInicial(mySquad, mySquadFile, totalSquads);
@@ -61,7 +63,7 @@ public class MainMenu {
                 break; //O utilizador escolheu sair
             }
 
-            mostrarMenuPrincipal(mySquad, mySquadFile, liga, leagueSimulator, strategy);
+            mostrarMenuPrincipal(mySquad, mySquadFile, liga, leagueSimulator, strategy,squads,clubs);
         }
 
         scanner.close();
@@ -139,7 +141,7 @@ public class MainMenu {
      */
     private void mostrarMenuPrincipal(Squad mySquad, String mySquadFile,
                                       ILeague liga, LeagueSimulator leagueSimulator,
-                                      MatchSimulatorStrategy strategy) throws IOException {
+                                      MatchSimulatorStrategy strategy,Squad[] opposingTeams,Team[] opposingClubs) throws IOException {
 
      
         ISeason season = liga.getSeason(0);
@@ -160,11 +162,18 @@ public class MainMenu {
         //Equipa do utilizador
         IFormation myFormation = mySquad.getFormation();
         Team myTeam = (Team) mySquad.getClub();
-
-        //Equipa do utilizador
         SetStartingLineup lineup = new SetStartingLineup();
         IPlayer[] myLineup = lineup.mySquadBestLineup(mySquad, myFormation.getDisplayName());
 
+        
+        //Equipa Restantes
+        for (Squad team : opposingTeams) {
+    
+    IPlayer[] bestLineup = lineup.mySquadBestLineup(team, team.getFormation().getDisplayName());
+
+}
+        
+        
         int opcao;
 
         

@@ -1,0 +1,6430 @@
+{
+
+  "name": "2024/2025",
+
+  "seasons": [
+
+  {
+    "name": "2024/2025",
+    "year": 2025,
+    "maxTeams": 8,
+    "maxRounds": 7,
+    "pointsPerWin": 3,
+    "pointsPerDraw": 0,
+    "pointsPerLoss": 1,
+  "rounds": {
+    "round_1": [
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 11,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Gabriel Batista",
+  "goalkeeperDefense": 79
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 20,
+  "club": "Futebol Clube do Porto",
+  "scorer": "Pepê",
+  "scorerShooting": 80,
+  "goalkeeper": "Gabriel Batista",
+  "goalkeeperDefense": 79
+}
+
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 59,
+  "club": "Sport Lisboa e Benfica",
+  "scorer": "Rafa Silva",
+  "scorerShooting": 84,
+  "goalkeeper": "Luís Ribeiro",
+  "goalkeeperDefense": 78
+}
+
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 12,
+  "club": "Sporting Clube de Portugal",
+  "scorer": "Paulinho",
+  "scorerShooting": 84,
+  "goalkeeper": "Jhonatan",
+  "goalkeeperDefense": 80
+}
+
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": true,
+
+  "round": 0,
+
+  "events": [
+
+{
+  "type": "GoalEvent",
+  "minute": 24,
+  "club": "Vitória Sport Clube",
+  "scorer": "Jota Silva",
+  "scorerShooting": 83,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 81
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 40,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Bruma",
+  "scorerShooting": 84,
+  "goalkeeper": "Bruno Varela",
+  "goalkeeperDefense": 80
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 64,
+  "club": "Sporting Clube de Braga",
+  "scorer": "Ricardo Horta",
+  "scorerShooting": 86,
+  "goalkeeper": "Bruno Varela",
+  "goalkeeperDefense": 80
+}
+,
+
+{
+  "type": "GoalEvent",
+  "minute": 74,
+  "club": "Vitória Sport Clube",
+  "scorer": "Nélson Oliveira",
+  "scorerShooting": 85,
+  "goalkeeper": "Matheus Magalhães",
+  "goalkeeperDefense": 81
+}
+
+
+  ]
+
+}
+    ],
+    "round_2": [
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_3": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_4": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_5": [
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_6": [
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_7": [
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_8": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_9": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_10": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_11": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_12": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_13": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_14": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_15": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_16": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_17": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_18": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_19": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_20": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_21": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_22": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_23": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_24": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_25": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_26": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_27": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_28": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_29": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_30": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_31": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_32": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_33": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_34": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_35": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_36": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_37": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_38": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_39": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_40": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_41": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_42": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_43": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_44": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_45": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_46": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_47": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_48": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ],
+    "round_49": [
+{
+
+  "home": {
+
+    "clubName": "Clube Desportivo Santa Clara",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube de Penafiel",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 70
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Rio Ave Futebol Clube",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 72
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Vitória Sport Clube",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 74
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false,
+
+  "round": 0,
+
+  "events": [
+
+  ]
+
+}
+    ]
+  }
+  }
+
+  ]
+
+}
