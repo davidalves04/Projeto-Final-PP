@@ -1,7 +1,8 @@
 package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
-import com.ppstudios.footballmanager.api.contracts.team.IClub;
+
+import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 /**
  * Classe utilitária responsável pela geração de jogos em formato round-robin
@@ -17,7 +18,7 @@ public class MatchGenerator {
      * @param numberOfRounds  Número de voltas (por exemplo, 2 para ida e volta).
      * @return Uma matriz onde cada linha representa uma jornada, e cada coluna um jogo.
      */
-    public static IMatch[][] generateRoundRobinMatches(IClub[] clubs, int numberOfRounds) {
+    public static IMatch[][] generateRoundRobinMatches(ITeam[] clubs, int numberOfRounds) {
         int n = clubs.length;
 
         // Número de jornadas por volta (round-robin simples)
@@ -36,12 +37,12 @@ public class MatchGenerator {
 
                 if (m == 0) away = n - 1;
 
-                IClub homeClub = clubs[home];
-                IClub awayClub = clubs[away];
+                ITeam homeClub = clubs[home];
+                ITeam awayClub = clubs[away];
 
                 if (r >= roundsPerRoundRobin) {
                     // Segunda volta: inverter casa/fora
-                    IClub temp = homeClub;
+                    ITeam temp = homeClub;
                     homeClub = awayClub;
                     awayClub = temp;
                 }

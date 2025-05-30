@@ -1,5 +1,6 @@
 package api.league;
 
+import api.event.GoalEvent;
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
@@ -14,8 +15,7 @@ import utils.JsonAccumulator;
  */
 public class Match implements IMatch {
 
-    private final IClub home;
-    private final IClub away;
+    
     private boolean played;
     private ITeam homeTeam;
     private ITeam awayTeam;
@@ -31,9 +31,9 @@ public class Match implements IMatch {
      * @param home clube da casa
      * @param away clube visitante
      */
-    public Match(IClub home, IClub away) {
-        this.home = home;
-        this.away = away;
+    public Match(ITeam home, ITeam away) {
+        this.homeTeam = home;
+        this.awayTeam = away;
         this.played = false;
         this.events = new IEvent[100]; // tamanho máximo arbitrário
         this.eventCount = 0;
@@ -46,7 +46,7 @@ public class Match implements IMatch {
      */
     @Override
     public IClub getHomeClub() {
-        return home;
+        return homeTeam.getClub();
     }
 
     /**
@@ -56,7 +56,7 @@ public class Match implements IMatch {
      */
     @Override
     public IClub getAwayClub() {
-        return away;
+        return awayTeam.getClub();
     }
 
     /**
@@ -132,7 +132,7 @@ public class Match implements IMatch {
      */
     @Override
     public boolean isValid() {
-        return home != null && away != null && !home.equals(away);
+        return homeTeam != null && awayTeam != null && !homeTeam.equals(awayTeam);
     }
 
     /**
@@ -142,8 +142,8 @@ public class Match implements IMatch {
      */
     @Override
     public ITeam getWinner() {
-        int homeGoals = getTotalByEvent(IGoalEvent.class, home);
-        int awayGoals = getTotalByEvent(IGoalEvent.class, away);
+        int homeGoals = getTotalByEvent(IGoalEvent.class, homeTeam.getClub());
+        int awayGoals = getTotalByEvent(IGoalEvent.class, awayTeam.getClub());
 
         if (homeGoals > awayGoals) return homeTeam;
         if (awayGoals > homeGoals) return awayTeam;
@@ -198,6 +198,10 @@ public class Match implements IMatch {
      * Inclui dados dos clubes da casa e visitante, golos, resultado,
      * estado do jogo, número da jornada e eventos registados.
      */
+    
+
+
+
     @Override
     public void exportToJson() {
         if (jsonAccumulator == null) {
@@ -205,51 +209,23 @@ public class Match implements IMatch {
             return;
         }
 
-        jsonAccumulator.append("{");
+        jsonAccumulator.append("{\n");
 
-        jsonAccumulator.append("  \"home\": {");
-        jsonAccumulator.append("    \"code\": \"" + home.getCode() + "\",");
-        jsonAccumulator.append("    \"name\": \"" + home.getName() + "\"");
-        jsonAccumulator.append("  },");
+    jsonAccumulator.append("  \"home\": {\n");
+    jsonAccumulator.append("    \"clubName\": \"" + homeTeam.getClub().getName() + "\",\n");
+    jsonAccumulator.append("    \"formation\": \"" + homeTeam.getFormation().getDisplayName() + "\",\n");
+    jsonAccumulator.append("    \"teamStrength\": " + homeTeam.getTeamStrength() + "\n");
+    jsonAccumulator.append("  },\n");
 
-        jsonAccumulator.append("  \"away\": {");
-        jsonAccumulator.append("    \"code\": \"" + away.getCode() + "\",");
-        jsonAccumulator.append("    \"name\": \"" + away.getName() + "\"");
-        jsonAccumulator.append("  },");
+    jsonAccumulator.append("  \"away\": {\n");
+    jsonAccumulator.append("    \"clubName\": \"" + awayTeam.getClub().getName() + "\",\n");
+    jsonAccumulator.append("    \"formation\": \"" + awayTeam.getFormation().getDisplayName() + "\",\n");
+    jsonAccumulator.append("    \"teamStrength\": " + awayTeam.getTeamStrength() + "\n");
+    jsonAccumulator.append("  },\n");
 
-        // Golos
-        int homeGoals = getTotalByEvent(IGoalEvent.class, home);
-        int awayGoals = getTotalByEvent(IGoalEvent.class, away);
-        jsonAccumulator.append("  \"homeGoals\": " + homeGoals + ",");
-        jsonAccumulator.append("  \"awayGoals\": " + awayGoals + ",");
+    jsonAccumulator.append("  \"played\": " + this.played + "\n");
 
-        // Resultado
-        String result;
-        if (homeGoals > awayGoals) {
-            result = "HOME_WIN";
-        } else if (awayGoals > homeGoals) {
-            result = "AWAY_WIN";
-        } else {
-            result = "DRAW";
-        }
-        jsonAccumulator.append("  \"result\": \"" + result + "\",");
-
-        // Outros metadados
-        jsonAccumulator.append("  \"played\": " + played + ",");
-        jsonAccumulator.append("  \"round\": " + round + ",");
-
-        // Eventos
-        jsonAccumulator.append("  \"events\": [");
-        for (int i = 0; i < eventCount; i++) {
-            IEvent e = events[i];
-            jsonAccumulator.append("    {");
-            jsonAccumulator.append("      \"minute\": " + e.getMinute() + ",");
-            jsonAccumulator.append("      \"description\": \"" + e.getDescription().replace("\"", "'") + "\"");
-            jsonAccumulator.append("    }" + (i < eventCount - 1 ? "," : ""));
-        }
-        jsonAccumulator.append("  ]");
-
-        jsonAccumulator.append("}");
+    jsonAccumulator.append("}");
     }
 
     /**

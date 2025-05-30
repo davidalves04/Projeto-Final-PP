@@ -124,7 +124,7 @@ public class TeamImporterJSON {
      * @return Squad lido do ficheiro.
      * @throws IOException Se faltar o campo do clube ou se ocorrer erro de parsing.
      */
-    private static Squad readSquadFromParser(JsonParser parser, IClub[] clubs) throws IOException {
+    public static Squad readSquadFromParser(JsonParser parser, IClub[] clubs) throws IOException {
          Formation formation = null;
     Player[] players = new Player[MAX_TEAM];
     int playerCount = 0;

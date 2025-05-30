@@ -1,6 +1,8 @@
 package api.league;
 
 import api.data.TeamImporterJSON;
+import api.simulation.DefaultMatchSimulator;
+
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.league.ISchedule;
@@ -25,13 +27,16 @@ public class Season implements ISeason {
     private final int pointsPerDraw;
     private final int pointsPerLoss;
 
-    private final IClub[] clubs;
+
     private ISchedule schedule;
     private int currentRound;
     private int numberOfClubs;
     private MatchSimulatorStrategy simulator;
     private IMatch[][] generatedRounds;
+    private IClub[] clubs;
     private ITeam[] teams;
+    
+    private ITeam myTeam;
 
     private JsonAccumulator jsonAccumulator;
 
@@ -45,11 +50,11 @@ public class Season implements ISeason {
      * @param pointsPerWin  pontos atribuídos por vitória
      * @param pointsPerDraw pontos atribuídos por empate
      * @param pointsPerLoss pontos atribuídos por derrota
-     * @param clubs         array de clubes participantes
+     * @param teams         array de clubes participantes
      */
     public Season(String name, int year, int maxTeams, int maxRounds,
                   int pointsPerWin, int pointsPerDraw, int pointsPerLoss,
-                  IClub[] clubs) {
+                  ITeam[] teams,IClub[] clubs) {
         this.name = name;
         this.year = year;
         this.maxTeams = maxTeams;
@@ -57,6 +62,7 @@ public class Season implements ISeason {
         this.pointsPerWin = pointsPerWin;
         this.pointsPerDraw = pointsPerDraw;
         this.pointsPerLoss = pointsPerLoss;
+        this.teams = teams;
         this.clubs = clubs;
 
         this.currentRound = 0;
@@ -77,7 +83,7 @@ public class Season implements ISeason {
      * Gera automaticamente os jogos da época utilizando um sistema round-robin.
      */
     public void generateMatchesAutomatically() {
-        this.generatedRounds = MatchGenerator.generateRoundRobinMatches(clubs, maxRounds);
+        this.generatedRounds = MatchGenerator.generateRoundRobinMatches(teams, maxRounds);
     }
 
     /**
@@ -187,21 +193,86 @@ public class Season implements ISeason {
         return schedule.getMatchesForRound(round);
     }
 
+    public void setMyTeam(ITeam myTeam) {
+        this.myTeam = myTeam;
+    }
+
+    public ITeam getMyTeam() {
+        return myTeam;
+    }
+
+    
+    
     /**
      * Simula os jogos da jornada atual, atualizando o estado dos jogos.
      */
     @Override
     public void simulateRound() {
-        if (!isSeasonComplete()) {
-            IMatch[] matches = schedule.getMatchesForRound(currentRound);
-            for (IMatch match : matches) {
-                if (!match.isPlayed()) {
-                    simulator.simulate(match);
-                    match.setPlayed();
+         IStanding homeStanding = null;
+    IStanding awayStanding = null;
+
+    if (!isSeasonComplete()) {
+        IMatch[] matches = schedule.getMatchesForRound(currentRound);
+
+        // 1. Simula primeiro o jogo da tua equipa
+        for (IMatch match : matches) {
+            if (!match.isPlayed()) {
+                ITeam homeTeam = match.getHomeTeam();
+                ITeam awayTeam = match.getAwayTeam();
+
+                if (homeTeam.getClub().getName().equals(myTeam.getClub().getName()) ||
+                    awayTeam.getClub().getName().equals(myTeam.getClub().getName())) {
+
+                    if (simulator instanceof DefaultMatchSimulator dms) {
+                        dms.detailedSimulation(match);
+
+                        if (schedule instanceof Schedule s) {
+                            homeStanding = s.getStandingByClub(homeTeam);
+                            awayStanding = s.getStandingByClub(awayTeam);
+                        }
+
+                        dms.saveStatistics(match, homeStanding, awayStanding, this.pointsPerWin, this.pointsPerLoss, this.pointsPerDraw);
+                    }
+
+                    // Espera o Enter para continuar
+                    System.out.println("\nPressione Enter para continuar...");
+                    try {
+                        System.in.read();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                     System.out.print("==== JOGOS RESTANTES ====");
+                    break; // Sai do loop depois de simular a tua equipa
                 }
             }
-            currentRound++;
         }
+
+        // 2. Simula os outros jogos
+        for (IMatch match : matches) {
+            if (!match.isPlayed()) {
+                ITeam homeTeam = match.getHomeTeam();
+                ITeam awayTeam = match.getAwayTeam();
+
+                if (!homeTeam.getClub().getName().equals(myTeam.getClub().getName()) &&
+                    !awayTeam.getClub().getName().equals(myTeam.getClub().getName())) {
+
+                    if (simulator instanceof DefaultMatchSimulator dms) {
+                        dms.simulate(match);
+
+                        if (schedule instanceof Schedule s) {
+                            homeStanding = s.getStandingByClub(homeTeam);
+                            awayStanding = s.getStandingByClub(awayTeam);
+                        }
+
+                        dms.saveStatistics(match, homeStanding, awayStanding, this.pointsPerWin, this.pointsPerLoss, this.pointsPerDraw);
+                    }
+                }
+            }
+        }
+    }
+
+    currentRound++;
     }
 
     /**

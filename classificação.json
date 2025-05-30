@@ -1,0 +1,57 @@
+[
+{
+  "team": {
+    "clubName": "Sport Lisboa e Benfica",
+    "formation": "4-4-2",
+    "teamStrength": 77
+  },
+  "points": 0,
+  "wins": 0,
+  "draws": 0,
+  "losses": 0,
+  "goalsscored": 0,
+  "goalsconceded": 0
+}
+,
+{
+  "team": {
+    "clubName": "Futebol Clube do Porto",
+    "formation": "4-3-3",
+    "teamStrength": 77
+  },
+  "points": 0,
+  "wins": 0,
+  "draws": 0,
+  "losses": 0,
+  "goalsscored": 0,
+  "goalsconceded": 0
+}
+,
+{
+  "team": {
+    "clubName": "Sporting Clube de Portugal",
+    "formation": "5-3-2",
+    "teamStrength": 76
+  },
+  "points": 0,
+  "wins": 0,
+  "draws": 0,
+  "losses": 0,
+  "goalsscored": 0,
+  "goalsconceded": 0
+}
+,
+{
+  "team": {
+    "clubName": "Sporting Clube de Braga",
+    "formation": "4-3-3",
+    "teamStrength": 75
+  },
+  "points": 0,
+  "wins": 0,
+  "draws": 0,
+  "losses": 0,
+  "goalsscored": 0,
+  "goalsconceded": 0
+}
+]

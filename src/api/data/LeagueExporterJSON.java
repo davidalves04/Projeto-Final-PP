@@ -1,6 +1,8 @@
 package api.data;
 
 import api.league.Season;
+import api.league.Standing;
+import api.team.Team;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -103,4 +105,29 @@ public class LeagueExporterJSON {
         }
         throw new IOException("Não encontrou o fechamento do array.");
     }
+    
+    
+     public void exportStandingArrayToJson(Standing[] standings, String standingFile) throws IOException {
+    File file = new File(standingFile);
+    JsonAccumulator accumulator = new JsonAccumulator();
+
+    accumulator.append("["); // abre array JSON
+
+    for (int i = 0; i < standings.length; i++) {
+        standings[i].setJsonAccumulator(accumulator);
+        standings[i].exportToJson();
+
+        if (i < standings.length - 1) {
+            accumulator.append(",");
+        }
+    }
+
+    accumulator.append("]"); // fecha array JSON
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
+        writer.write(accumulator.getJson());
+    }
+     }
+     
+     
 }

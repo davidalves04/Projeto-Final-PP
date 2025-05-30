@@ -4,6 +4,7 @@ import api.player.Player;
 import com.ppstudios.footballmanager.api.contracts.event.IEvent;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;
 import com.ppstudios.footballmanager.api.contracts.team.IClub;
+import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 /**
  * Representa um evento de remate falhado por um jogador durante um jogo de futebol.
@@ -17,7 +18,7 @@ public class MissedShotEvent implements IEvent {
     /** Minuto do jogo em que o remate foi falhado. */
     private final int minute;
     
-    private final IClub club;
+    private final ITeam club;
     /** Jogador que falhou o remate. */
     
     private final Player attacker;
@@ -35,7 +36,7 @@ public class MissedShotEvent implements IEvent {
 
     
 
-    public MissedShotEvent(IClub club, Player attacker,Player goalkeeper, int minute) {
+    public MissedShotEvent(ITeam club, Player attacker,Player goalkeeper, int minute) {
         this.club = club;
         this.attacker = attacker;
         this.goalkeeper = goalkeeper;

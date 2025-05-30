@@ -1,0 +1,6063 @@
+{
+
+  "name": "2024/2025",
+
+  "seasons": [
+
+  {
+    "name": "2024/2025",
+    "year": 2025,
+    "maxTeams": 20,
+    "maxRounds": 38,
+    "pointsPerWin": 3,
+    "pointsPerDraw": 1,
+    "pointsPerLoss": 0,
+  "rounds": {
+    "round_1": [
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_2": [
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_3": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_4": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_5": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_6": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_7": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_8": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_9": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_10": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_11": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_12": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_13": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_14": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_15": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_16": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_17": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_18": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_19": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_20": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_21": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_22": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_23": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_24": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_25": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_26": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_27": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_28": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_29": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_30": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_31": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_32": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_33": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_34": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_35": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_36": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_37": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_38": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_39": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_40": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_41": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_42": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_43": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_44": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_45": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_46": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_47": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_48": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_49": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_50": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_51": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_52": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_53": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_54": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_55": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_56": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_57": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_58": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_59": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_60": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_61": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_62": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_63": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_64": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_65": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_66": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_67": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_68": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_69": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_70": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_71": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_72": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_73": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_74": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_75": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_76": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_77": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_78": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_79": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_80": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_81": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_82": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_83": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_84": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_85": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_86": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_87": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_88": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_89": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_90": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_91": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_92": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_93": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_94": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_95": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_96": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_97": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_98": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_99": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_100": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_101": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_102": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_103": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_104": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_105": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_106": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_107": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_108": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_109": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_110": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_111": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_112": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_113": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+    ],
+    "round_114": [
+{
+
+  "home": {
+
+    "clubName": "Sporting Clube de Braga",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 75
+
+  },
+
+  "away": {
+
+    "clubName": "Sporting Clube de Portugal",
+
+    "formation": "5-3-2",
+
+    "teamStrength": 76
+
+  },
+
+  "played": false
+
+}
+,
+{
+
+  "home": {
+
+    "clubName": "Futebol Clube do Porto",
+
+    "formation": "4-3-3",
+
+    "teamStrength": 77
+
+  },
+
+  "away": {
+
+    "clubName": "Sport Lisboa e Benfica",
+
+    "formation": "4-4-2",
+
+    "teamStrength": 77
+
+  },
+
+  "played": false
+
+}
+    ]
+  }
+  }
+
+  ]
+
+}

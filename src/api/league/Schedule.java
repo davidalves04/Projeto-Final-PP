@@ -127,11 +127,13 @@ public class Schedule implements ISchedule {
                 if (!match.isPlayed()) {
                     match.setPlayed();
 
-                    IClub home = match.getHomeClub();
-                    IClub away = match.getAwayClub();
+                    ITeam home = match.getHomeTeam();
+                    ITeam away = match.getAwayTeam();
+                    
+                    
 
-                    int homeGoals = match.getTotalByEvent(IGoalEvent.class, home);
-                    int awayGoals = match.getTotalByEvent(IGoalEvent.class, away);
+                    int homeGoals = match.getTotalByEvent(IGoalEvent.class, home.getClub());
+                    int awayGoals = match.getTotalByEvent(IGoalEvent.class, away.getClub());
 
                     IStanding homeStanding = getStandingByClub(home);
                     IStanding awayStanding = getStandingByClub(away);
@@ -148,16 +150,17 @@ public class Schedule implements ISchedule {
     /**
      * Procura a classificação associada a um determinado clube.
      *
-     * @param club Clube a procurar.
+     * @param team Clube a procurar.
      * @return Classificação correspondente ou null se não encontrada.
      */
-    private IStanding getStandingByClub(IClub club) {
-        for (IStanding standing : standings) {
-            if (standing.getTeam().getClub().equals(club)) {
-                return standing;
-            }
+    public IStanding getStandingByClub(ITeam team) {
+        String teamName = team.getClub().getName();
+    for (IStanding standing : standings) {
+        if (standing.getTeam().getClub().getName().equals(teamName)) {
+            return standing;
         }
-        return null;
+    }
+    return null;
     }
 
     /**

@@ -2,6 +2,11 @@ package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.league.IStanding;
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import utils.JsonAccumulator;
 
 /**
  * Implementação da interface {@link IStanding} que representa a classificação
@@ -9,13 +14,17 @@ import com.ppstudios.footballmanager.api.contracts.team.ITeam;
  */
 public class Standing implements IStanding {
 
-    private final ITeam team;
+    private ITeam team;
     private int points;
     private int wins;
     private int draws;
     private int losses;
     private int goalsScored;
     private int goalsConceded;
+    
+    private String file;
+    
+     private JsonAccumulator jsonAccumulator;
 
     /**
      * Constrói um novo objeto {@code Standing} para a equipa especificada.
@@ -42,6 +51,9 @@ public class Standing implements IStanding {
         return team;
     }
 
+    public void setTeam(ITeam team){
+        this.team = team;
+    }
     /**
      * Devolve o total de pontos obtidos pela equipa.
      *
@@ -213,4 +225,67 @@ public class Standing implements IStanding {
         this.goalsScored = 0;
         this.goalsConceded = 0;
     }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public void setWins(int wins) {
+        this.wins = wins;
+    }
+
+    public void setDraws(int draws) {
+        this.draws = draws;
+    }
+
+    public void setLosses(int losses) {
+        this.losses = losses;
+    }
+
+    public void setGoalsScored(int goalsScored) {
+        this.goalsScored = goalsScored;
+    }
+
+    public void setGoalsConceded(int goalsConceded) {
+        this.goalsConceded = goalsConceded;
+    }
+
+ 
+    
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    public void setJsonAccumulator(JsonAccumulator jsonAccumulator) {
+        this.jsonAccumulator = jsonAccumulator;
+    }
+    
+    
+ 
+    
+    public void exportToJson(){
+         if (jsonAccumulator == null) {
+        System.err.println("JsonAccumulator não definido para Standing!");
+        return;
+    }
+
+    jsonAccumulator.append("{");
+    jsonAccumulator.append("  \"team\": {");
+    jsonAccumulator.append("    \"clubName\": \"" + this.team.getClub().getName() + "\",");
+    jsonAccumulator.append("    \"formation\": \"" + this.team.getFormation().getDisplayName() + "\",");
+    jsonAccumulator.append("    \"teamStrength\": " + this.team.getTeamStrength());
+    jsonAccumulator.append("  },");
+    jsonAccumulator.append("  \"points\": " + this.points + ",");
+    jsonAccumulator.append("  \"wins\": " + this.wins + ",");
+    jsonAccumulator.append("  \"draws\": " + this.draws + ",");
+    jsonAccumulator.append("  \"losses\": " + this.losses + ",");
+    jsonAccumulator.append("  \"goalsscored\": " + this.goalsScored + ",");
+    jsonAccumulator.append("  \"goalsconceded\": " + this.goalsConceded);
+    jsonAccumulator.append("}");
+    }
+    
 }
