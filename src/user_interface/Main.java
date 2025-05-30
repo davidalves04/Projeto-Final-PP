@@ -57,7 +57,7 @@ public class Main {
            
 
        League league2 = new League("2024/2025");
-           Season s2 = new Season("2024/2025",2025,20,38,3,1,0,totalSquads,totalClubs);
+           Season s2 = new Season("2024/2025",2025,20,2,3,1,0,totalSquads,totalClubs);
            s2.setTeams("squad.json", totalClubs);
            s2.generateMatchesAutomatically();
            s2.generateSchedule();
