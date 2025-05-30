@@ -5,10 +5,23 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * Classe responsável por gerar um ficheiro HTML com o conteúdo de um ficheiro JSON representando uma época.
+ */
 public class LeagueHtmlGenerator {
 
+    /**
+     * Construtor por omissão da classe {@code LeagueHtmlGenerator}.
+     */
     public LeagueHtmlGenerator() {}
 
+    /**
+     * Gera um ficheiro HTML com o conteúdo de um ficheiro JSON especificado.
+     *
+     * @param jsonFilePath Caminho para o ficheiro JSON que contém os dados da época.
+     * @param outputPath Caminho relativo (dentro da pasta "html/") onde o ficheiro HTML será guardado.
+     * @throws IOException Se ocorrer um erro ao ler o ficheiro JSON ou ao escrever o HTML.
+     */
     public static void generate(String jsonFilePath, String outputPath) throws IOException {
         String jsonContent = Files.readString(Paths.get(jsonFilePath));
 

@@ -118,14 +118,14 @@ public class MainMenu {
 
                         // Exportar Season (tabela e jogos)
                         SeasonHtmlGenerator.generate(currentSeason, "html/season.html");
-                        System.out.println("Temporada exportada para HTML com sucesso.");
+                        //System.out.println("Temporada exportada para HTML com sucesso.");
 
                         // Exportar todos os clubes
                         for (IClub club : currentSeason.getCurrentClubs()) {
                             String filename = "club_" + club.getCode() + ".html";
                             try {
                                 ClubHtmlGenerator.generate(club, filename);
-                                System.out.println("Clube exportado: " + club.getName());
+                                //System.out.println("Clube exportado: " + club.getName());
                             } catch (IOException e) {
                                 System.err.println("Erro ao exportar clube " + club.getName() + ": " + e.getMessage());
                             }
@@ -137,7 +137,7 @@ public class MainMenu {
                             String filename = "html/match" + matchIndex++ + ".html";
                             try {
                                 MatchHtmlGenerator.generate(match, filename);
-                                System.out.println("Jogo exportado: " + match.getHomeClub().getName() + " vs " + match.getAwayClub().getName());
+                                //System.out.println("Jogo exportado: " + match.getHomeClub().getName() + " vs " + match.getAwayClub().getName());
                             } catch (IOException e) {
                                 System.err.println("Erro ao exportar jogo: " + e.getMessage());
                             }
@@ -147,16 +147,15 @@ public class MainMenu {
                         File leagueJson = new File("league.json");
                         if (leagueJson.exists()) {
                             LeagueHtmlGenerator.generate("league.json", "league.html");
-                            System.out.println("Liga exportada (via JSON) para HTML com sucesso.");
+                            //System.out.println("Liga exportada para HTML com sucesso.");
                         } else {
                             System.out.println("Ficheiro league.json não encontrado. Ignorado.");
                         }
-
+                        System.out.println("Exportação concluída.");
                     } catch (IOException e) {
                         System.out.println("Erro ao exportar para HTML: " + e.getMessage());
                     }
                     break;
-
 
                 case 0:
                     System.out.println("A sair...");
@@ -165,9 +164,7 @@ public class MainMenu {
                 default:
                     System.out.println("Opção inválida.");
             }
-
         } while (opcao2 != 0);
-
         scanner.close();
     }
 }

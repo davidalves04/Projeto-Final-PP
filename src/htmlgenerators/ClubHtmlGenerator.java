@@ -8,10 +8,24 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * Classe responsável por gerar um ficheiro HTML com a informação detalhada de um clube.
+ * Inclui dados como nome, código, país, ano de fundação, estádio, logótipo e plantel.
+ */
 public class ClubHtmlGenerator {
 
+    /**
+     * Construtor por omissão da classe {@code ClubHtmlGenerator}.
+     */
     public ClubHtmlGenerator() {}
 
+    /**
+     * Gera um ficheiro HTML com os detalhes do clube fornecido.
+     *
+     * @param club O clube cuja informação será usada para gerar o HTML.
+     * @param outputPath O nome do ficheiro de saída (dentro da pasta "html/").
+     * @throws IOException Se ocorrer um erro ao escrever o ficheiro HTML.
+     */
     public static void generate(IClub club, String outputPath) throws IOException {
         StringBuilder html = new StringBuilder();
         html.append("<html><head><title>").append(club.getName()).append("</title></head><body>");
