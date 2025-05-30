@@ -1,16 +1,22 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/ 
 package api.data;
 
 import api.league.Season;
 import api.league.Standing;
-import api.team.Team;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import utils.JsonAccumulator;
 
 /**

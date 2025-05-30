@@ -1,6 +1,16 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
 package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
+
 import com.ppstudios.footballmanager.api.contracts.team.ITeam;
 
 /**
@@ -20,52 +30,33 @@ public class MatchGenerator {
     public static IMatch[][] generateRoundRobinMatches(ITeam[] clubs, int numberOfRounds) {
         int n = clubs.length;
 
-        if (n % 2 != 0) {
-            throw new IllegalArgumentException("Número de equipas deve ser par.");
-        }
-
+        // Número de jornadas por volta (round-robin simples)
         int roundsPerRoundRobin = n - 1;
         int matchesPerRound = n / 2;
+
+        // Total de jornadas considerando todas as voltas
         int totalRounds = roundsPerRoundRobin * numberOfRounds;
 
         IMatch[][] schedule = new IMatch[totalRounds][matchesPerRound];
 
-        // Índices base para a primeira volta
-        for (int round = 0; round < roundsPerRoundRobin; round++) {
-            for (int match = 0; match < matchesPerRound; match++) {
-                int home = (round + match) % (n - 1);
-                int away = (n - 1 - match + round) % (n - 1);
+        for (int r = 0; r < totalRounds; r++) {
+            for (int m = 0; m < matchesPerRound; m++) {
+                int home = (r + m) % (n - 1);
+                int away = (n - 1 - m + r) % (n - 1);
 
-                if (match == 0) {
-                    away = n - 1; // Última equipa é fixa
-                }
-
-                schedule[round][match] = new Match(clubs[home], clubs[away]);
-            }
-        }
-
-        // Gerar voltas adicionais invertendo casa/fora
-        for (int round = 0; round < totalRounds; round++) {
-            for (int match = 0; match < matchesPerRound; match++) {
-                int baseRound = round % roundsPerRoundRobin;
-                int home = (baseRound + match) % (n - 1);
-                int away = (n - 1 - match + baseRound) % (n - 1);
-
-                if (match == 0) {
-                    away = n - 1;
-                }
+                if (m == 0) away = n - 1;
 
                 ITeam homeClub = clubs[home];
                 ITeam awayClub = clubs[away];
 
-                // Alternar casa/fora em voltas ímpares
-                if ((round / roundsPerRoundRobin) % 2 == 1) {
+                if (r >= roundsPerRoundRobin) {
+                    // Segunda volta: inverter casa/fora
                     ITeam temp = homeClub;
                     homeClub = awayClub;
                     awayClub = temp;
                 }
 
-                schedule[round][match] = new Match(homeClub, awayClub);
+                schedule[r][m] = new Match(homeClub, awayClub);
             }
         }
 

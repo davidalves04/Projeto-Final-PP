@@ -1,8 +1,18 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
 package api.league;
 
 import com.ppstudios.footballmanager.api.contracts.league.ILeague;
 import com.ppstudios.footballmanager.api.contracts.league.ISeason;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import utils.JsonAccumulator;

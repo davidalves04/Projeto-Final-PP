@@ -1,3 +1,12 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
 package user_interface;
 
 
@@ -56,7 +65,7 @@ public class Main {
 
 
        League league2 = new League("2024/2025");
-           Season s2 = new Season("2024/2025",2025,20,2,3,1,0,totalSquads,totalClubs);
+           Season s2 = new Season("2024/2025",2025,20,38,3,1,0,totalSquads,totalClubs);
            s2.setTeams("squad.json", totalClubs);
            s2.generateMatchesAutomatically();
            s2.generateSchedule();

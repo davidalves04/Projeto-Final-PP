@@ -84,6 +84,20 @@
     "speedstats": 83,
     "passingstats": 85
   },
+{
+  "name": "Tiago Gouveia",
+  "birthDate": "2001-06-18",
+  "nationality": "Português",
+  "basePosition": "Midfielder",
+  "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/tiago-gouveia",
+  "number": 17,
+  "height": 1.75,
+  "weight": 68,
+  "shootingstats": 72,
+  "staminastats": 84,
+  "speedstats": 82,
+  "passingstats": 80
+},
   {
     "name": "Orkun Kökçü",
     "birthDate": "2000-12-29",
@@ -181,5 +195,19 @@
     "staminastats": 80,
     "speedstats": 79,
     "passingstats": 72
-  }
+  },
+{
+  "name": "Casper Tengstedt",
+  "birthDate": "2000-06-01",
+  "nationality": "Dinamarquês",
+  "basePosition": "Forward",
+  "photo": "https://www.slbenfica.pt/pt-pt/futebol/plantel-principal/casper-tengstedt",
+  "number": 19,
+  "height": 1.85,
+  "weight": 80,
+  "shootingstats": 82,
+  "staminastats": 78,
+  "speedstats": 81,
+  "passingstats": 75
+}
 ]

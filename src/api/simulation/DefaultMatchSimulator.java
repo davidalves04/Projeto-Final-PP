@@ -1,4 +1,13 @@
- package api.simulation;
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
+package api.simulation;
 
 import com.ppstudios.footballmanager.api.contracts.match.IMatch;
 import com.ppstudios.footballmanager.api.contracts.player.IPlayer;

@@ -1,3 +1,12 @@
+/*  
+* Nome: David Sérgio Ferreira Alves
+* Número: 8240231
+* Turma: LSIRC T2
+*  
+* Nome: Gabriel Alexandre Meireles Moreira 
+* Número: 8240266  
+* Turma: LSIRC T2
+*/
 /**
  * A classe {@code Schedule} implementa a interface {@code ISchedule} e representa a
  * agenda de partidas de uma liga, incluindo os jogos por jornada e a classificação
