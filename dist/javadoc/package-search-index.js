@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"api.data"},{"l":"api.event"},{"l":"api.league"},{"l":"api.player"},{"l":"api.simulation"},{"l":"api.team"},{"l":"enums"},{"l":"htmlgenerators"},{"l":"user_interface"},{"l":"utils"}];updateSearchResults();
